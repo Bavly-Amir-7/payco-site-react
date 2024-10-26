@@ -1,4 +1,3 @@
-"use client"; // This makes the component a Client Component
 import { useState } from 'react';
 import Head from 'next/head';
 import "./verification.css";

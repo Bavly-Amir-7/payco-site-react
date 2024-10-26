@@ -1,6 +1,5 @@
 // this is next.jsx code  component name is 1-loginPage
 
-"use client";
 
 import React, { useState } from 'react';
 import Head from 'next/head';
