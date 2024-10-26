@@ -1,5 +1,7 @@
 import React from 'react'
 import "./loginPage.css"
+import image1 from "./../images/computer.png"
+import image2 from ".//../images/Ayco2.png"
 
 export default function LoginPage() {
     
@@ -10,12 +12,12 @@ export default function LoginPage() {
 
         <div className="flex h-screen">
           <div className="w-1/2 flex items-center justify-center">
-            <img src="https://placehold.co/400x400" alt="Illustration of secure payment system with various security icons" className="w-2/3" />
+            <img src={image1} alt="Illustration of secure payment system with various security icons" className="w-2/3" />
           </div>
           <div className="w-1/2 flex items-center justify-center bg-gray-100">
             <div className="w-2/3">
               <div className="text-center mb-8">
-                <img src="https://placehold.co/100x50" alt="Payco Logo" className="mx-auto mb-4" />
+                <img src={image2} alt="Payco Logo" className="mx-auto mb-4" />
                 <h2 className="text-2xl font-bold">Welcome Back</h2>
               </div>
               <form>
