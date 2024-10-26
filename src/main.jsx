@@ -8,6 +8,8 @@ import { BrowserRouter } from 'react-router-dom';
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import './index.css';
+
 
 
 

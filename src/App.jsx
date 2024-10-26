@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import { useEffect } from 'react';
 import { Opacity } from '@mui/icons-material';
-import Login from './components/1-loginPage/loginPage';
+import LoginPage from './components/1-loginPage/LoginPage';
 
 
 
@@ -16,18 +16,8 @@ function App() {
 
 
   return (
+    <LoginPage />
 
-
-    <>
-      <div id='up' className='container'>
-      
-      <Login/>
-
-
- 
-
-      </div>
-    </>
   );
 }
 
