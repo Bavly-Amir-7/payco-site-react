@@ -1,3 +1,29 @@
+ .iconArea {
+    background-color: white;
+}
+
 .lines{
     gap: 7px;
+}
+
+@media (max-width: 768px) {
+    .computer {
+        display: none;
+        /* Hide the computer image on small screens */
+    }
+
+    .imageParent {
+        flex: 1 1 100%;
+        /* Takes full width on small screens */
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        /* Adjust heading size */
+    }
+
+    .loginArea {
+        width: 100%;
+        /* Makes form take more space on small screens */
+    }
 }
