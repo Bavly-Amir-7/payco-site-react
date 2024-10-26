@@ -37,7 +37,7 @@ export default function LoginPage() {
                         <div className="w-2/3">
                             <div className="text-center imageParent mb-8">
                                 <img src={image2} alt="Payco Logo" className="mx-auto mb-4" />
-                                {/* <h2 className="text-2xl font-bold">Welcome Back</h2> */}
+                                <h2 className="text-2xl font-bold">Welcome Back</h2>
                             </div>
                             <form>
                                 <div className="mb-4">
