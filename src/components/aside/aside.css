@@ -1,0 +1,103 @@
+.highlight {
+    /* position: absolute; */
+    left: 0;
+    width: 250px;
+    height: 68px;
+    background: #F6D6D6;
+    border-radius: 6px 0px 0px 0px;
+    transition: top 0.3s ease;
+    z-index: -1;
+}
+
+
+
+.asideStyles {
+    height: 100%;
+    width: 333px;
+}
+
+.sidebarStyles {
+    left: 0;
+    top: 0;
+    width: 333px;
+    /* عرض السايد بار */
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    height: fit-content;
+}
+
+.word {
+    padding-bottom: 50px;
+    place-self: center;
+    place-items: center;
+    margin-top: 10px;
+}
+
+.verfNav {
+    padding-top: 70px;
+}
+
+.asideStyles {
+    width: 100%;
+    place-items: center;
+}
+
+
+
+
+
+
+.visible {
+    display: block;
+    /* اجعل السايد بار مرئيًا */
+}
+
+.visible.hidden {
+    display: none;
+    /* لإخفاء السايد بار عند الضغط على الزر */
+}
+
+@media (max-width: 768px) {
+    .asideStyles {
+        display: none;
+        /* إخفاء السايد بار على الشاشات الصغيرة */
+    }
+
+    .mainVerf {
+        margin-left: 0;
+        /* لا هوامش في الشاشات الصغيرة */
+        margin-right: 0;
+        overflow: hidden;
+    }
+
+    .form-input {
+        width: 100%;
+        /* عرض الحقول */
+    }
+}
+
+.asideBtns {
+    width: 292px;
+    height: 68px;
+    gap: 0px;
+    border-radius: 6px 0px 0px 0px;
+    background-color: #F6D6D6;
+    /* لون الخلفية عند التفعيل */
+    /* مثال على إضافة حدود */
+    transition: 0.7s ease;
+    /* تأثير التغيير */
+
+}
+
+.test {
+    display: flex;
+}
+
+.test.active {
+    display: flex;
+    padding-left: 100px;
+}
+
+.logOutIcon {
+    margin-left: 105px;
+}

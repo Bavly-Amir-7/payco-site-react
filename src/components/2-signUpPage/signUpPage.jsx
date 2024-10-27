@@ -64,7 +64,7 @@ export default function SignUpPage() {
                 </div>
                 <div className="w-1/2 flex items-center justify-center bg-gray-100 loginArea pt-8">
                     <div className="w-2/3">
-                        <div className="text-center imageParent mb-3">
+                        <div className="text-start imageParent mb-3" style={{placeSelf:"start"}}>
                             <img src={image2} alt="Payco Logo" className="mx-auto mb-3" />
                             <h2 className="text-2xl font-bold mt-5">Welcome Back</h2>
                         </div>
@@ -151,6 +151,7 @@ export default function SignUpPage() {
                                 <div className="mt-3">
                                     <button className="redBg w-full bg-red-600 text-white py-2 rounded">Sign Up</button>
                                 </div>
+                                <p>to continue signing up You have to agree to our Terms of Service and Privacy Policy.</p>
                                 <div className="flex items-center justify-center mt-4 lines">
                                     <span className="flex-1">
                                         <svg width="100%" height="1" viewBox="0 0 268 1" fill="none" xmlns="http://www.w3.org/2000/svg">
