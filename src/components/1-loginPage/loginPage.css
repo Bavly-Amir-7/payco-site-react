@@ -6,6 +6,12 @@
     gap: 7px;
 }
 
+.remember-and-forget{
+    width: 100%;
+    place-content: space-between;
+
+}
+
 @media (max-width: 768px) {
     .computer {
         display: none;

@@ -15,9 +15,10 @@
 
 
 /* Flexbox layout for the login area */
-.loginArea {
+ .signUpBody .loginArea {
     display: flex;
     flex-wrap: wrap;
+    height: fit-content;
     /* Allows wrapping on smaller screens */
 }
 
@@ -50,7 +51,6 @@ input[type="email"]::placeholder, input[type="password"]::placeholder {
   }
 
 .lines{
-    gap: 7px;
 }
 
 
