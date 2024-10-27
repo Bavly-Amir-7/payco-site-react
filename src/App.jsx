@@ -1,23 +1,19 @@
-// this is App.js
-
-import React, { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'; // Import BrowserRouter
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import { useEffect } from 'react';
-import { Opacity } from '@mui/icons-material';
-import LoginPage from './components/1-loginPage/loginPage';
-
-
+import LoginPage from './components/1-loginPage/LoginPage';
+import SignUpPage from './components/2-signUpPage/signUpPage';
 
 function App() {
-
-
-
   return (
-    <LoginPage />
-
+    <>
+        <Routes>
+          <Route path="/" element={<LoginPage/>} />
+          <Route path="ss" element={<SignUpPage/>} />
+        </Routes>
+    </>
   );
 }
 

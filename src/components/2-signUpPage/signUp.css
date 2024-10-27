@@ -3,10 +3,7 @@
     margin: 0;
     padding: 0;
 }
-.welcome{
-    font-size: 32px;
-    font-weight: 700;
-}
+
 
 .googleSearch {
     display: flex;
@@ -15,17 +12,7 @@
 }
 
 
-/* Styles for the body and main container */
-.loginBody {
-    font-family: 'Roboto', sans-serif;
-}
 
-/* Full height for the background */
-.bg-gray-100 {
-    background-color: #f7fafc;
-    /* light gray */
-    min-height: 100vh;
-}
 
 /* Flexbox layout for the login area */
 .loginArea {
@@ -34,14 +21,6 @@
     /* Allows wrapping on smaller screens */
 }
 
-/* Styles for the computer illustration */
-.computer {
-    flex: 1;
-    /* Takes half the width */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .computer img {
     max-width: 100%;
@@ -50,20 +29,7 @@
     /* Keeps aspect ratio */
 }
 
-/* Styles for the login form area */
-.imageParent {
-    flex: 1;
-    /* Takes half the width */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.imageChild img {
-    width: 250px;
-    height: 95px;
-    /* Keeps the aspect ratio when the width is set */
-}
 
 
 /* Responsive typography */
@@ -77,19 +43,10 @@ h1 {
 }
 
 /* Form styles */
-input {
-    width: 100%;
-    /* Makes inputs full width */
-    padding: 0.5rem;
-    /* Adds padding */
-    border: 1px solid #ccc;
-    /* Default border */
-    border-radius: 4px;
-    /* Rounded corners */
-}
+
 
 input[type="email"]::placeholder, input[type="password"]::placeholder {
-    color: black; /* Black placeholder text */
+    color: #2D2D2D; /* Black placeholder text */
   }
 
 .lines{

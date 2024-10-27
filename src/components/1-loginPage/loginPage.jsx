@@ -16,15 +16,15 @@ export default function LoginPage() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-      };
-    
-      const handleSignUpClick = () => {
+    };
+
+    const handleSignUpClick = () => {
         setShowTerms(true);
-      };
-    
-      const handleCloseTerms = () => {
+    };
+
+    const handleCloseTerms = () => {
         setShowTerms(false);
-      };
+    };
 
     return (
         <>
@@ -115,7 +115,7 @@ export default function LoginPage() {
                                 <div className="mb-4">
                                     <button className="w-full border border-gray-300 py-2 rounded flex items-center justify-center">
                                         <i className='p-2'><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_2795_60742)">
+                                            <g clipPath="url(#clip0_2795_60742)">
                                                 <path d="M5.77203 14.5027L4.93663 17.6213L1.88323 17.6859C0.970719 15.9934 0.453125 14.057 0.453125 11.9992C0.453125 10.0093 0.937063 8.13277 1.79488 6.48047H1.79553L4.51391 6.97884L5.70472 9.68091C5.45548 10.4075 5.31964 11.1875 5.31964 11.9992C5.31973 12.88 5.4793 13.724 5.77203 14.5027Z" fill="#FBBB00" />
                                                 <path d="M24.2433 9.75781C24.3811 10.4837 24.453 11.2334 24.453 11.9996C24.453 12.8587 24.3627 13.6967 24.1906 14.5051C23.6064 17.2558 22.08 19.6578 19.9655 21.3576L19.9649 21.3569L16.541 21.1822L16.0564 18.1572C17.4594 17.3343 18.5559 16.0466 19.1335 14.5051H12.7168V9.75781H19.2271H24.2433Z" fill="#518EF8" />
                                                 <path d="M19.9655 21.3577L19.9662 21.3584C17.9097 23.0113 15.2974 24.0004 12.4537 24.0004C7.88379 24.0004 3.91062 21.4461 1.88379 17.6872L5.77259 14.5039C6.78598 17.2085 9.39499 19.1338 12.4537 19.1338C13.7684 19.1338 15.0001 18.7784 16.057 18.158L19.9655 21.3577Z" fill="#28B446" />
@@ -146,36 +146,36 @@ export default function LoginPage() {
 
 
                 {showTerms && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="relative bg-white p-8 rounded-lg shadow-lg w-3/4 max-w-2xl">
-            <h2 className="text-lg mb-4">
-              To continue signing up You have to agree to our <a href="#" className="text-black underline">Terms of Service</a> and <a href="#" className="text-black underline">Privacy Policy.</a>
-            </h2>
-            <h3 className="text-2xl font-bold text-red-600 mb-4">Our Terms of service & Privacy policy.</h3>
-            <div className="h-64 overflow-y-scroll pr-4 scrollbar-thin scrollbar-thumb-red-600 scrollbar-track-gray-200">
-              <p className="text-sm text-gray-700">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                <br /><br />
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-              </p>
-              <p className="text-sm text-gray-700">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                <br /><br />
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-              </p>
-            </div>
-            <div className="flex justify-center mt-4">
-              <Link href="/1-loginPage">
-                <button className="bg-red-600 text-white py-2 px-6 rounded mr-4">Cancel</button>
-              </Link>
-              <Link href="2-signUpPage">
-                <button className="bg-red-600 text-white py-2 px-6 rounded">I Agree</button>
-              </Link>
+                    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                        <div className="relative bg-white p-8 rounded-lg shadow-lg w-3/4 max-w-2xl">
+                            <h2 className="text-lg mb-4">
+                                To continue signing up You have to agree to our <a href="#" className="text-black underline">Terms of Service</a> and <a href="#" className="text-black underline">Privacy Policy.</a>
+                            </h2>
+                            <h3 className="text-2xl font-bold text-red-600 mb-4">Our Terms of service & Privacy policy.</h3>
+                            <div className="h-64 overflow-y-scroll pr-4 scrollbar-thin scrollbar-thumb-red-600 scrollbar-track-gray-200">
+                                <p className="text-sm text-gray-700">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                    <br /><br />
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                                </p>
+                                <p className="text-sm text-gray-700">
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                    <br /><br />
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                                </p>
+                            </div>
+                            <div className="flex justify-center mt-4">
+                                <Link href="/1-loginPage">
+                                    <button className="bg-red-600 text-white py-2 px-6 rounded mr-4">Cancel</button>
+                                </Link>
+                                <Link href="2-signUpPage">
+                                    <button className="bg-red-600 text-white py-2 px-6 rounded">I Agree</button>
+                                </Link>
 
-            </div>
-          </div>
-        </div>
-      )}
+                            </div>
+                        </div>
+                    </div>
+                )}
 
             </div>
         </>
