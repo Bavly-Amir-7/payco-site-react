@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'; // Import Brows
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
-import LoginPage from './components/1-loginPage/LoginPage';
+import LoginPage from './components/1-loginPage/loginPage';
 import SignUpPage from './components/2-signUpPage/signUpPage';
 
 function App() {
