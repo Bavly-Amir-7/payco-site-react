@@ -118,14 +118,14 @@ input[type="radio"] {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     }
 
-.mainVerf {
-    margin-top: 50px;
-    margin-left: 78px;
-    margin-right: 114px; /* الحسبة: 95px المسافة المطلوبة + 19px */
-    padding: 20px;
-    width: 940px; /* عرض كامل */
-    background-color: rgb(236, 236, 236); /* إضافة الخلفية */
-}
+    .mainVerf {
+        margin-top: 50px;
+        margin-left: 30%;
+        margin-right: 114px;
+        padding: 20px;
+        width: 940px;
+        background-color: rgb(236, 236, 236);
+    }
 
 .mainVerf label {
     padding-left: 10px;
@@ -178,3 +178,4 @@ input[type="radio"] {
 .visible.hidden {
     display: none; /* لإخفاء السايد بار عند الضغط على الزر */
 }
+

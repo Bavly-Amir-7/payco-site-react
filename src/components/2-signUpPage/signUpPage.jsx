@@ -149,7 +149,10 @@ export default function SignUpPage() {
                                     <li className={passwordValid.match ? "text-green-500" : "text-red-500"}>Passwords match</li>
                                 </ul>
                                 <div className="mt-3">
+                                    <Link to="/verfi1">
                                     <button className="redBg w-full bg-red-600 text-white py-2 rounded">Sign Up</button>
+                                    </Link>
+                                    
                                 </div>
                                 <p>to continue signing up You have to agree to our Terms of Service and Privacy Policy.</p>
                                 <div className="flex items-center justify-center mt-4 lines">
