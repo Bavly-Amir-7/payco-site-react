@@ -198,7 +198,7 @@ export default function AccountVerification2() {
                                 <div className="grid grid-cols-3 gap-4 mb-4">
                                     <div>
                                         <label className="block mb-2">Country*</label>
-                                        <div className="flex  items-center borderInput rounded p-2">
+                                        <div className="flex iconGap items-center borderInput rounded p-2">
                                             <i><svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
                                                 <rect width="24" height="18" fill="#012169" />
                                                 <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
@@ -206,7 +206,7 @@ export default function AccountVerification2() {
                                                 <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
                                                 <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
                                             </svg>
-                                            </i>                                             <span className='pl-2'>|</span>
+                                            </i>                                             <span className=''>|</span>
 
                                             <select className="flex-1 outline-none">
                                                 <option>United Kingdom</option>
@@ -241,7 +241,7 @@ export default function AccountVerification2() {
                                 <div className="grid grid-cols-2 gap-4 mb-4">
                                     <div>
                                         <label className="block mb-2">Nationality*</label>
-                                        <div className="flex  items-center borderInput rounded p-2">
+                                        <div className="flex iconGap items-center borderInput rounded p-2">
                                             <i><svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
                                                 <rect width="24" height="18" fill="#012169" />
                                                 <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
@@ -249,7 +249,7 @@ export default function AccountVerification2() {
                                                 <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
                                                 <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
                                             </svg>
-                                            </i>                                             <span className='pl-2'>|</span>
+                                            </i>                                             <span className=''>|</span>
 
                                             <select className="flex-1 outline-none">
                                                 <option>United Kingdom</option>
@@ -258,7 +258,7 @@ export default function AccountVerification2() {
                                     </div>
                                     <div>
                                         <label className="block mb-2">Second Nationality if available*</label>
-                                        <div className="flex  items-center borderInput rounded p-2">
+                                        <div className="flex iconGap items-center borderInput rounded p-2">
                                             <i><svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
                                                 <rect width="24" height="18" fill="#012169" />
                                                 <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
@@ -266,7 +266,7 @@ export default function AccountVerification2() {
                                                 <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
                                                 <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
                                             </svg>
-                                            </i>                                              <span className='pl-2'>|</span>
+                                            </i>                                              <span className=''>|</span>
                                             <select className="flex-1 outline-none">
                                                 <option>United Kingdom</option>
                                             </select>
