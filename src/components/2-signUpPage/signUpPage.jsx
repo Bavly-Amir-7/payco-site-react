@@ -154,7 +154,7 @@ export default function SignUpPage() {
                                     </Link>
                                     
                                 </div>
-                                <p>to continue signing up You have to agree to our Terms of Service and Privacy Policy.</p>
+                                <p className='mt-4'>to continue signing up You have to agree to our Terms of Service and Privacy Policy.</p>
                                 <div className="flex items-center justify-center mt-4 lines">
                                     <span className="flex-1">
                                         <svg width="100%" height="1" viewBox="0 0 268 1" fill="none" xmlns="http://www.w3.org/2000/svg">
