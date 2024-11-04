@@ -322,8 +322,10 @@ export default function Business1() {
                             </form>
                         </div>
                         <div className='w-100 text-center'>
+                        <Link to="/business2">
 
                             <button className='save'>Save & Next</button>
+                            </Link>
                         </div>
                     </div>
 

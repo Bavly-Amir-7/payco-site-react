@@ -159,6 +159,7 @@ function Business2() {
 
                     </div>
                                 <div className='w-100 text-center mt-6'>
+
                                     <button className='save bg-blue-600 text-white px-6 py-2 rounded-md'>Save & Next</button>
                                 </div>
                 </div>
