@@ -1,0 +1,16 @@
+.changeBtn{
+    text-decoration: underline;
+}
+
+.uploadBtn{
+    width: 180px;
+    height: 48px;
+    background-color: #FFFFFF;
+    color: #C20101;
+}
+
+.uploadBtn:hover{
+ 
+    color: #FFFFFF;
+    background-color: #C20101;
+}

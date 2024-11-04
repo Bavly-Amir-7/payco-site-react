@@ -14,7 +14,7 @@
 
 @media (max-width: 768px) {
     .computer {
-        display: none;
+        display: none !important;
         /* Hide the computer image on small screens */
     }
 

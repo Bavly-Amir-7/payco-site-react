@@ -1,0 +1,106 @@
+.businessForm1 label {
+    margin-top: 24px;
+}
+
+
+.selectedCountries {
+    width: Fixed (803px)px;
+    height: Fixed (64.38px)px;
+    padding: 13px 16px 13px 16px;
+    gap: 12px;
+    border-radius: 8px;
+    border: 1px;
+    opacity: 0px;
+    border: 1px solid #11111333
+}
+
+.countreybg {
+    width: 212.47px;
+    height: 40.66px;
+    padding: 8px;
+    gap: 12px;
+    border-radius: 8px;
+    opacity: 0px;
+    background: #E6E6E6;
+
+
+}
+
+.articleArea {
+    background: #E6E6E6;
+    padding: 24px;
+    gap: 8px;
+    border-radius: 16px;
+
+}
+
+.upLoadBtn1 {
+    width: 180px;
+    height: 48px;
+    gap: 0px;
+    border-radius: 8px;
+    opacity: 0px;
+    background: #FFFFFF;
+    place-content: center;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.upLoadBtn1:hover{
+    background: #C5C5C5;
+    color: rgb(152, 7, 7);
+}
+
+.MediumTitle {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.ein {
+    font-size: 24px;
+    font-weight: 600;
+    color: #686868;
+
+}
+
+.vat {
+    font-size: 24px;
+    font-weight: 500;
+
+}
+
+.upLoadBtn2 {
+    width: 180px;
+    height: 48px;
+    gap: 0px;
+    border-radius: 8px;
+    opacity: 0px;
+    background: #C5C5C5;
+    color: white;
+    place-content: center;
+    align-items: center;
+    gap: 12px;
+
+}
+
+
+.upLoadBtn2:hover {
+    background-color: #C20101;
+    color: white;
+}
+
+.save {
+    width: 220px;
+    height: 64px;
+    border-radius: 8px;
+    background: #C20101;
+    color: #FCFCFC;
+    margin-top: 40px;
+
+}
+
+.save:hover {
+    background: #8e0303;
+
+}

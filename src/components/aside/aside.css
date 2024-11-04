@@ -11,9 +11,8 @@
 
 
 
-.asideStyles {
+.asideStyless {
     height: 100%;
-    width: 333px;
 }
 
 .sidebarStyles {
@@ -56,6 +55,20 @@
     /* لإخفاء السايد بار عند الضغط على الزر */
 }
 
+.asideStyless li {
+    display: flex;
+    align-items: center;
+    gap: 19px; /* Adds 19px gap between the icon and text */
+}
+
+ .asideStyless li.active,
+ .asideStyless li.asideBtns {
+    display: flex;
+    align-items: center;
+    gap: 19px; /* Adds 19px gap for active items */
+}
+
+
 @media (max-width: 768px) {
     .asideStyles {
         display: none;
@@ -76,10 +89,9 @@
 }
 
 .asideBtns {
-    width: 292px;
     height: 68px;
     gap: 0px;
-    border-radius: 6px 0px 0px 0px;
+    border-radius: 6px 6px 6px 6px;
     background-color: #F6D6D6;
     /* لون الخلفية عند التفعيل */
     /* مثال على إضافة حدود */
@@ -88,13 +100,18 @@
 
 }
 
+.custom-hr {
+    border: 1px solid black; /* Adjust the thickness and color as needed */
+}
+
+
 .test {
     display: flex;
 }
 
 .test.active {
     display: flex;
-    padding-left: 100px;
+    /* padding-left: 100px; */
 }
 
 .logOutIcon {

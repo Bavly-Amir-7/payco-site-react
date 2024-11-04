@@ -1,0 +1,61 @@
+.mail {
+    gap: 24px;
+}
+
+
+.phoneNumber {
+    width: 138px;
+    height: 48px;
+    box-sizing: border-box;
+    padding-right: 8px;
+    /* زودنا المسافة */
+    overflow: hidden;
+    /* لمنع القص */
+    direction: ltr;
+    /* لضمان ترتيب العناصر */
+}
+
+
+
+.closeBtn {
+    background: #B8B8B8;
+    height: 50px;
+    width: 50px;
+    justify-items: center;
+}
+
+.theNumber {
+    width: 539px;
+    height: 48px;
+}
+
+
+.phoneNumberVerfi  {
+    transform: translateX(10%);
+    position: fixed;
+
+}
+.phoneNumberVerfi .phoneMsg {
+    background: #F3F3F3;
+    font-weight: bold;
+    height: 434px;
+    width: 588px;
+    align-content: center;
+}
+
+.numBg {
+    width: 85.75px;
+    height: 108.45px;
+    gap: 0px;
+    border-radius: 24px;
+    opacity: 0px;
+    background: #FFFFFF;
+
+}
+
+.nums {
+    font-size: 66px;
+    color: #C20101;
+    font-weight: 500;
+}
+
