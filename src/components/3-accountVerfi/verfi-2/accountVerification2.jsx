@@ -320,7 +320,7 @@ export default function AccountVerification2() {
                                         <br />
                                         <div className="nums flex space-x-2 justify-center ">
                                             {randomNumbers.map((num, index) => (
-                                                <div key={index} className="numBg w-16 h-16 flex items-center justify-center bg-white borderInput borderInput-gray-300 rounded-md" style={{placeContent:"center"}}>
+                                                <div key={index} className="numBg w-16 h-16 flex items-center justify-center bg-white borderInput borderInput-gray-300 rounded-md" style={{ placeContent: "center" }}>
                                                     <span className="font-bold nums">{num}</span>
                                                 </div>
                                             ))}

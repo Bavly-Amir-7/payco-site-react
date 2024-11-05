@@ -52,3 +52,29 @@
     color: #ffffff;
 
 }
+
+
+
+@media (max-width: 650px){
+
+.codeBtn{
+    width: 100%;
+}
+.codeBtn2{
+    width: 100%;
+}
+
+.back{
+    width: 50%;
+}
+
+.saveNext{
+    width: 50%;
+}
+.backBtn{
+    width: 100%;
+}
+.saveBtn{
+    width: 100% !important;
+}
+}

@@ -57,7 +57,7 @@ export default function AccountVerification3() {
                                     <input type="radio" name="accountType" className="form-radio h-5 w-5 text-red-500" onClick={() => handleNavigation('personal')} />
                                     <h2 className="bold ml-2 text-lg font-medium">Continue on this Device</h2>
                                 </label>
-                                <p style={{ marginLeft: "38px" }}>Continue on this device: Open your camera to verify with a third party. Press 'Go to <br /> Verification' to proceed</p>
+                                <p className='' style={{ marginLeft: "38px" }}>Continue on this device: Open your camera to verify with a third party. Press 'Go to <br /> Verification' to proceed</p>
                                 <div className='text-center'>
                                     <button className='codeBtn'>Go to verification</button>
                                 </div>
@@ -95,11 +95,11 @@ export default function AccountVerification3() {
 
 
                     <div className="flex justify-center gap-2">
-                        <Link to="/verfi2">
+                        <Link to="/verfi2" className='back'>
                             <button className="backBtn  font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Back</button>
                         </Link>
-                        <Link to="/verfi4">
-                            <button className="greyBtn greyBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Save & Next</button>
+                        <Link to="/verfi4" className='saveNext'>
+                            <button className="saveBtn greyBtn greyBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Save & Next</button>
                         </Link>
                     </div>
                 </div>

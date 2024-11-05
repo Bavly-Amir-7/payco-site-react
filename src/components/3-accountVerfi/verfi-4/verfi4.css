@@ -1,16 +1,27 @@
-.changeBtn{
+.changeBtn {
     text-decoration: underline;
 }
 
-.uploadBtn{
+.uploadBtn {
     width: 180px;
     height: 48px;
     background-color: #FFFFFF;
     color: #C20101;
 }
 
-.uploadBtn:hover{
- 
+.uploadBtn:hover {
+
     color: #FFFFFF;
     background-color: #C20101;
+}
+
+.backBtn:hover {
+    background-color: #C20101;
+}
+
+.finishBtn:hover{
+    background-color: #ffffff;
+    color: #C20101 !important;
+    border: 1px solid #C20101;
+
 }
