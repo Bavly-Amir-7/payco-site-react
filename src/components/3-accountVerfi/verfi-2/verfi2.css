@@ -1,3 +1,5 @@
+
+
 .mail {
     gap: 24px;
 }
@@ -30,11 +32,12 @@
 }
 
 
-.phoneNumberVerfi  {
+.phoneNumberVerfi {
     transform: translateX(10%);
     position: fixed;
 
 }
+
 .phoneNumberVerfi .phoneMsg {
     background: #F3F3F3;
     font-weight: bold;
@@ -59,3 +62,49 @@
     font-weight: 500;
 }
 
+
+@media (max-width: 650px) {
+    .rightSection {
+        width: 100% !important;
+    }
+}
+
+
+/* For 13" MacBook (1280px width) */
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .rightSection {
+        width: 100% !important;
+    }
+    
+    .mainVerf {
+        margin-top: 50px;
+        margin-left: 25%;
+        margin-right: 114px;
+        padding: 20px;
+        width: 940px;
+        background-color: rgb(236, 236, 236);
+    }
+}
+
+/* For MacBook Pro 15" or 16" (1440px width and up) */
+@media only screen and (min-width: 1401px) and (max-width: 1600px) {
+    .rightSection {
+        width: 100% !important;
+    }
+    
+    .mainVerf {
+        margin-top: 50px;
+        margin-left: 25%;
+        margin-right: 114px;
+        padding: 20px;
+        width: 940px;
+        background-color: rgb(236, 236, 236);
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-9 {
+        flex: 0 0 auto;
+        width: 65% !important;
+    }
+}

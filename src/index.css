@@ -64,6 +64,10 @@ html {
     color: #707070;
 }
 
+.whiteColor{
+    color: #FFFFFF;
+}
+
 .redClr {
     color: #C20101;
 }
@@ -105,10 +109,7 @@ html {
 }
 
 .borderInput {
-    width: Fill (803px)px;
-    height: Fixed (48px)px;
-    padding: 13px 16px 13px 16px;
-    gap: 12px;
+    width: 100%;
     border-radius: var(--mainraduis);
     border: 1px 0px 0px 0px;
     opacity: 0px;

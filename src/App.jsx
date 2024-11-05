@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom'; // Import BrowserRouter
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
 import LoginPage from './components/1-loginPage/loginPage';
 import SignUpPage from './components/2-signUpPage/signUpPage';
 import Aside from './components/aside/aside';
@@ -12,6 +11,7 @@ import AccountVerification3 from './components/3-accountVerfi/verfi-3/accountVer
 import AccountVerification4 from './components/3-accountVerfi/verfi-4/accountVerification4';
 import Business1 from './components/4-businessVerfi/1-business1/businessPage1';
 import Business2 from './components/4-businessVerfi/2-business/businessPage2';
+import './index.css';
 
 function App() {
   return (

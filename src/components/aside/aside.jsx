@@ -1,19 +1,37 @@
-import React, { useState } from 'react'; // Import useState from React
+import React, { useState } from 'react';
 import "./aside.css";
 import image2 from "./../images/payco.png";
 import { FaTh, FaUserAlt, FaFileInvoice, FaWallet, FaCog, FaSignOutAlt, FaEnvelopeOpenText } from 'react-icons/fa';
 import { BiNotepad } from 'react-icons/bi';
-import { MdOutlineSecurity } from 'react-icons/md';
+import { MdOutlineSecurity, MdOutlineMenuOpen } from 'react-icons/md';
+import { AiOutlineMenu } from 'react-icons/ai'; // Import AiOutlineMenu from react-icons
 
 export default function Aside() {
-    const [activeLink, setActiveLink] = useState('overview'); // Initialize state for active link
+    const [activeLink, setActiveLink] = useState('overview'); // State to track active link
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State to control sidebar visibility
+
+    // Toggle sidebar visibility
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen);
+    };
 
     const handleLinkClick = (link) => {
         setActiveLink(link);
     };
 
     return (
-        <div className="asideStyless w-64 bg-white min-h-screen p-4">
+        <div className={`asideStyless w-64 bg-white min-h-screen p-4 fixed left-0 top-0 ${
+            isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out md:translate-x-0`}>
+            
+            <button
+                className="p-2 text-2xl md:hidden"
+                onClick={toggleSidebar}
+            >
+                <AiOutlineMenu />
+            </button>
+
+
             <img src={image2} alt="PAYCO logo" className="mb-6" width={"160px"} style={{placeSelf:"center"}} />
 
             {/* Menu Items */}
@@ -122,7 +140,7 @@ export default function Aside() {
                     </i>
                     <span>Wallets</span>
                 </li>
-                <hr className="custom-hr my-4" />
+                <hr className=" my-4" />
                 <li
                     className={`flex items-center py-2 px-4 rounded-md transition duration-150 ${activeLink === 'contacts' ? 'asideBtns text-red-600' : 'text-gray-700 hover:text-red-600'}`}
                     onClick={() => handleLinkClick('contacts')}
