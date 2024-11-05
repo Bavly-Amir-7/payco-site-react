@@ -46,6 +46,7 @@
     align-content: center;
 }
 
+
 .numBg {
     width: 85.75px;
     height: 108.45px;
@@ -67,8 +68,33 @@
     .rightSection {
         width: 100% !important;
     }
-}
 
+    .phoneNumberVerfi{
+        justify-content: initial !important;
+    }
+
+    .phoneNumberVerfi .phoneMsg {
+        width: 80%; /* اجعل العرض 80% من الشاشة في الشاشات الصغيرة */
+        height: auto; /* السماح بمرونة الطول */
+        padding: 16px; /* تقليل الحشو الداخلي */
+    }
+
+    .numBg {
+        width: 60px; /* تصغير عرض الأرقام */
+        height: 80px; /* تصغير طول الأرقام */
+        border-radius: 12px; /* تقليل نصف القطر */
+    }
+
+    .nums {
+        font-size: 36px; /* تصغير حجم النص */
+    }
+
+    .closeBtn {
+        height: 40px;
+        width: 40px;
+    }
+
+}
 
 /* For 13" MacBook (1280px width) */
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {

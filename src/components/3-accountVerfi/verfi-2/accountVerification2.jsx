@@ -308,17 +308,19 @@ export default function AccountVerification2() {
                                 <button className="save greyBtn greyBg bg-gray-700 text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600" onClick={handleSave}>Save & Next</button>
                             </div>
                             {isPhoneVerfiVisible && (
-                                <div className="phoneNumberVerfi absolute inset-0 flex items-center justify-center">
+                                <div className="phoneNumberVerfi fixed inset-0 flex items-center justify-center">
                                     <div className="phoneMsg p-6 rounded-lg shadow-lg relative w-96 bg-white">
-                                        <button className="closeBtn absolute top-2 right-2 rounded-md p-2" onClick={handleClose}>
+                                        <button className="closeBtn absolute top-2 right-2 rounded-md p-2 " onClick={handleClose}>
                                             <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M16.5669 1.82617L2.27568 18.1298" stroke="white" strokeWidth="2" strokeLinecap="round" />
                                                 <path d="M1.08691 1.82617L15.3781 18.1298" stroke="white" strokeWidth="2" strokeLinecap="round" />
                                             </svg>
                                         </button>
-                                        <div className="flex space-x-2 justify-center mb-4">
+                                        <br />
+                                        <br />
+                                        <div className="nums flex space-x-2 justify-center ">
                                             {randomNumbers.map((num, index) => (
-                                                <div key={index} className="numBg w-16 h-16 flex items-center justify-center bg-white borderInput borderInput-gray-300 rounded-md">
+                                                <div key={index} className="numBg w-16 h-16 flex items-center justify-center bg-white borderInput borderInput-gray-300 rounded-md" style={{placeContent:"center"}}>
                                                     <span className="font-bold nums">{num}</span>
                                                 </div>
                                             ))}
