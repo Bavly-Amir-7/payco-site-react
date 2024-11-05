@@ -66,7 +66,7 @@ export default function AccountVerification2() {
                                 <div  >
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                                         <div className="w-full">
-                                            <label className="block mb-2 whitespace-nowrap text-xs">First Name*</label>
+                                            <label className="block mb-2 whitespace-nowrap text-sm">First Name*</label>
                                             <div className="iconGap flex items-center borderInput rounded p-2">
                                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <g clipPath="url(#clip0_3373_226)">
@@ -80,12 +80,12 @@ export default function AccountVerification2() {
                                                     </defs>
                                                 </svg>
                                                 <span>|</span>
-                                                <input type="text" className="flex-1 outline-none placeholder:text-xs w-full" placeholder="Changable" />
+                                                <input type="text" className="flex-1 outline-none placeholder:text-sm w-full" placeholder="Changable" />
                                             </div>
                                         </div>
 
                                         <div className="w-full">
-                                            <label className="block mb-2 whitespace-nowrap text-xs">Middle Name <span className="text-xs">(Optional)</span></label>
+                                            <label className="block mb-2 whitespace-nowrap text-sm">Middle Name <span className="text-sm">(Optional)</span></label>
                                             <div className="iconGap flex items-center borderInput rounded p-2">
                                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <g clipPath="url(#clip0_3373_226)">
@@ -99,12 +99,12 @@ export default function AccountVerification2() {
                                                     </defs>
                                                 </svg>
                                                 <span>|</span>
-                                                <input type="text" className="flex-1 outline-none placeholder:text-xs w-full" placeholder="Changable" />
+                                                <input type="text" className="flex-1 outline-none placeholder:text-sm w-full" placeholder="Changable" />
                                             </div>
                                         </div>
 
                                         <div className="w-full">
-                                            <label className="block mb-2 whitespace-nowrap text-xs">Last Name*</label>
+                                            <label className="block mb-2 whitespace-nowrap text-sm">Last Name*</label>
                                             <div className="iconGap flex items-center borderInput rounded p-2">
                                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <g clipPath="url(#clip0_3373_226)">
@@ -118,25 +118,25 @@ export default function AccountVerification2() {
                                                     </defs>
                                                 </svg>
                                                 <span>|</span>
-                                                <input type="text" className="flex-1 outline-none placeholder:text-xs w-full" placeholder="Changable" />
+                                                <input type="text" className="flex-1 outline-none placeholder:text-sm w-full" placeholder="Changable" />
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className="grid  gap-1 mb-4">
                                         <div>
-                                            <label className="block mb-2 text-xs">Date of Birth*</label>
+                                            <label className="block mb-2 text-sm">Date of Birth*</label>
                                             <div className="d-flex mail">
                                                 <div className="iconGap flex items-center borderInput rounded p-2" style={{ width: "100%" }}>
 
-                                                    <input type="text" className="flex-1 outline-none placeholder:text-xs" placeholder="1 / 31 / 1998" />
+                                                    <input type="text" className="flex-1 outline-none placeholder:text-sm" placeholder="1 / 31 / 1998" />
                                                     <i className="fas fa-calendar-alt ml-2"></i>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="w-full  grid gap-1 mb-4">
-                                        <label className="block mb-2 text-xs">Email*</label>
+                                        <label className="block mb-2 text-sm">Email*</label>
                                         <div className="d-flex mail">
                                             <div className="mailArea labelStyles iconGap flex items-center borderInput rounded p-2 w-full">
                                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -150,15 +150,15 @@ export default function AccountVerification2() {
                                                     </defs>
                                                 </svg>
                                                 <span>|</span>
-                                                <input type="text" className="flex-1 outline-none placeholder:text-xs w-full" placeholder="Changable" />
+                                                <input type="text" className="flex-1 outline-none placeholder:text-sm w-full" placeholder="Changable" />
                                             </div>
                                             <button className="verfBtn bg-gray-200 text-gray-700 px-4 py-2 rounded ml-2">Verify</button>
                                         </div>
-                                        <p className='text-center text-xs'>Tap “Verify” to receive a code. Enter it below to confirm your phone number.</p>
+                                        <p className='text-center text-sm'>Tap “Verify” to receive a code. Enter it below to confirm your phone number.</p>
                                     </div>
 
                                     <div className="w-full  grid gap-1 mb-4">
-                                        <label className="block mb-2 text-xs">Phone Number*</label>
+                                        <label className="block mb-2 text-sm">Phone Number*</label>
                                         <div className="d-flex">
                                             <div className="phoneNumber iconGap flex items-center borderInput rounded p-2">
                                                 <i>
@@ -170,45 +170,45 @@ export default function AccountVerification2() {
                                                         <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
                                                     </svg>
                                                 </i>
-                                                <input type="text" className="outline-none w-full placeholder:text-xs" placeholder="(+44)" />
+                                                <input type="text" className="outline-none w-full placeholder:text-sm" placeholder="(+44)" />
                                             </div>
                                             <div className="flex items-center borderInput rounded p-2 ml-2 w-full">
-                                                <input type="text" className="flex-1 outline-none placeholder:text-xs text-xs w-full" placeholder="(+44) 123123456" />
+                                                <input type="text" className="flex-1 outline-none placeholder:text-sm text-sm w-full" placeholder="(+44) 123123456" />
                                             </div>
                                             <button className="verfBtn bg-gray-200 text-gray-700 px-4 py-2 rounded ml-6">Verify</button>
                                         </div>
-                                        <p className='text-center text-xs'>Tap “Verify” to receive a code. Enter it below to confirm your phone number.</p>
+                                        <p className='text-center text-sm'>Tap “Verify” to receive a code. Enter it below to confirm your phone number.</p>
                                     </div>
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-    <div className="w-full">
-        <label className="block mb-2 text-xs">Address Line One*</label>
-        <div className="flex iconGap items-center borderInput rounded p-2">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" clipRule="evenodd" d="M5.53188 3.64437C6.49162 2.71478 7.64764 2.25 9 2.25C10.3524 2.25 11.5029 2.7095 12.4518 3.62852C13.4006 4.54754 13.875 5.66197 13.875 6.97183C13.875 7.62676 13.706 8.37676 13.3679 9.22183C13.0298 10.0669 12.6208 10.8592 12.1409 11.5986C11.6611 12.338 11.1867 13.0299 10.7177 13.6743C10.2487 14.3187 9.85067 14.831 9.52349 15.2113L9 15.75C8.86913 15.6021 8.69463 15.4067 8.47651 15.1637C8.25839 14.9208 7.86577 14.4349 7.29866 13.706C6.73154 12.9771 6.23532 12.2694 5.80998 11.5827C5.38465 10.8961 4.99748 10.1197 4.64849 9.25352C4.29949 8.38732 4.125 7.62676 4.125 6.97183C4.125 5.66197 4.59396 4.55282 5.53188 3.64437Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M9.75 7.125C9.75 7.53921 9.41421 7.875 9 7.875C8.58579 7.875 8.25 7.53921 8.25 7.125C8.25 6.71079 8.58579 6.375 9 6.375C9.41421 6.375 9.75 6.71079 9.75 7.125Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            <span>|</span>
-            <input type="text" className="flex-1 outline-none w-full placeholder:text-xs" placeholder="Changable" />
-        </div>
-    </div>
+                                        <div className="w-full">
+                                            <label className="block mb-2 text-sm">Address Line One*</label>
+                                            <div className="flex iconGap items-center borderInput rounded p-2">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fillRule="evenodd" clipRule="evenodd" d="M5.53188 3.64437C6.49162 2.71478 7.64764 2.25 9 2.25C10.3524 2.25 11.5029 2.7095 12.4518 3.62852C13.4006 4.54754 13.875 5.66197 13.875 6.97183C13.875 7.62676 13.706 8.37676 13.3679 9.22183C13.0298 10.0669 12.6208 10.8592 12.1409 11.5986C11.6611 12.338 11.1867 13.0299 10.7177 13.6743C10.2487 14.3187 9.85067 14.831 9.52349 15.2113L9 15.75C8.86913 15.6021 8.69463 15.4067 8.47651 15.1637C8.25839 14.9208 7.86577 14.4349 7.29866 13.706C6.73154 12.9771 6.23532 12.2694 5.80998 11.5827C5.38465 10.8961 4.99748 10.1197 4.64849 9.25352C4.29949 8.38732 4.125 7.62676 4.125 6.97183C4.125 5.66197 4.59396 4.55282 5.53188 3.64437Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                                    <path d="M9.75 7.125C9.75 7.53921 9.41421 7.875 9 7.875C8.58579 7.875 8.25 7.53921 8.25 7.125C8.25 6.71079 8.58579 6.375 9 6.375C9.41421 6.375 9.75 6.71079 9.75 7.125Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                                </svg>
+                                                <span>|</span>
+                                                <input type="text" className="flex-1 outline-none w-full placeholder:text-sm" placeholder="Changable" />
+                                            </div>
+                                        </div>
 
-    <div className="w-full">
-        <label className="block mb-2 text-xs whitespace-nowrap">Address Line Two (Optional)</label>
-        <div className="flex iconGap items-center borderInput rounded p-2">
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" clipRule="evenodd" d="M5.53188 3.64437C6.49162 2.71478 7.64764 2.25 9 2.25C10.3524 2.25 11.5029 2.7095 12.4518 3.62852C13.4006 4.54754 13.875 5.66197 13.875 6.97183C13.875 7.62676 13.706 8.37676 13.3679 9.22183C13.0298 10.0669 12.6208 10.8592 12.1409 11.5986C11.6611 12.338 11.1867 13.0299 10.7177 13.6743C10.2487 14.3187 9.85067 14.831 9.52349 15.2113L9 15.75C8.86913 15.6021 8.69463 15.4067 8.47651 15.1637C8.25839 14.9208 7.86577 14.4349 7.29866 13.706C6.73154 12.9771 6.23532 12.2694 5.80998 11.5827C5.38465 10.8961 4.99748 10.1197 4.64849 9.25352C4.29949 8.38732 4.125 7.62676 4.125 6.97183C4.125 5.66197 4.59396 4.55282 5.53188 3.64437Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M9.75 7.125C9.75 7.53921 9.41421 7.875 9 7.875C8.58579 7.875 8.25 7.53921 8.25 7.125C8.25 6.71079 8.58579 6.375 9 6.375C9.41421 6.375 9.75 6.71079 9.75 7.125Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            <span>|</span>
-            <input type="text" className="flex-1 outline-none placeholder:text-xs w-full" placeholder="Changable" />
-        </div>
-    </div>
-</div>
+                                        <div className="w-full">
+                                            <label className="block mb-2 text-sm whitespace-nowrap">Address Line Two (Optional)</label>
+                                            <div className="flex iconGap items-center borderInput rounded p-2">
+                                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fillRule="evenodd" clipRule="evenodd" d="M5.53188 3.64437C6.49162 2.71478 7.64764 2.25 9 2.25C10.3524 2.25 11.5029 2.7095 12.4518 3.62852C13.4006 4.54754 13.875 5.66197 13.875 6.97183C13.875 7.62676 13.706 8.37676 13.3679 9.22183C13.0298 10.0669 12.6208 10.8592 12.1409 11.5986C11.6611 12.338 11.1867 13.0299 10.7177 13.6743C10.2487 14.3187 9.85067 14.831 9.52349 15.2113L9 15.75C8.86913 15.6021 8.69463 15.4067 8.47651 15.1637C8.25839 14.9208 7.86577 14.4349 7.29866 13.706C6.73154 12.9771 6.23532 12.2694 5.80998 11.5827C5.38465 10.8961 4.99748 10.1197 4.64849 9.25352C4.29949 8.38732 4.125 7.62676 4.125 6.97183C4.125 5.66197 4.59396 4.55282 5.53188 3.64437Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                                    <path d="M9.75 7.125C9.75 7.53921 9.41421 7.875 9 7.875C8.58579 7.875 8.25 7.53921 8.25 7.125C8.25 6.71079 8.58579 6.375 9 6.375C9.41421 6.375 9.75 6.71079 9.75 7.125Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                                </svg>
+                                                <span>|</span>
+                                                <input type="text" className="flex-1 outline-none placeholder:text-sm w-full" placeholder="Changable" />
+                                            </div>
+                                        </div>
+                                    </div>
 
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                                         <div>
-                                            <label className="block mb-2 text-xs">Country*</label>
+                                            <label className="block mb-2 text-sm">Country*</label>
                                             <div className="flex iconGap items-center borderInput rounded p-2">
                                                 <i>
                                                     <svg className="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-6 lg:h-6" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
@@ -220,38 +220,38 @@ export default function AccountVerification2() {
                                                     </svg>
                                                 </i>
                                                 <span>|</span>
-                                                <select className="flex-1 outline-none text-xs w-full">
-                                                    <option className="text-xs">United Kingdom</option>
+                                                <select className="flex-1 outline-none text-sm w-full">
+                                                    <option className="text-sm">United Kingdom</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div className="w-full">
-                                            <label className="block mb-2 text-xs">City/Town*</label>
+                                            <label className="block mb-2 text-sm">City/Town*</label>
                                             <div className="flex iconGap items-center borderInput rounded p-2">
                                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path fillRule="evenodd" clipRule="evenodd" d="M8.04283 4.85915C9.32248 3.61971 10.8639 3 12.667 3C14.4701 3 16.0042 3.61267 17.2693 4.83803C18.5344 6.06339 19.167 7.54929 19.167 9.29577C19.167 10.169 18.9416 11.169 18.4908 12.2958C18.04 13.4225 17.4947 14.4789 16.8549 15.4648C16.2151 16.4507 15.5825 17.3732 14.9573 18.2324C14.332 19.0916 13.8012 19.7746 13.365 20.2817L12.667 21C12.4925 20.8028 12.2598 20.5423 11.969 20.2183C11.6782 19.8944 11.1547 19.2465 10.3985 18.2746C9.64238 17.3028 8.98075 16.3592 8.41364 15.4437C7.84652 14.5282 7.33031 13.493 6.86498 12.338C6.39965 11.1831 6.16699 10.169 6.16699 9.29577C6.16699 7.54929 6.79227 6.07043 8.04283 4.85915Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                                     <path d="M13.667 9.5C13.667 10.0523 13.2193 10.5 12.667 10.5C12.1147 10.5 11.667 10.0523 11.667 9.5C11.667 8.94772 12.1147 8.5 12.667 8.5C13.2193 8.5 13.667 8.94772 13.667 9.5Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                                 </svg>
                                                 <span>|</span>
-                                                <input type="text" className="flex-1 outline-none placeholder:text-xs w-full" placeholder="London" />
+                                                <input type="text" className="flex-1 outline-none placeholder:text-sm w-full" placeholder="London" />
                                             </div>
                                         </div>
 
                                         <div className="w-full">
-                                            <label className="block mb-2 text-xs whitespace-nowrap">Postal Code*</label>
+                                            <label className="block mb-2 text-sm whitespace-nowrap">Postal Code*</label>
                                             <div className="flex iconGap items-center borderInput rounded p-2">
                                                 <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M17.5149 4.50022H15.0292L15.8498 1.13335C15.9668 0.653641 15.7083 0.159594 15.2714 0.0308912C14.8346 -0.0978115 14.3853 0.187444 14.2692 0.667154L13.3357 4.50022H7.52483L8.34551 1.13335C8.46251 0.653641 8.20393 0.159594 7.76708 0.0308912C7.33007 -0.0968227 6.88183 0.187444 6.76557 0.667154L5.83118 4.50022H2.78756C2.33587 4.50022 1.96943 4.90248 1.96943 5.40015C1.96943 5.89799 2.33587 6.30025 2.78756 6.30025H5.39178L4.07536 11.7002H1.15114C0.699603 11.7002 0.333008 12.1024 0.333008 12.6001C0.333008 13.0978 0.699603 13.5 1.15114 13.5H3.63686L2.81617 16.8669C2.69917 17.3466 2.95775 17.8406 3.39461 17.9693C3.46502 17.9901 3.53618 18 3.60569 18C3.9666 18 4.29798 17.7353 4.39536 17.3331L5.3305 13.5H11.1412L10.3205 16.8669C10.2037 17.3466 10.4621 17.8406 10.8991 17.9693C10.9694 17.9901 11.0405 18 11.1109 18C11.4718 18 11.8031 17.7353 11.9004 17.3331L12.8348 13.5H15.8785C16.3301 13.5 16.6967 13.0978 16.6967 12.6001C16.6967 12.1024 16.3301 11.7002 15.8785 11.7002H13.2742L14.5907 6.30025H17.5149C17.9666 6.30025 18.333 5.89799 18.333 5.40015C18.333 4.90248 17.9666 4.50022 17.5149 4.50022ZM11.5797 11.7002H5.76901L7.08542 6.30025H12.8963L11.5797 11.7002Z" fill="black" />
                                                 </svg>
                                                 <span>|</span>
-                                                <input type="text" className="flex-1 outline-none placeholder:text-xs w-full" placeholder="Changable" />
+                                                <input type="text" className="flex-1 outline-none placeholder:text-sm w-full" placeholder="Changable" />
                                             </div>
                                         </div>
                                     </div>
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                                         <div>
-                                            <label className="block mb-2 text-xs">Nationality*</label>
+                                            <label className="block mb-2 text-sm">Nationality*</label>
                                             <div className="flex iconGap items-center borderInput rounded p-2">
                                                 <i>
                                                     <svg className="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-6 lg:h-6" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
@@ -263,13 +263,13 @@ export default function AccountVerification2() {
                                                     </svg>
                                                 </i>
                                                 <span>|</span>
-                                                <select className="flex-1 outline-none text-xs w-full">
-                                                    <option className="text-xs">United Kingdom</option>
+                                                <select className="flex-1 outline-none text-sm w-full">
+                                                    <option className="text-sm">United Kingdom</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div>
-                                            <label className="block mb-2 text-xs whitespace-nowrap">Second Nationality if available*</label>
+                                            <label className="block mb-2 text-sm whitespace-nowrap">Second Nationality if available*</label>
                                             <div className="flex iconGap items-center borderInput rounded p-2">
                                                 <i>
                                                     <svg className="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-6 lg:h-6" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
@@ -281,8 +281,8 @@ export default function AccountVerification2() {
                                                     </svg>
                                                 </i>
                                                 <span>|</span>
-                                                <select className="flex-1 outline-none text-xs w-full">
-                                                    <option className="text-xs">United Kingdom</option>
+                                                <select className="flex-1 outline-none text-sm w-full">
+                                                    <option className="text-sm">United Kingdom</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -290,14 +290,14 @@ export default function AccountVerification2() {
 
                                     <div className="grid  gap-4 mb-4">
                                         <div>
-                                            <label className="block mb-2 text-xs">Social security number (Only for US People)</label>
+                                            <label className="block mb-2 text-sm">Social security number (Only for US People)</label>
                                             <div className="flex iconGap items-center borderInput rounded p-2">
                                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M17.1819 4.50022H14.6962L15.5168 1.13335C15.6338 0.653641 15.3753 0.159594 14.9384 0.0308912C14.5015 -0.0978115 14.0523 0.187444 13.9361 0.667154L13.0027 4.50022H7.19182L8.0125 1.13335C8.12951 0.653641 7.87093 0.159594 7.43407 0.0308912C6.99706 -0.0968227 6.54882 0.187444 6.43256 0.667154L5.49817 4.50022H2.45455C2.00286 4.50022 1.63642 4.90248 1.63642 5.40015C1.63642 5.89799 2.00286 6.30025 2.45455 6.30025H5.05877L3.74235 11.7002H0.818134C0.366595 11.7002 0 12.1024 0 12.6001C0 13.0978 0.366595 13.5 0.818134 13.5H3.30385L2.48317 16.8669C2.36616 17.3466 2.62474 17.8406 3.0616 17.9693C3.13201 17.9901 3.20317 18 3.27269 18C3.63359 18 3.96498 17.7353 4.06236 17.3331L4.99749 13.5H10.8082L9.9875 16.8669C9.87064 17.3466 10.1291 17.8406 10.5661 17.9693C10.6363 17.9901 10.7075 18 10.7779 18C11.1388 18 11.4701 17.7353 11.5674 17.3331L12.5018 13.5H15.5454C15.9971 13.5 16.3637 13.0978 16.3637 12.6001C16.3637 12.1024 15.9971 11.7002 15.5454 11.7002H12.9412L14.2576 6.30025H17.1819C17.6336 6.30025 18 5.89799 18 5.40015C18 4.90248 17.6336 4.50022 17.1819 4.50022ZM11.2467 11.7002H5.436L6.75242 6.30025H12.5633L11.2467 11.7002Z" fill="black" />
                                                 </svg>
                                                 <span>|</span>
 
-                                                <input type="text" className="flex-1 outline-none placeholder:text-xs" placeholder="123456" />
+                                                <input type="text" className="flex-1 outline-none placeholder:text-sm" placeholder="123456" />
                                             </div>
                                         </div>
                                     </div>
