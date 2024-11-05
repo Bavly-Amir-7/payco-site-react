@@ -62,7 +62,7 @@ export default function SignUpPage() {
                 <div className="computer w-1/2 flex items-center justify-center">
                     <img src={image1} alt="Illustration of secure payment system with various security icons" className="w-2/3" />
                 </div>
-                <div className="w-1/2 flex items-center justify-center bg-gray-100 loginArea pt-8">
+                <div className=" flex items-center justify-center bg-gray-100 loginArea pt-8">
                     <div className="w-2/3">
                         <div className="text-start imageParent mb-3" style={{placeSelf:"start"}}>
                             <img src={image2} alt="Payco Logo" className="mx-auto mb-3" />
