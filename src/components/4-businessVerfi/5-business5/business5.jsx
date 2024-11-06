@@ -83,7 +83,7 @@ export default function Business5() {
                         <Aside />
                     </div>
 
-                    <div className="col-12 col-lg-9 col-md-10" style={{ placeItems: "center" }}>
+                    <div className="col-12 col-lg-9 col-md-10 mt-5" style={{ placeItems: "center" }}>
 
                         <div className="relative mb-6 w-100">
                             <div className="absolute inset-0 flex items-center justify-center">
@@ -128,7 +128,6 @@ export default function Business5() {
                             <div className="col text-center text-sm">Signatory Power</div>
                             <div className="col text-center text-sm">Review and Additional Documents</div>
                         </div>
-                        <h1 className="text-2xl font-bold mb-6 text-center">Account Verification</h1>
 
                         <div className="business5 bg-white p-6 rounded-lg shadow-lg w-full">
                             <h1 className="text-center text-lg font-semibold mb-4">Review</h1>
