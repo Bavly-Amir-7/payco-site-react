@@ -10,8 +10,9 @@ import AccountVerification2 from './components/3-accountVerfi/verfi-2/accountVer
 import AccountVerification3 from './components/3-accountVerfi/verfi-3/accountVerification3';
 import AccountVerification4 from './components/3-accountVerfi/verfi-4/accountVerification4';
 import Business1 from './components/4-businessVerfi/1-business1/businessPage1';
-import Business2 from './components/4-businessVerfi/2-business/businessPage2';
+import Business2 from './components/4-businessVerfi/2-business2/businessPage2';
 import './index.css';
+import Business5 from './components/4-businessVerfi/5-business5/business5';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="verfi4" element={<AccountVerification4/>} />
           <Route path="business1" element={<Business1/>} />
           <Route path="business2" element={<Business2/>} />
+          <Route path="business5" element={<Business5/>} />
           <Route path="aside" element={<Aside/>} />
         </Routes>
     </>

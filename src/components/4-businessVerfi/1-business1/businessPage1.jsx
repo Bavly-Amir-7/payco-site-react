@@ -19,48 +19,48 @@ export default function Business1() {
                 <div className="mainVerf">
                     <h1 className="text-2xl font-bold mb-6 text-center">Business Verification</h1>
                     <div className="relative mb-6 w-100">
-                            <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="dashedLine border-t-2 border-dashed border-gray-300 " style={{ width: "80%" }}></div>
-                            </div>
-                            <div className="relative flex" style={{ justifyContent: "space-around" }}>
-                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
-                                    <i>
-                                        <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" fill="#FCFCFC" />
-                                            <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" stroke="#CDCDCD" />
-                                            <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </i>
-                                </div>
-                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
-                                    <i>
-                                        <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" fill="#FCFCFC" />
-                                            <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" stroke="#CDCDCD" />
-                                            <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </i>
-                                </div>
-                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
-                                    <i>
-                                        <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" fill="#FCFCFC" />
-                                            <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" stroke="#CDCDCD" />
-                                            <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                    </i>
-                                </div>
-                                <div className="w-10 h-10 whiteColor redBg rounded-full flex items-center justify-center">4</div>
-                            </div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="dashedLine border-t-2 border-dashed border-gray-300 " style={{ width: "80%" }}></div>
                         </div>
+                        <div className="relative flex" style={{ justifyContent: "space-around" }}>
+                            <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
+                                <i>
+                                    <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" fill="#FCFCFC" />
+                                        <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" stroke="#CDCDCD" />
+                                        <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </i>
+                            </div>
+                            <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
+                                <i>
+                                    <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" fill="#FCFCFC" />
+                                        <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" stroke="#CDCDCD" />
+                                        <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </i>
+                            </div>
+                            <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
+                                <i>
+                                    <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" fill="#FCFCFC" />
+                                        <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" stroke="#CDCDCD" />
+                                        <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </i>
+                            </div>
+                            <div className="w-10 h-10 whiteColor redBg rounded-full flex items-center justify-center">4</div>
+                        </div>
+                    </div>
 
 
                     <div className="flex justify-between mb-6 w-100">
-                            <div className="col text-center text-sm">Business Details</div>
-                            <div className="col text-center text-sm">Business Beneficial Owners</div>
-                            <div className="col text-center text-sm">Signatory Power</div>
-                            <div className="col text-center text-sm">Review and Additional Documents</div>
-                        </div>
+                        <div className="col text-center text-sm">Business Details</div>
+                        <div className="col text-center text-sm">Business Beneficial Owners</div>
+                        <div className="col text-center text-sm">Signatory Power</div>
+                        <div className="col text-center text-sm">Review and Additional Documents</div>
+                    </div>
                     <div className='businessForm1' >
 
                         <div className=" p-6 bg-white shadow-md rounded-md mt-10 ">
