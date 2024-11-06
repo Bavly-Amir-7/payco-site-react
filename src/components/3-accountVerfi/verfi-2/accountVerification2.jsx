@@ -46,7 +46,7 @@ export default function AccountVerification2() {
                                         <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" fill="#FCFCFC" />
                                             <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" stroke="#CDCDCD" />
-                                            <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </i> </div>
                                 <div className="w-10 h-10 whiteColor redBg rounded-full flex items-center justify-center">2</div>
@@ -164,8 +164,8 @@ export default function AccountVerification2() {
                                                 <i>
                                                     <svg className="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-6 lg:h-6" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
                                                         <rect width="24" height="18" fill="#012169" />
-                                                        <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="3" />
-                                                        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1.5" />
+                                                        <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
+                                                        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
                                                         <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
                                                         <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
                                                     </svg>

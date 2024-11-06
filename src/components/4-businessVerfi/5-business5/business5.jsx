@@ -95,7 +95,7 @@ export default function Business5() {
                                         <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" fill="#FCFCFC" />
                                             <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" stroke="#CDCDCD" />
-                                            <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </i>
                                 </div>
@@ -104,7 +104,7 @@ export default function Business5() {
                                         <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" fill="#FCFCFC" />
                                             <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" stroke="#CDCDCD" />
-                                            <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </i>
                                 </div>
@@ -113,7 +113,7 @@ export default function Business5() {
                                         <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" fill="#FCFCFC" />
                                             <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" stroke="#CDCDCD" />
-                                            <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </i>
                                 </div>
@@ -130,7 +130,7 @@ export default function Business5() {
                         </div>
                         <h1 className="text-2xl font-bold mb-6 text-center">Account Verification</h1>
 
-                        <div className="bg-white p-6 rounded-lg shadow-lg w-full">
+                        <div className="business5 bg-white p-6 rounded-lg shadow-lg w-full">
                             <h1 className="text-center text-lg font-semibold mb-4">Review</h1>
                             <div className="space-y-4">
 
@@ -207,16 +207,22 @@ export default function Business5() {
                                 </div>
                             </div>
 
-                            <div className="mt-6 bg-gray-100 p-4 rounded-lg text-center">
-                                <p className="text-sm mb-4">Verification is within reach! Adding extra documents helps us confirm your info quickly and securely, so you can unlock the full experience sooner.</p>
-                                <button className="bg-red-500 text-white py-2 px-4 rounded-lg">
-                                    <FontAwesomeIcon icon={faPlus} className="mr-2" />UPLOAD
+                            <div className="documentArea mt-6 bg-gray-100 p-4 rounded-lg text-center">
+                                <h2 className='additionalDocuments'>Additional Documents</h2>
+                                <p className="additionalPar text-sm mb-4">Verification is within reach! Adding extra documents helps us confirm your info quickly and <br /> securely, so you can unlock the full experience sooner.</p>
+                                <button className="uploadBtn7 whiteBg redClr py-2 px-4 rounded-lg flex items-center" >
+                                    UPLOAD
+                                    <svg width="14" height="18" viewBox="0 0 14 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-2">
+                                        <path d="M4 13.5H10V7.5H14L7 0.5L0 7.5H4V13.5ZM0 15.5H14V17.5H0V15.5Z" fill="#C20101" />
+                                    </svg>
                                 </button>
+
+
                             </div>
 
-                            <div className="flex justify-between mt-6">
-                                <button className="border border-red-500 text-red-500 py-2 px-4 rounded-lg">Back</button>
-                                <button className="bg-red-500 text-white py-2 px-4 rounded-lg">Finish</button>
+                            <div className="flex justify-center gap-3 mt-6">
+                                <button className="backBtn7 py-2 px-4 rounded-lg">Back</button>
+                                <button className="nextBtn7  py-2  rounded-lg">Finish</button>
                             </div>
                         </div>
                     </div>
