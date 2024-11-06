@@ -18,25 +18,49 @@ export default function Business1() {
 
                 <div className="mainVerf">
                     <h1 className="text-2xl font-bold mb-6 text-center">Business Verification</h1>
-                    <div className="relative mb-6">
-                        <div className="absolute inset-0 flex items-center">
-                            <div className="w-full border-t border-gray-300"></div>
+                    <div className="relative mb-6 w-100">
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="dashedLine border-t-2 border-dashed border-gray-300 " style={{ width: "80%" }}></div>
+                            </div>
+                            <div className="relative flex" style={{ justifyContent: "space-around" }}>
+                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
+                                    <i>
+                                        <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" fill="#FCFCFC" />
+                                            <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" stroke="#CDCDCD" />
+                                            <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
+                                    <i>
+                                        <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" fill="#FCFCFC" />
+                                            <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" stroke="#CDCDCD" />
+                                            <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
+                                    <i>
+                                        <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" fill="#FCFCFC" />
+                                            <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" stroke="#CDCDCD" />
+                                            <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div className="w-10 h-10 whiteColor redBg rounded-full flex items-center justify-center">4</div>
+                            </div>
                         </div>
-                        <div className="relative flex justify-between">
-                           
-                            <div className="w-10 h-10 redBg text-white rounded-full flex items-center justify-center">1</div>
-                            <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">2</div>
-                            <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">3</div>
-                            <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">4</div>
+
+
+                    <div className="flex justify-between mb-6 w-100">
+                            <div className="col text-center text-sm">Business Details</div>
+                            <div className="col text-center text-sm">Business Beneficial Owners</div>
+                            <div className="col text-center text-sm">Signatory Power</div>
+                            <div className="col text-center text-sm">Review and Additional Documents</div>
                         </div>
-                    </div>
-                    <div className="flex justify-between mb-6">
-                        <p className="text-center flex-1">Account Type</p>
-                        <p className="text-center flex-1">Personal Details</p>
-                        <p className="text-center flex-1">Identity Verification</p>
-                        <p className="text-center flex-1">Review and Additional Documents</p>
-                    </div>
-                    
                     <div className='businessForm1' >
 
                         <div className=" p-6 bg-white shadow-md rounded-md mt-10 ">
@@ -146,19 +170,20 @@ export default function Business1() {
                                         <input type="text" className="flex-1 outline-none" placeholder="Changable" />
                                     </div>
                                 </div>
-                                <div className="flex mb-4">
-                                    <div className="w-1/2 pr-2">
+                                <div className=" flex-col md:flex-row mb-4">
+                                    <div className="pr-2 mb-4 md:mb-0">
                                         <label className="block mb-2">Country</label>
-                                        <div className="flex iconGap items-center borderInput rounded p-2" style={{ width: "390px" }}>
-                                            <i><svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="24" height="18" fill="#012169" />
-                                                <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
-                                                <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
-                                                <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
-                                                <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
-                                            </svg>
-                                            </i>                                             <span className=''>|</span>
-
+                                        <div className="seven0 flex iconGap items-center borderInput rounded p-2" style={{ width: "50%" }}>
+                                            <i>
+                                                <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="24" height="18" fill="#012169" />
+                                                    <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
+                                                    <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
+                                                    <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
+                                                    <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
+                                                </svg>
+                                            </i>
+                                            <span>|</span>
                                             <select className="flex-1 outline-none">
                                                 <option>United Kingdom</option>
                                             </select>
@@ -166,98 +191,107 @@ export default function Business1() {
                                     </div>
                                     <div>
                                         <label className="block mb-2">City/Town</label>
-                                        <div className="flex iconGap items-center borderInput rounded p-2" style={{ width: "390px" }}>
-                                            <i><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fillRule="evenodd" clipRule="evenodd" d="M7.87584 4.85915C9.15549 3.61971 10.6969 3 12.5 3C14.3031 3 15.8372 3.61267 17.1023 4.83803C18.3675 6.06339 19 7.54929 19 9.29577C19 10.169 18.7746 11.169 18.3238 12.2958C17.873 13.4225 17.3277 14.4789 16.6879 15.4648C16.0481 16.4507 15.4156 17.3732 14.7903 18.2324C14.165 19.0916 13.6342 19.7746 13.198 20.2817L12.5 21C12.3255 20.8028 12.0928 20.5423 11.802 20.2183C11.5112 19.8944 10.9877 19.2465 10.2315 18.2746C9.47539 17.3028 8.81376 16.3592 8.24664 15.4437C7.67953 14.5282 7.16331 13.493 6.69799 12.338C6.23266 11.1831 6 10.169 6 9.29577C6 7.54929 6.62527 6.07043 7.87584 4.85915Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                                <path d="M13.5 9.5C13.5 10.0523 13.0523 10.5 12.5 10.5C11.9477 10.5 11.5 10.0523 11.5 9.5C11.5 8.94772 11.9477 8.5 12.5 8.5C13.0523 8.5 13.5 8.94772 13.5 9.5Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                            </svg>
-
+                                        <div className="seven0 flex iconGap items-center borderInput rounded p-2" style={{ width: "50%" }}>
+                                            <i>
+                                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fillRule="evenodd" clipRule="evenodd" d="M7.87584 4.85915C9.15549 3.61971 10.6969 3 12.5 3C14.3031 3 15.8372 3.61267 17.1023 4.83803C18.3675 6.06339 19 7.54929 19 9.29577C19 10.169 18.7746 11.169 18.3238 12.2958C17.873 13.4225 17.3277 14.4789 16.6879 15.4648C16.0481 16.4507 15.4156 17.3732 14.7903 18.2324C14.165 19.0916 13.6342 19.7746 13.198 20.2817L12.5 21C12.3255 20.8028 12.0928 20.5423 11.802 20.2183C11.5112 19.8944 10.9877 19.2465 10.2315 18.2746C9.47539 17.3028 8.81376 16.3592 8.24664 15.4437C7.67953 14.5282 7.16331 13.493 6.69799 12.338C6.23266 11.1831 6 10.169 6 9.29577C6 7.54929 6.62527 6.07043 7.87584 4.85915Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                                    <path d="M13.5 9.5C13.5 10.0523 13.0523 10.5 12.5 10.5C11.9477 10.5 11.5 10.0523 11.5 9.5C11.5 8.94772 11.9477 8.5 12.5 8.5C13.0523 8.5 13.5 8.94772 13.5 9.5Z" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                                </svg>
                                             </i>
-                                            <span className=''>|</span>
-
+                                            <span>|</span>
                                             <select className="flex-1 outline-none">
-                                                <option>Lodon</option>
+                                                <option>London</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="flex mb-4 ">
-                                    <div className="grid grid-cols-2 gap-4 mb-4">
+
+                                <div className="flex flex-col md:flex-row mb-4">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                                         <div>
                                             <label className="block mb-2">Address Line One*</label>
-                                            <div className="flex iconGap items-center borderInput rounded p-2" style={{ width: "523px" }}>
-                                                <i><svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
+                                            <div className="flex iconGap items-center borderInput rounded p-2" style={{ width: "100%" }}>
+                                                <i>
+                                                    <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="24" height="18" fill="#012169" />
+                                                        <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
+                                                        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
+                                                        <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
+                                                        <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
+                                                    </svg>
+                                                </i>
+                                                <span>|</span>
+                                                <select className="flex-1 outline-none">
+                                                    <option>United Kingdom</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div className="md:ml-32">
+                                            <label className="block mb-2">Currency</label>
+                                            <div className="iconGap flex items-center borderInput rounded p-2" style={{ width: "100%" }}>
+                                                <i>
+                                                    <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
+                                                        <rect width="24" height="18" fill="#012169" />
+                                                        <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
+                                                        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
+                                                        <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
+                                                        <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
+                                                    </svg>
+                                                </i>
+                                                <span>|</span>
+                                                <select className="flex-1 outline-none">
+                                                    <option>United Kingdom</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="flex mb-4" >
+
+                                </div>
+                                <div className="mb-4">
+                                    <label className="block text-gray-700 font-medium mb-2">Which countries do you expect to work with the most?</label>
+                                    <div className="selectedCountries flex flex-col md:flex-row items-center">
+                                        <div className="countreybg flex items-center  md:mb-0 md:mr-4">
+                                            <i>
+                                                <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
                                                     <rect width="24" height="18" fill="#012169" />
                                                     <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
                                                     <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
                                                     <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
                                                     <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
                                                 </svg>
-                                                </i>
-                                                <span className=''>|</span>
-
-                                                <select className="flex-1 outline-none">
-                                                    <option>United Kingdom</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div style={{ marginLeft: "125px" }}>
-                                            <label className="block mb-2">Currency</label>
-                                            <div className=" iconGap  flex  items-center borderInput rounded p-2" style={{ width: "256px" }}>
-                                               <i>
-    <svg class="w-6 h-6 sm:w-5 sm:h-5 md:w-10 md:h-10 lg:w-12 lg:h-12" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-        <rect width="24" height="18" fill="#012169" />
-        <path d="M0 0L24 18M24 0L0 18" stroke="white" stroke-width="3" />
-        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" stroke-width="1.5" />
-        <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
-        <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
-    </svg>
-</i>                                             <span className=''>|</span>
-                                                <select className="flex-1 outline-none">
-                                                    <option>United Kingdom</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex mb-4" >
-
-                                </div>
-                                <div className="mb-4">
-                                    <label className="block text-gray-700 font-medium mb-2">Which countries do you expect to work with the most?</label>
-                                    <div className="selectedCountries flex items-center">
-                                        <div className="countreybg flex items-center mr-4">
-                                            <i><svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="24" height="18" fill="#012169" />
-                                                <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
-                                                <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
-                                                <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
-                                                <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
-                                            </svg>
-                                            </i>                                                <span>United Kingdom</span>
-                                            <i><svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <line x1="1.17976" y1="0.749436" x2="17.1798" y2="16.7494" stroke="black" strokeWidth="2" />
-                                                <line x1="17.1798" y1="2.16365" x2="1.17976" y2="18.1636" stroke="black" strokeWidth="2" />
-                                            </svg>
+                                            </i>
+                                            <span>United Kingdom</span>
+                                            <i>
+                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <line x1="1.17976" y1="0.749436" x2="17.1798" y2="16.7494" stroke="black" strokeWidth="2" />
+                                                    <line x1="17.1798" y1="2.16365" x2="1.17976" y2="18.1636" stroke="black" strokeWidth="2" />
+                                                </svg>
                                             </i>
                                         </div>
                                         <div className="countreybg flex items-center">
-                                            <i><svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-                                                <rect width="24" height="18" fill="#012169" />
-                                                <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
-                                                <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
-                                                <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
-                                                <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
-                                            </svg>
-                                            </i>                                                <span>United Kingdom</span>
-                                            <i><svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <line x1="1.17976" y1="0.749436" x2="17.1798" y2="16.7494" stroke="black" strokeWidth="2" />
-                                                <line x1="17.1798" y1="2.16365" x2="1.17976" y2="18.1636" stroke="black" strokeWidth="2" />
-                                            </svg>
+                                            <i>
+                                                <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect width="24" height="18" fill="#012169" />
+                                                    <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
+                                                    <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
+                                                    <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
+                                                    <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
+                                                </svg>
+                                            </i>
+                                            <span>United Kingdom</span>
+                                            <i>
+                                                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <line x1="1.17976" y1="0.749436" x2="17.1798" y2="16.7494" stroke="black" strokeWidth="2" />
+                                                    <line x1="17.1798" y1="2.16365" x2="1.17976" y2="18.1636" stroke="black" strokeWidth="2" />
+                                                </svg>
                                             </i>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div className="mb-4 flex gap-2">
                                     <i><svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <rect x="0.25" y="0.89502" width="24.5" height="24.5" rx="12.25" fill="#656565" stroke="white" strokeWidth="0.5" />
@@ -269,31 +303,35 @@ export default function Business1() {
                                     </p>
                                 </div>
                                 <div className="mb-4">
-                                    <h2 className=" font-bold mb-2 text-center" style={{ fontSize: "20px" }}>Upload Mandatory Documents</h2>
-                                    <div className="mb-4 p-4  rounded-md articleArea">
-                                        <h2 className="MediumTitle font-bold mb-2 ">1. Articles of incorporation</h2>
-                                        <div className='flex justify-content-between'>
+                                    <h2 className="font-bold mb-2 text-center" style={{ fontSize: "20px" }}>Upload Mandatory Documents</h2>
 
+                                    <div className="mb-4 p-4 rounded-md articleArea">
+                                        <h2 className="MediumTitle font-bold mb-2">1. Articles of incorporation</h2>
+                                        <div className='flex flex-col md:flex-row md:justify-between'>
                                             <p className="text-gray-600 text-sm mb-2">
                                                 Legal document filed with the government to establish a corporation, <br /> including information about the company's name, purpose, <br /> structure, and initial shareholders.
                                             </p>
-                                            <div className="upload">
-
-                                                <button className="upLoadBtn1 redClr whiteBg py-2 flex rounded-md">UPLOAD <span><i><svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M4.5 13.145H10.5V7.14502H14.5L7.5 0.14502L0.5 7.14502H4.5V13.145ZM0.5 15.145H14.5V17.145H0.5V15.145Z" fill="#C20101" />
-                                                </svg>
-                                                </i></span></button>
+                                            <div className="upload mt-4 md:mt-0">
+                                                <button className="upLoadBtn1 redClr whiteBg py-2 flex rounded-md">UPLOAD
+                                                    <span>
+                                                        <i>
+                                                            <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M4.5 13.145H10.5V7.14502H14.5L7.5 0.14502L0.5 7.14502H4.5V13.145ZM0.5 15.145H14.5V17.145H0.5V15.145Z" fill="#C20101" />
+                                                            </svg>
+                                                        </i>
+                                                    </span>
+                                                </button>
                                             </div>
-
                                         </div>
                                     </div>
-                                    <div className="mb-4 p-4 articleArea   ">
+
+                                    <div className="mb-4 p-4 articleArea">
                                         <h2 className="MediumTitle font-bold mb-2">2. Commercial Register Extract</h2>
                                         <p className="text-gray-600 text-sm mb-2">
                                             Legal document filed with the government to establish a corporation, <br /> including information about the company's name, purpose, <br /> structure, and initial shareholders.
                                         </p>
-                                        <div className="flex items-center justify-content-between">
-                                            <div className="flex items-center">
+                                        <div className="flex flex-col md:flex-row md:justify-between items-center">
+                                            <div className="flex items-center mb-4 md:mb-0">
                                                 <img src={selectedImage} alt="Document thumbnail" className="mr-2" />
                                             </div>
                                             <div className="flex items-center">
@@ -302,30 +340,34 @@ export default function Business1() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="mb-4 p-4  rounded-md articleArea">
-                                        <h2 className=" mb-2 ein">3. EIN (Federal Tax ID) <span className='vat'>or VAT Number</span> </h2>
-                                        <div className="flex">
 
+                                    <div className="mb-4 p-4 rounded-md articleArea">
+                                        <h2 className="mb-2 ein">3. EIN (Federal Tax ID) <span className='vat'>or VAT Number</span></h2>
+                                        <div className="flex flex-col md:flex-row md:justify-between">
                                             <p className="text-gray-600 text-sm mb-2">
                                                 Company-issued tax ID number for tax reporting purposes, outlining the procedures for invoicing, and decision-making processes.
                                             </p>
-                                            <div className="upload">
-
-                                                <button className="upLoadBtn2 py-2 flex rounded-md">UPLOAD <span><i><svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M4.5 13.4487H10.5V7.44873H14.5L7.5 0.44873L0.5 7.44873H4.5V13.4487ZM0.5 15.4487H14.5V17.4487H0.5V15.4487Z" fill="#FCFCFC" />
-                                                </svg>
-
-                                                </i></span></button>
+                                            <div className="upload mt-4 md:mt-0">
+                                                <button className="upLoadBtn2 py-2 flex rounded-md">UPLOAD
+                                                    <span>
+                                                        <i>
+                                                            <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M4.5 13.4487H10.5V7.44873H14.5L7.5 0.44873L0.5 7.44873H4.5V13.4487ZM0.5 15.4487H14.5V17.4487H0.5V15.4487Z" fill="#FCFCFC" />
+                                                            </svg>
+                                                        </i>
+                                                    </span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                             </form>
                         </div>
                         <div className='w-100 text-center'>
-                        <Link to="/business2">
+                            <Link to="/business2">
 
-                            <button className='save'>Save & Next</button>
+                                <button className='save'>Save & Next</button>
                             </Link>
                         </div>
                     </div>

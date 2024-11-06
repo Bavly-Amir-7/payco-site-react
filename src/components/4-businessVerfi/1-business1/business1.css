@@ -104,3 +104,9 @@
     background: #8e0303;
 
 }
+
+@media (max-width: 650px){
+    .seven0{
+        width: 100% !important;
+    }
+}
