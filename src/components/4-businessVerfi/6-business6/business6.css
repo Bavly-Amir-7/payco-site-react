@@ -1,0 +1,32 @@
+.overviewBtn {
+    border-radius: 6px;
+    border: 1px;
+    opacity: 0px;
+    background: #FFFFFF;
+    color: #C20101;
+    border: 1px solid #C20101
+}
+
+.overviewBtn:hover{
+    color: #FFFFFF;
+    background-color: #C20101;
+}
+
+
+
+.profileBtn{
+
+    border-radius: 6px;
+    border: 1px;
+    opacity: 0px;
+    color: #FFFFFF;
+    background-color: #C20101;
+    border: 1px solid #C20101
+
+}
+
+.profileBtn:hover{
+
+    background: #FFFFFF;
+    color: #C20101;
+}

@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import Aside from '../../aside/aside';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faPlus, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
-import "./business6.css";
+import "./business7.css";
 
-export default function Business6() {
+export default function Business7() {
 
 
     return (
@@ -55,29 +55,29 @@ export default function Business6() {
                         </div>
 
 
-                        <div className="flex justify-between mb-6 w-100">
+                        <div className="flex justify-between mb-3 w-100">
                             <div className="col text-center text-sm">Business Details</div>
                             <div className="col text-center text-sm">Business Beneficial Owners</div>
                             <div className="col text-center text-sm">Signatory Power</div>
                             <div className="col text-center text-sm">Review and Additional Documents</div>
                         </div>
 
-                        <div className="flex items-center justify-center ">
-                            <div className="bg-white p-10 rounded-lg shadow-lg text-center  w-full">
+                        <div className="flex items-center justify-center w-100">
+                            <div className="bg-white p-10 rounded-lg shadow-lg text-center w-full">
                                 <div className="flex justify-center mb-6">
-                                    <div className="w-32 h-32 border-4 border-red-600 rounded-full flex items-center justify-center">
-                                        <i className="fas fa-check text-red-600 text-6xl"></i>
+                                <div className="redBg rounded-full w-90 h-90 flex items-center justify-center" style={{ width: "260px", height: "260px" }}>
+                                        <svg className="w-40 h-40 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6 18L18 6M6 6l12 12"></path>
+                                        </svg>
                                     </div>
                                 </div>
                                 <p className="text-gray-700 mb-6">
-                                    Thank you for submitting. Our team will review your application to ensure your account security and compliance with our regulations. Expect an email from us regarding the next steps within 48 hours.
+                                    Thank you for your interest. Due to security protocols and regulations, currently we can't offer <br /> our services to your business. We apologize for any inconvenience.
                                 </p>
                             </div>
                         </div>
-                        <div className="flex justify-center space-x-4 mt-5">
-                            <button className="overviewBtn px-6 py-2  rounded-full ">Overview</button>
-                            <button className="profileBtn px-6 py-2  rounded-full">Go To My Profile</button>
-                        </div>
+                       
+
                     </div>
                 </div>
             </div>
