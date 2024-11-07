@@ -13,6 +13,7 @@ import Business1 from './components/4-businessVerfi/1-business1/businessPage1';
 import Business2 from './components/4-businessVerfi/2-business2/businessPage2';
 import './index.css';
 import Business5 from './components/4-businessVerfi/5-business5/business5';
+import Business6 from './components/4-businessVerfi/6-business6/business6';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="business1" element={<Business1/>} />
           <Route path="business2" element={<Business2/>} />
           <Route path="business5" element={<Business5/>} />
+          <Route path="business6" element={<Business6/>} />
           <Route path="aside" element={<Aside/>} />
         </Routes>
     </>
