@@ -4,6 +4,9 @@ import Aside from '../../aside/aside';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faPlus, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import "./overView1.css";
+import { BarChart } from '@mui/x-charts/BarChart';
+
+
 
 export default function OverView1() {
     const [selectedCoin, setSelectedCoin] = useState('Bitcoin');
@@ -66,22 +69,73 @@ export default function OverView1() {
                                     </div>
                                 ))}
                             </div>
-                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
+                            <div className="charts grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
                                 <div className="bg-white p-6 rounded-lg border border-gray-200">
                                     <h2 className="text-xl font-bold mb-4">Analytics</h2>
-                                    <div className="flex space-x-4 mb-4">
-                                        <button className="text-gray-700 font-bold">Month</button>
-                                        <button className="text-gray-500">Week</button>
-                                        <button className="text-gray-500">Day</button>
+                                    <div className="flex  mb-4">
+                                        <div className=' w-100 space-x-4'>
+
+                                            <button className="text-gray-700 font-bold">Month</button>
+                                            <button className="text-gray-500">Week</button>
+                                            <button className="text-gray-500">Day</button>
+                                        </div>
+                                        <div className="flex items-center space-x-4 ">
+                                            <div className="flex items-center">
+                                                <div className="w-3 h-3 rounded-full mr-2" style={{ backgroundColor: '#B71C1C' }}></div>
+                                                <span className="text-gray-800 font-semibold">Sent</span>
+                                            </div>
+                                            <div className="flex items-center">
+                                                <div className="w-3 h-3 rounded-full mr-2" style={{ backgroundColor: '#F8BBD0' }}></div>
+                                                <span className="text-gray-800 font-semibold">Received</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="flex justify-between items-end h-40">
-                                        <div className="w-1/5 bg-red-500 h-24"></div>
-                                        <div className="w-1/5 bg-red-500 h-32"></div>
-                                        <div className="w-1/5 bg-red-500 h-40"></div>
-                                        <div className="w-1/5 bg-red-500 h-28"></div>
-                                        <div className="w-1/5 bg-red-500 h-36"></div>
+
+                                    <div className="flex justify-between items-end">
+                                        <BarChart
+                                            xAxis={[
+                                                {
+                                                    scaleType: 'band',
+                                                    data: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                                                },
+                                            ]}
+                                            series={[
+                                                { data: [15, 5, 25, 30, 10], color: '#B71C1C' }, // Sent (Dark Red)
+                                                { data: [20, 3, 15, 20, 8], color: '#F8BBD0' },  // Received (Light Pink)
+                                            ]}
+                                            barWidth={12} // Slightly wider bars
+                                            slots={{
+                                                bar: (props) => {
+                                                    const { style, ownerState } = props;
+                                                    const str = JSON.stringify(style);
+                                                    const arr = JSON.parse(str);
+                                                    const { x, y, height, width } = arr;
+
+                                                    const radius = 8;
+                                                    const barWidth = 15;
+
+                                                    const d = `
+            M${x + radius},${y} 
+            h${barWidth - 2 * radius} 
+            a${radius},${radius} 0 0 1 ${radius},${radius}
+            v${height - 2 * radius} 
+            a${radius},${radius} 0 0 1 ${-radius},${radius} 
+            h${2 * radius - barWidth} 
+            a${radius},${radius} 0 0 1 ${-radius},${-radius} 
+            v${2 * radius - height} 
+            a${radius},${radius} 0 0 1 ${radius},${-radius} 
+            z
+          `;
+
+                                                    return <path d={d} fill={ownerState.color}></path>;
+                                                },
+                                            }}
+                                            width={500}
+                                            height={300}
+                                        />
                                     </div>
                                 </div>
+
                                 <div className="bg-white p-6 rounded-lg border border-gray-200">
                                     <h2 className="text-xl font-bold mb-4">Balance Overview</h2>
                                     <div className="flex space-x-4 mb-4">
