@@ -1,0 +1,31 @@
+.backBtn8 {
+    width: 20%;
+    background: #FFFFFF;
+    color: #C20101;
+}
+
+.backBtn8:hover {
+    color: #FFFFFF;
+    background-color: #C20101;
+}
+
+.nextBtn8 {
+    width: 20%;
+    color: #FFFFFF;
+    background-color: #C20101;
+}
+
+.nextBtn8:hover {
+    background: #FFFFFF;
+    color: #C20101;
+}
+
+@media (max-width: 700px) {
+    .backBtn8 {
+        width: 100%;
+    }
+
+    .nextBtn8{
+        width: 100%;
+    }
+}

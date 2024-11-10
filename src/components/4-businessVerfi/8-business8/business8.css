@@ -1,0 +1,15 @@
+.eddBtn{
+    width:253px;
+height: 62px;
+gap: 8px;
+border-radius: 6px;
+opacity: 0px;
+background: #C20101;
+color: #FCFCFC;
+}
+
+.eddBtn:hover{
+color: #C20101;
+background: #FCFCFC;
+
+}

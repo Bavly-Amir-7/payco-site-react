@@ -1,0 +1,15 @@
+.addBtnsArea {
+    width: 85%;
+    justify-self: center;
+}
+
+.savebackBtns {
+    justify-content: center;
+
+}
+
+@media (max-width: 700px) {
+    .addBtnsArea {
+        width: 100% !important;
+    }
+}

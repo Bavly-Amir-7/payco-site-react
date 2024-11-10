@@ -15,6 +15,12 @@ import './index.css';
 import Business5 from './components/4-businessVerfi/5-business5/business5';
 import Business6 from './components/4-businessVerfi/6-business6/business6';
 import Business7 from './components/4-businessVerfi/7-business7/business7';
+import Business8 from './components/4-businessVerfi/8-business8/business8';
+import Business9 from './components/4-businessVerfi/9-business9/business9';
+import Business10 from './components/4-businessVerfi/10-business10/business10';
+import Business11 from './components/4-businessVerfi/11-Business11/business11';
+import Business12 from './components/4-businessVerfi/12-business12/business12';
+import OverView1 from './components/5-overView/1-overView1/overView1';
 
 function App() {
   return (
@@ -31,6 +37,12 @@ function App() {
           <Route path="business5" element={<Business5/>} />
           <Route path="business6" element={<Business6/>} />
           <Route path="business7" element={<Business7/>} />
+          <Route path="business8" element={<Business8/>} />
+          <Route path="business9" element={<Business9/>} />
+          <Route path="business10" element={<Business10/>} />
+          <Route path="business11" element={<Business11/>} />
+          <Route path="business12" element={<Business12/>} />
+          <Route path="overview" element={<OverView1/>} />
           <Route path="aside" element={<Aside/>} />
         </Routes>
     </>
