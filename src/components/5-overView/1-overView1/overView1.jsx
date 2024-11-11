@@ -206,7 +206,7 @@ export default function OverView1() {
 
                         <div className="">
                             <div className="flex flex-col md:flex-row justify-between items-center mb-6">
-                                <div className="relative w-full  mb-4 md:mb-0" style={{width:"80%"}}>
+                                <div className="relative w-full   md:mb-0" style={{width:"80%"}}>
                                     <input type="text" placeholder="Search anything here" className="w-full p-3 rounded-lg border border-gray-300" />
                                 </div>
                                 <div className="flex items-center space-x-4">

@@ -1,0 +1,71 @@
+.accountsSent {
+
+    gap: 0px;
+    border-radius: 24px;
+    border: 1px;
+    opacity: 0px;
+    background: #C2010199;
+    border: 1px solid #DFDFDF;
+    color: white;
+}
+
+.accountsRecived {
+
+    height: 161px;
+    gap: 0px;
+    border-radius: 24px;
+    border: 1px;
+    opacity: 0px;
+    background: #F9D4D4;
+    border: 1px solid #DFDFDF;
+    color: black;
+
+
+}
+
+.confirmedBtn {
+    width: 120.66px;
+    height: 36px;
+    top: 726px;
+    gap: 0px;
+    border-radius: 6px;
+    background: #54af0a82;
+    color: #515151;
+
+}
+
+
+.pendingdBtn {
+    width: 120.66px;
+    height: 36px;
+    top: 726px;
+    gap: 0px;
+    border-radius: 6px;
+    background: #ffb62589;
+    color: #515151;
+
+}
+
+.cancelledBtn {
+    width: 120.66px;
+    height: 36px;
+    top: 726px;
+    gap: 0px;
+    border-radius: 6px;
+    background: #af0a0a6d;
+    color: #515151;
+
+}
+
+.yearBtn{
+
+    width: 224.01px;
+height: 40px;
+top: 281px;
+gap: 0px;
+border-radius: 6px;
+opacity: 0px;
+background: #FBEFEF;
+justify-content: space-between;
+
+}

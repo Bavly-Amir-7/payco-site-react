@@ -21,6 +21,7 @@ import Business10 from './components/4-businessVerfi/10-business10/business10';
 import Business11 from './components/4-businessVerfi/11-Business11/business11';
 import Business12 from './components/4-businessVerfi/12-business12/business12';
 import OverView1 from './components/5-overView/1-overView1/overView1';
+import Accounts1 from './components/6-accounts/1-accounts1/accounts';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route path="business11" element={<Business11/>} />
           <Route path="business12" element={<Business12/>} />
           <Route path="overview" element={<OverView1/>} />
+          <Route path="accounts1" element={<Accounts1/>} />
           <Route path="aside" element={<Aside/>} />
         </Routes>
     </>
