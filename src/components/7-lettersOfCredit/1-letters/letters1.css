@@ -1,0 +1,32 @@
+.nextLetter {
+    width: 184px;
+    height: 61px;
+    gap: 10px;
+    border-radius: 6px;
+    opacity: 0px;
+    background: #C20101;
+
+}
+
+.backLetter {
+    width: 184px;
+    height: 61px;
+    gap: 10px;
+    border-radius: 6px;
+    opacity: 0px;
+    background: white;
+    color: #C20101;
+    border: 1px solid #C20101;
+
+}
+* {
+    border: 1px solid;
+}
+
+@media (max-width: 767px) {
+
+    .table {
+        width: 100%;
+    }
+    
+}

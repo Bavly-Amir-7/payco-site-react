@@ -174,59 +174,59 @@ export default function Accounts1() {
                                 </div>
 
                                 <div className="bg-white p-6 rounded-lg border border-gray-200">
-                                <div className="flex justify-between items-center mb-3">
-                                    <h2 className="text-xl font-bold mb-4">Balance Overview</h2>
-                                    <button className="text-gray-500" onClick={() => تغييرعرضالرسم(!عرضالرسم)}>View Details</button>
-                                </div>
+                                    <div className="flex justify-between items-center mb-3">
+                                        <h2 className="text-xl font-bold mb-4">Balance Overview</h2>
+                                        <button className="text-gray-500" onClick={() => تغييرعرضالرسم(!عرضالرسم)}>View Details</button>
+                                    </div>
 
-                                <div className="flex mb-4 justify-between">
-                                    <div className="flex items-center space-x-4 ">
-                                        <div className="flex items-center">
-                                            <div className="w-3 h-3 rounded-full mr-2" style={{ backgroundColor: '#B71C1C' }}></div>
-                                            <span className="text-gray-800 font-semibold">Sent</span>
+                                    <div className="flex mb-4 justify-between">
+                                        <div className="flex items-center space-x-4 ">
+                                            <div className="flex items-center">
+                                                <div className="w-3 h-3 rounded-full mr-2" style={{ backgroundColor: '#B71C1C' }}></div>
+                                                <span className="text-gray-800 font-semibold">Sent</span>
+                                            </div>
+                                            <div className="flex items-center">
+                                                <div className="w-3 h-3 rounded-full mr-2" style={{ backgroundColor: '#F8BBD0' }}></div>
+                                                <span className="text-gray-800 font-semibold">Received</span>
+                                            </div>
                                         </div>
-                                        <div className="flex items-center">
-                                            <div className="w-3 h-3 rounded-full mr-2" style={{ backgroundColor: '#F8BBD0' }}></div>
-                                            <span className="text-gray-800 font-semibold">Received</span>
+
+                                        <div className="yearBtn flex items-center justify-center bg-red-100 p-2 rounded-lg">
+                                            <button className="text-red-600" onClick={decrementYear}>
+                                                <i><svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.710803 7.8416C0.0976085 7.44807 0.097609 6.55193 0.710803 6.1584L10.0044 0.19415C10.6699 -0.232974 11.5445 0.244932 11.5445 1.03575L11.5445 12.9643C11.5445 13.7551 10.6699 14.233 10.0044 13.8058L0.710803 7.8416Z" fill="#C20101" /></svg></i>
+                                            </button>
+                                            <span className="mx-4 text-gray-700">{year}</span>
+                                            <button onClick={incrementYear}>
+                                                <i><svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.2081 7.8416C11.8213 7.44807 11.8213 6.55193 11.2081 6.1584L1.91456 0.194149C1.24901 -0.232974 0.374459 0.244932 0.374459 1.03575L0.374458 12.9643C0.374458 13.7551 1.24901 14.233 1.91456 13.8058L11.2081 7.8416Z" fill="#C20101" /></svg></i>
+                                            </button>
                                         </div>
                                     </div>
 
-                                    <div className="yearBtn flex items-center justify-center bg-red-100 p-2 rounded-lg">
-                                        <button className="text-red-600" onClick={decrementYear}>
-                                            <i><svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.710803 7.8416C0.0976085 7.44807 0.097609 6.55193 0.710803 6.1584L10.0044 0.19415C10.6699 -0.232974 11.5445 0.244932 11.5445 1.03575L11.5445 12.9643C11.5445 13.7551 10.6699 14.233 10.0044 13.8058L0.710803 7.8416Z" fill="#C20101" /></svg></i>
-                                        </button>
-                                        <span className="mx-4 text-gray-700">{year}</span>
-                                        <button onClick={incrementYear}>
-                                            <i><svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.2081 7.8416C11.8213 7.44807 11.8213 6.55193 11.2081 6.1584L1.91456 0.194149C1.24901 -0.232974 0.374459 0.244932 0.374459 1.03575L0.374458 12.9643C0.374458 13.7551 1.24901 14.233 1.91456 13.8058L11.2081 7.8416Z" fill="#C20101" /></svg></i>
-                                        </button>
-                                    </div>
-                                </div>
+                                    <div className="flex justify-between items-end">
+                                        {عرضالرسم ? (
+                                            <BarChart
+                                                xAxis={[
+                                                    {
+                                                        scaleType: 'band',
+                                                        data: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+                                                    },
+                                                ]}
+                                                series={[
+                                                    { data: [15, 5, 25, 30, 10], color: '#B71C1C' }, // Sent (Dark Red)
+                                                    { data: [20, 3, 15, 20, 8], color: '#F8BBD0' },  // Received (Light Pink)
+                                                ]}
+                                                barwidth={12} // Slightly wider bars
+                                                slots={{
+                                                    bar: (props) => {
+                                                        const { style, ownerState } = props;
+                                                        const str = JSON.stringify(style);
+                                                        const arr = JSON.parse(str);
+                                                        const { x, y, height, width } = arr;
 
-                                <div className="flex justify-between items-end">
-                                    {عرضالرسم ? (
-                                       <BarChart
-                                       xAxis={[
-                                           {
-                                               scaleType: 'band',
-                                               data: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
-                                           },
-                                       ]}
-                                       series={[
-                                           { data: [15, 5, 25, 30, 10], color: '#B71C1C' }, // Sent (Dark Red)
-                                           { data: [20, 3, 15, 20, 8], color: '#F8BBD0' },  // Received (Light Pink)
-                                       ]}
-                                       barwidth={12} // Slightly wider bars
-                                       slots={{
-                                           bar: (props) => {
-                                               const { style, ownerState } = props;
-                                               const str = JSON.stringify(style);
-                                               const arr = JSON.parse(str);
-                                               const { x, y, height, width } = arr;
+                                                        const radius = 8;
+                                                        const barwidth = 15;
 
-                                               const radius = 8;
-                                               const barwidth = 15;
-
-                                               const d = `
+                                                        const d = `
                                                    M${x + radius},${y} 
                                                    h${barwidth - 2 * radius} 
                                                    a${radius},${radius} 0 0 1 ${radius},${radius}
@@ -239,20 +239,20 @@ export default function Accounts1() {
                                                    z
                                                `;
 
-                                               return <path d={d} fill={ownerState.color}></path>;
-                                           },
-                                       }}
-                                       width={500}
-                                       height={270}
-                                   />
-                                    ) : (
-                                        <div className="flex flex-col items-center w-100">
-                                            <img className='w-50' src={notFound} alt="not found" style={{ margin: "0 auto" }} />
-                                            <p className="text-gray-500 text-center">Analytics will be shown here once you start using payco services</p>
-                                        </div>
-                                    )}
+                                                        return <path d={d} fill={ownerState.color}></path>;
+                                                    },
+                                                }}
+                                                width={500}
+                                                height={270}
+                                            />
+                                        ) : (
+                                            <div className="flex flex-col items-center w-100">
+                                                <img className='w-50' src={notFound} alt="not found" style={{ margin: "0 auto" }} />
+                                                <p className="text-gray-500 text-center">Analytics will be shown here once you start using payco services</p>
+                                            </div>
+                                        )}
+                                    </div>
                                 </div>
-                            </div>
                             </div>
                             <div className="bg-white p-6 rounded-lg border border-gray-200">
                                 <div className="flex justify-between items-center mb-4">
