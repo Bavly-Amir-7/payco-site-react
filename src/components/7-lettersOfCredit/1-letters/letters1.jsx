@@ -35,7 +35,7 @@ export default function Letters1() {
                                 </div>
                             </div>
                         </div>
-                        <div className="text-gray-500 mb-6 w-100" style={{ placeSelf: "start" }}>
+                        <div className="text-gray-500 mb-6 " style={{ placeSelf: "start" }}>
                             <span>Dashboard</span>
                             <i className="fas fa-chevron-right mx-2"></i>
                             <span>Letters of credit</span>
@@ -88,7 +88,7 @@ export default function Letters1() {
                                 {activeTab === "new" && (
                                     <div>
                                         {/* محتوى Create new invoice */}
-                                        <div className="p-6">
+                                        <div className="">
                                             <div className='     .bg-gray-100'>
                                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                                                     <div>
