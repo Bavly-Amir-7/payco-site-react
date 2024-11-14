@@ -62,7 +62,7 @@ export default function Letters3() {
                                 </div>
                             </div>
                         </div>
-                        <div className="text-gray-500 mb-6 " style={{ placeSelf: "start" }}>
+                           <div className="text-gray-500 mb-6 text-sm" style={{ placeSelf: "start" }}>
                             <span>Dashboard</span>
                             <i className="fas fa-chevron-right mx-2"></i>
                             <span>Letters of credit</span>
@@ -83,8 +83,15 @@ export default function Letters3() {
                                         </svg>
                                     </i>
                                 </div>
-                                <div className="w-10 h-10 whiteColor redBg rounded-full flex items-center justify-center">2</div>
-                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">3</div>
+                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
+                                    <i>
+                                        <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" fill="#FCFCFC" />
+                                            <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" stroke="#CDCDCD" />
+                                            <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                    </i>
+                                </div>                                <div className="w-10 h-10 whiteColor redBg rounded-full flex items-center justify-center">3</div>
                                 <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">4</div>
                             </div>
                         </div>
@@ -176,8 +183,8 @@ export default function Letters3() {
                                     </div>
                                 </div>
 
-                                <div className="flex justify-center items-center mt-10 bg-white">
-                                    <div className="" style={{ width: '90       %' }}>
+                                <div className="flex justify-center items-center mt-10 bg-white w-100">
+                                    <div className="" style={{ width: '90%' }}>
                                         <div className="flex justify-between mb-2 text-gray-600">
                                             <span>Subtotal</span>
                                             <span>$120,000</span>

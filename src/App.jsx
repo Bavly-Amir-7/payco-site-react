@@ -25,6 +25,9 @@ import Accounts1 from './components/6-accounts/1-accounts1/accounts';
 import Letters1 from './components/7-lettersOfCredit/1-letters/letters1';
 import Letters2 from './components/7-lettersOfCredit/2-letters/letters2';
 import Letters3 from './components/7-lettersOfCredit/3-letters3.jsx/letters3';
+import Letters4 from './components/7-lettersOfCredit/4-letters/letters4';
+import Letters5 from './components/7-lettersOfCredit/5-letters/letters5';
+import Accounts2 from './components/6-accounts/2-accounts2/accounts2';
 
 function App() {
   return (
@@ -48,9 +51,12 @@ function App() {
           <Route path="business12" element={<Business12/>} />
           <Route path="overview" element={<OverView1/>} />
           <Route path="accounts1" element={<Accounts1/>} />
+          <Route path="accounts2" element={<Accounts2/>} />
           <Route path="letters1" element={<Letters1/>} />
           <Route path="letters2" element={<Letters2/>} />
           <Route path="letters3" element={<Letters3/>} />
+          <Route path="letters4" element={<Letters4/>} />
+          <Route path="letters5" element={<Letters5/>} />
           <Route path="aside" element={<Aside/>} />
         </Routes>
     </>
