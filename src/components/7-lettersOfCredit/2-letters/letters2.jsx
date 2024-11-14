@@ -62,7 +62,7 @@ export default function Letters2() {
                                 </div>
                             </div>
                         </div>
-                           <div className="text-gray-500 mb-6 text-sm" style={{ placeSelf: "start" }}>
+                        <div className="text-gray-500 mb-6 text-sm" style={{ placeSelf: "start" }}>
                             <span>Dashboard</span>
                             <i className="fas fa-chevron-right mx-2"></i>
                             <span>Letters of credit</span>
