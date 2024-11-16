@@ -12,7 +12,7 @@ export default function Credit1() {
 
 
     const [activeTab, setActiveTab] = React.useState('sent');
-
+    const [showAll, setShowAll] = React.useState(false);
 
 
     return (
@@ -30,31 +30,34 @@ export default function Credit1() {
 
 
                         <div className="">
-                        <div className="flex flex-col md:flex-row justify-between items-center mb-6 w-100">
-                            <div className="parent w-100 flex gap-2">
-                                <div className="relative w-full md:mb-0" style={{ width: "80%" }}>
-                                    <input type="text" placeholder="Search anything here" className="w-full p-3 rounded-lg border border-gray-300" />
-                                </div>
-                                <div className="flex items-center space-x-4">
-                                    <i className="fas fa-bell text-gray-400"></i>
-                                    <div className="flex items-center space-x-2">
-                                        <img src="https://storage.googleapis.com/a1aa/image/ScBMkEoJ3Gr6HVjcF2CrdyIti56QzXDWjyir38s7YUdcXC8E.jpg" alt="User profile picture" className="w-10 h-10 rounded-full" width="40" height="40" />
-                                        <div className="flex flex-col items-start">
-                                            <span className="text-gray-700">John Smith</span>
+                            <div className="flex flex-col md:flex-row justify-between items-center mb-6 w-100">
+                                <div className="parent w-100 flex gap-2">
+                                    <div className="relative w-full md:mb-0" style={{ width: "80%" }}>
+                                        <input Sender="text" placeholder="Search anything here" className="w-full p-3 rounded-lg border border-gray-300" />
+                                    </div>
+                                    <div className="flex items-center space-x-4">
+                                        <i className="fas fa-bell text-gray-400"></i>
+                                        <div className="flex items-center space-x-2">
+                                            <img src="https://storage.googleapis.com/a1aa/image/ScBMkEoJ3Gr6HVjcF2CrdyIti56QzXDWjyir38s7YUdcXC8E.jpg" alt="User profile picture" className="w-10 h-10 rounded-full" width="40" height="40" />
+                                            <div className="flex flex-col items-start">
+                                                <span className="text-gray-700">John Smith</span>
+                                            </div>
+                                            <i className="fas fa-caret-down text-gray-400"></i>
                                         </div>
-                                        <i className="fas fa-caret-down text-gray-400"></i>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                            <div className="flex justify-between">
+                            <div className="md:flex justify-between block">
 
                                 <h1 className="text-2xl font-bold mb-2">Welcome back, John</h1>
                                 <button className="redBg text-white px-4 py-2 rounded-lg mt-1">send/receive</button>
 
                             </div>
-                            <div className="text-gray-500 mb-6">
-                                <span>Dashboard</span> <i className="fas fa-chevron-right mx-2"></i> <span className="font-bold text-gray-700">Accounts</span>
+
+                            <div className="text-gray-500 mb-6 mt-4 md:mt-10">
+                                <span>Dashboard</span>
+                                <i className="fas fa-chevron-right mx-2"></i>
+                                <span className="font-bold text-gray-700">Letters of Credit </span>
                             </div>
 
 
@@ -73,82 +76,79 @@ export default function Credit1() {
 
                                 <div>
                                     <div className="flex items-center space-x-4 bg-gray-200 p-2 rounded-lg" style={{ justifyContent: "space-around" }}>
-                                        <div></div>
+                                        <div className='noneDiv'></div>
                                         <div className="sentAndrevice flex gap-2">
-
                                             <button
                                                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg ${activeTab === 'sent' ? 'bg-white' : ''}`}
-                                                onClick={() => setActiveTab('sent')}
+                                                onClick={() => { setActiveTab('sent'); setShowAll(false); }}
                                             >
                                                 <span className={`font-semibold ${activeTab === 'sent' ? 'text-red-600' : 'text-gray-600'}`}>Sent</span>
                                                 {activeTab === 'sent' && <span className="text-red-600">•</span>}
                                             </button>
                                             <button
                                                 className={`flex items-center space-x-2 px-4 py-2 rounded-lg ${activeTab === 'received' ? 'bg-white' : ''}`}
-                                                onClick={() => setActiveTab('received')}
+                                                onClick={() => { setActiveTab('received'); setShowAll(false); }}
                                             >
                                                 <span className={`font-semibold ${activeTab === 'received' ? 'text-red-600' : 'text-gray-600'}`}>Received</span>
                                                 {activeTab === 'received' && <span className="text-red-600">•</span>}
                                             </button>
                                         </div>
-                                        <div className="text-gray-400 cursor-pointer">
+                                        <div className="text-gray-400 cursor-pointer" onClick={() => setShowAll(true)}>
                                             See all
                                         </div>
                                     </div>
 
                                     {/* محتوى الزرار المختار */}
                                     <div className="mt-4 p-4  rounded-lg">
-                                        {activeTab === 'sent' && (
+                                        {!showAll && activeTab === 'sent' && (
                                             <div>
-                                                <div className="flex justify-between items-center mb-4">
-                                                    <h2 className="text-xl font-bold">Recent transactions</h2>
-                                                    <div className="flex space-x-4">
-                                                        <select className="border border-gray-300 rounded-lg p-2">
-                                                            <option>All</option>
-                                                            <option>Sent</option>
-                                                        </select>
-                                                        <select className="border border-gray-300 rounded-lg p-2">
-                                                            <option>Sent</option>
-                                                        </select>
-                                                        <button className="text-red-500">See all</button>
-                                                    </div>
-                                                </div>
+
+
                                                 <div className="hidden md:grid grid-cols-6 gap-1  text-gray-500 mb-2">
-                                                    <div className='col-span-1 md:col-span-2'>Recipient/Applicant</div>
-                                                    <div >Type</div>
-                                                    <div className=''>Ref Num.</div>
-                                                    <div>Status</div>
-                                                    <div>Amount</div>
+                                                    <div className='col-span-1 md:col-span-2'>Sender</div>
+                                                    <div >Status</div>
+                                                    <div className='refNum'>Amount</div>
+                                                    <p className="numbersHash text-gray-700">Last Update</p>
                                                 </div>
                                                 <div className="space-y-4">
                                                     <div className="grid grid-cols-1 md:grid-cols-6 gap-1 items-center">
                                                         <div className="col-span-2 md:col-span-2 flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
                                                             <img src={recptImage} alt="Recipient profile picture" className="w-10 h-10 rounded-full" />
                                                             <div>
-                                                                <p className="text-gray-500 md:hidden">Recipient/Applicant</p>
+                                                                <p className="text-gray-500 md:hidden">Sender</p>
                                                                 <p className="font-bold text-gray-700">Muhammad Abdelhamid</p>
-                                                                <p className="text-gray-500">10/2/2024</p>
+                                                                <p className="text-gray-500">Today - 3:20 PM</p>
                                                             </div>
                                                         </div>
                                                         <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
-                                                            <p className="text-gray-500 md:hidden">Type</p>
-                                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0.941297 13.9319C0.900519 14.5047 1.29555 14.9995 1.82363 15.0371L10.4291 15.6498C10.9572 15.6874 11.4183 15.2535 11.4591 14.6807C11.4999 14.1079 11.1049 13.6131 10.5768 13.5755L2.92746 13.0309L3.51814 4.73379C3.55892 4.16099 3.16389 3.66617 2.63581 3.62857C2.10774 3.59098 1.64659 4.02485 1.60581 4.59765L0.941297 13.9319ZM14.5316 0.744688L1.27356 13.2185L2.52136 14.7815L15.7794 2.30769L14.5316 0.744688Z" fill="black" />
-                                                            </svg>
-                                                            </i>
-                                                            <p className="text-gray-700">Received</p>
-                                                        </div>
-                                                        <div>
-                                                            <p className="text-gray-500 md:hidden">Type</p>
-                                                            <p className="text-gray-700">#12345</p>
-                                                        </div>
-                                                        <div>
                                                             <p className="text-gray-500 md:hidden">Status</p>
-                                                            <button className='confirmedBtn' >Confirmed</button>
+                                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_2795_48744)">
+                                                                    <path d="M14.3252 11.897C14.0483 11.691 13.6568 11.7485 13.4507 12.0254C13.3374 12.1777 13.2162 12.3271 13.0903 12.4695C12.8617 12.7281 12.886 13.1231 13.1446 13.3517C13.2636 13.4568 13.4112 13.5084 13.5583 13.5084C13.7312 13.5084 13.9033 13.4371 14.0268 13.2974C14.1759 13.1288 14.3195 12.9519 14.4536 12.7715C14.6597 12.4946 14.6022 12.103 14.3252 11.897Z" fill="#FFB930" />
+                                                                    <path d="M15.37 8.9656C15.0329 8.89219 14.6997 9.1061 14.6263 9.44335C14.5859 9.62888 14.5371 9.81476 14.4811 9.99588C14.3792 10.3257 14.564 10.6756 14.8938 10.7775C14.9552 10.7965 15.0174 10.8055 15.0785 10.8055C15.3454 10.8055 15.5925 10.6332 15.6754 10.3648C15.7419 10.1499 15.7998 9.92932 15.8477 9.70923C15.9211 9.37198 15.7072 9.03904 15.37 8.9656Z" fill="#FFB930" />
+                                                                    <path d="M11.317 13.8978C11.1511 13.9904 10.9793 14.0769 10.8064 14.155C10.4918 14.2971 10.352 14.6673 10.494 14.9819C10.5984 15.213 10.8259 15.3498 11.064 15.3498C11.15 15.3498 11.2374 15.3319 11.3209 15.2943C11.526 15.2016 11.7296 15.099 11.9264 14.9891C12.2278 14.8209 12.3357 14.4401 12.1674 14.1388C11.9992 13.8374 11.6184 13.7295 11.317 13.8978Z" fill="#FFB930" />
+                                                                    <path d="M7.37528 3V7.74113L5.08344 10.0329C4.83938 10.277 4.83938 10.6728 5.08344 10.9168C5.2055 11.0389 5.36541 11.0999 5.52541 11.0999C5.68534 11.0999 5.84531 11.0388 5.96738 10.9168L8.44225 8.44194C8.55944 8.32475 8.62528 8.16575 8.62528 8V3C8.62528 2.65481 8.34547 2.375 8.00028 2.375C7.65509 2.375 7.37528 2.65481 7.37528 3Z" fill="#FFB930" />
+                                                                    <path d="M15.375 1.34375C15.0298 1.34375 14.75 1.62356 14.75 1.96875V3.70425C13.2952 1.42275 10.7547 0 8 0C5.86312 0 3.85416 0.832156 2.34313 2.34313C0.832156 3.85416 0 5.86312 0 8C0 10.1369 0.832156 12.1458 2.34313 13.6569C3.85416 15.1678 5.86312 16 8 16C8.00528 16 8.01038 15.9993 8.01562 15.9992C8.02087 15.9993 8.02597 16 8.03125 16C8.2565 16 8.48397 15.9905 8.70741 15.9718C9.05137 15.943 9.30687 15.6408 9.27809 15.2968C9.24925 14.9529 8.94747 14.6973 8.60309 14.7262C8.41422 14.742 8.22184 14.75 8.03125 14.75C8.02597 14.75 8.02087 14.7507 8.01562 14.7508C8.01038 14.7507 8.00528 14.75 8 14.75C4.27803 14.75 1.25 11.722 1.25 8C1.25 4.27803 4.27803 1.25 8 1.25C10.3987 1.25 12.6049 2.52853 13.8105 4.5625H12.092C11.7468 4.5625 11.467 4.84231 11.467 5.1875C11.467 5.53269 11.7468 5.8125 12.092 5.8125H14C14.3806 5.8125 14.7367 5.70553 15.0399 5.52022C15.0594 5.50909 15.0782 5.49712 15.096 5.48422C15.64 5.12637 16 4.51084 16 3.8125V1.96875C16 1.62356 15.7202 1.34375 15.375 1.34375Z" fill="#FFB930" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_2795_48744">
+                                                                        <rect width="16" height="16" fill="white" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+
+                                                            </i>
+                                                            <p className="orangeClr text-gray-700 whitespace-nowrap">Pending Submission</p>
+                                                        </div>
+                                                        <div className=''>
+                                                            <p className="text-gray-500 md:hidden">Status</p>
+                                                            <p className="numbersHash text-gray-700">$ 3,000</p>
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-gray-500 md:hidden">Last Update</p>
+                                                            <button className='' >Today - 3:20 PM</button>
                                                         </div>
                                                         <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
-                                                            <p className="text-gray-500 md:hidden">Amount</p>
-                                                            <p className="text-gray-700">-$3,000</p>
                                                             <button className="viewDetails text-red-500 border border-red-500 rounded-lg w-100 py-2 text-xs">View Details</button>
                                                         </div>
                                                     </div>
@@ -157,28 +157,40 @@ export default function Credit1() {
                                                         <div className="col-span-2 md:col-span-2 flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
                                                             <img src={recptImage} alt="Recipient profile picture" className="w-10 h-10 rounded-full" />
                                                             <div>
-                                                                <p className="text-gray-500 md:hidden">Recipient/Applicant</p>
+                                                                <p className="text-gray-500 md:hidden">Sender</p>
                                                                 <p className="font-bold text-gray-700">Muhammad Abdelhamid</p>
                                                                 <p className="text-gray-500">10/2/2024</p>
                                                             </div>
                                                         </div>
                                                         <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
-                                                            <p className="text-gray-500 md:hidden">Type</p>
-                                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0.941297 13.9319C0.900519 14.5047 1.29555 14.9995 1.82363 15.0371L10.4291 15.6498C10.9572 15.6874 11.4183 15.2535 11.4591 14.6807C11.4999 14.1079 11.1049 13.6131 10.5768 13.5755L2.92746 13.0309L3.51814 4.73379C3.55892 4.16099 3.16389 3.66617 2.63581 3.62857C2.10774 3.59098 1.64659 4.02485 1.60581 4.59765L0.941297 13.9319ZM14.5316 0.744688L1.27356 13.2185L2.52136 14.7815L15.7794 2.30769L14.5316 0.744688Z" fill="black" />
-                                                            </svg>
-                                                            </i>                                            <p className="text-gray-700">Received</p>
-                                                        </div>
-                                                        <div>
-                                                            <p className="text-gray-500 md:hidden">Type</p>
-                                                            <p className="text-gray-700">#12345</p>
-                                                        </div>
-                                                        <div>
                                                             <p className="text-gray-500 md:hidden">Status</p>
-                                                            <button className='pendingdBtn'>Pending</button>                                        </div>
-                                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
+                                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_2795_48744)">
+                                                                    <path d="M14.3252 11.897C14.0483 11.691 13.6568 11.7485 13.4507 12.0254C13.3374 12.1777 13.2162 12.3271 13.0903 12.4695C12.8617 12.7281 12.886 13.1231 13.1446 13.3517C13.2636 13.4568 13.4112 13.5084 13.5583 13.5084C13.7312 13.5084 13.9033 13.4371 14.0268 13.2974C14.1759 13.1288 14.3195 12.9519 14.4536 12.7715C14.6597 12.4946 14.6022 12.103 14.3252 11.897Z" fill="#FFB930" />
+                                                                    <path d="M15.37 8.9656C15.0329 8.89219 14.6997 9.1061 14.6263 9.44335C14.5859 9.62888 14.5371 9.81476 14.4811 9.99588C14.3792 10.3257 14.564 10.6756 14.8938 10.7775C14.9552 10.7965 15.0174 10.8055 15.0785 10.8055C15.3454 10.8055 15.5925 10.6332 15.6754 10.3648C15.7419 10.1499 15.7998 9.92932 15.8477 9.70923C15.9211 9.37198 15.7072 9.03904 15.37 8.9656Z" fill="#FFB930" />
+                                                                    <path d="M11.317 13.8978C11.1511 13.9904 10.9793 14.0769 10.8064 14.155C10.4918 14.2971 10.352 14.6673 10.494 14.9819C10.5984 15.213 10.8259 15.3498 11.064 15.3498C11.15 15.3498 11.2374 15.3319 11.3209 15.2943C11.526 15.2016 11.7296 15.099 11.9264 14.9891C12.2278 14.8209 12.3357 14.4401 12.1674 14.1388C11.9992 13.8374 11.6184 13.7295 11.317 13.8978Z" fill="#FFB930" />
+                                                                    <path d="M7.37528 3V7.74113L5.08344 10.0329C4.83938 10.277 4.83938 10.6728 5.08344 10.9168C5.2055 11.0389 5.36541 11.0999 5.52541 11.0999C5.68534 11.0999 5.84531 11.0388 5.96738 10.9168L8.44225 8.44194C8.55944 8.32475 8.62528 8.16575 8.62528 8V3C8.62528 2.65481 8.34547 2.375 8.00028 2.375C7.65509 2.375 7.37528 2.65481 7.37528 3Z" fill="#FFB930" />
+                                                                    <path d="M15.375 1.34375C15.0298 1.34375 14.75 1.62356 14.75 1.96875V3.70425C13.2952 1.42275 10.7547 0 8 0C5.86312 0 3.85416 0.832156 2.34313 2.34313C0.832156 3.85416 0 5.86312 0 8C0 10.1369 0.832156 12.1458 2.34313 13.6569C3.85416 15.1678 5.86312 16 8 16C8.00528 16 8.01038 15.9993 8.01562 15.9992C8.02087 15.9993 8.02597 16 8.03125 16C8.2565 16 8.48397 15.9905 8.70741 15.9718C9.05137 15.943 9.30687 15.6408 9.27809 15.2968C9.24925 14.9529 8.94747 14.6973 8.60309 14.7262C8.41422 14.742 8.22184 14.75 8.03125 14.75C8.02597 14.75 8.02087 14.7507 8.01562 14.7508C8.01038 14.7507 8.00528 14.75 8 14.75C4.27803 14.75 1.25 11.722 1.25 8C1.25 4.27803 4.27803 1.25 8 1.25C10.3987 1.25 12.6049 2.52853 13.8105 4.5625H12.092C11.7468 4.5625 11.467 4.84231 11.467 5.1875C11.467 5.53269 11.7468 5.8125 12.092 5.8125H14C14.3806 5.8125 14.7367 5.70553 15.0399 5.52022C15.0594 5.50909 15.0782 5.49712 15.096 5.48422C15.64 5.12637 16 4.51084 16 3.8125V1.96875C16 1.62356 15.7202 1.34375 15.375 1.34375Z" fill="#FFB930" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_2795_48744">
+                                                                        <rect width="16" height="16" fill="white" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+
+                                                            </i>
+                                                            <p className="orangeClr text-gray-700 whitespace-nowrap">Pending Submission</p>
+                                                        </div>
+                                                        <div>
                                                             <p className="text-gray-500 md:hidden">Amount</p>
-                                                            <p className="text-gray-700">-$3,000</p>
+                                                            <p className="numbersHash text-gray-700">$ 3,000</p>
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-gray-500 md:hidden">Last Update</p>
+                                                            <button className='' >Today - 3:20 PM</button>
+                                                        </div>
+                                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
                                                             <button className="text-red-500 border border-red-500 rounded-lg w-100 py-2 text-xs">View Details</button>
                                                         </div>
                                                     </div>
@@ -187,28 +199,31 @@ export default function Credit1() {
                                                         <div className="col-span-2 md:col-span-2 flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
                                                             <img src={recptImage} alt="Recipient profile picture" className="w-10 h-10 rounded-full" />
                                                             <div>
-                                                                <p className="text-gray-500 md:hidden">Recipient/Applicant</p>
+                                                                <p className="text-gray-500 md:hidden">Sender</p>
                                                                 <p className="font-bold text-gray-700">Muhammad Abdelhamid</p>
                                                                 <p className="text-gray-500">10/2/2024</p>
                                                             </div>
                                                         </div>
                                                         <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
-                                                            <p className="text-gray-500 md:hidden">Type</p>
-                                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0.941297 13.9319C0.900519 14.5047 1.29555 14.9995 1.82363 15.0371L10.4291 15.6498C10.9572 15.6874 11.4183 15.2535 11.4591 14.6807C11.4999 14.1079 11.1049 13.6131 10.5768 13.5755L2.92746 13.0309L3.51814 4.73379C3.55892 4.16099 3.16389 3.66617 2.63581 3.62857C2.10774 3.59098 1.64659 4.02485 1.60581 4.59765L0.941297 13.9319ZM14.5316 0.744688L1.27356 13.2185L2.52136 14.7815L15.7794 2.30769L14.5316 0.744688Z" fill="black" />
-                                                            </svg>
-                                                            </i>                                            <p className="text-gray-700">Received</p>
-                                                        </div>
-                                                        <div>
-                                                            <p className="text-gray-500 md:hidden">Type</p>
-                                                            <p className="text-gray-700">#12345</p>
-                                                        </div>
-                                                        <div>
                                                             <p className="text-gray-500 md:hidden">Status</p>
-                                                            <button className='cancelledBtn'>Cancelled</button>                                       </div>
-                                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
+                                                            <i className=""><svg width="189" height="27" viewBox="0 0 189 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M26.688 12.418C26.688 11.33 26.9333 10.354 27.424 9.48995C27.9147 8.61529 28.5813 7.93262 29.424 7.44195C30.2773 6.95129 31.2213 6.70595 32.256 6.70595C33.472 6.70595 34.5333 6.99929 35.44 7.58595C36.3467 8.17262 37.008 9.00462 37.424 10.082H35.68C35.3707 9.40995 34.9227 8.89262 34.336 8.52995C33.76 8.16729 33.0667 7.98595 32.256 7.98595C31.4773 7.98595 30.7787 8.16729 30.16 8.52995C29.5413 8.89262 29.056 9.40995 28.704 10.082C28.352 10.7433 28.176 11.522 28.176 12.418C28.176 13.3033 28.352 14.082 28.704 14.754C29.056 15.4153 29.5413 15.9273 30.16 16.29C30.7787 16.6526 31.4773 16.834 32.256 16.834C33.0667 16.834 33.76 16.658 34.336 16.306C34.9227 15.9433 35.3707 15.426 35.68 14.754H37.424C37.008 15.8206 36.3467 16.6473 35.44 17.234C34.5333 17.81 33.472 18.098 32.256 18.098C31.2213 18.098 30.2773 17.858 29.424 17.378C28.5813 16.8873 27.9147 16.21 27.424 15.346C26.9333 14.482 26.688 13.506 26.688 12.418ZM43.4154 18.146C42.594 18.146 41.8474 17.9593 41.1754 17.586C40.514 17.2126 39.9914 16.6846 39.6074 16.002C39.234 15.3086 39.0474 14.5086 39.0474 13.602C39.0474 12.706 39.2394 11.9166 39.6234 11.234C40.018 10.5406 40.5514 10.0126 41.2234 9.64995C41.8954 9.27662 42.6474 9.08995 43.4794 9.08995C44.3114 9.08995 45.0634 9.27662 45.7354 9.64995C46.4074 10.0126 46.9354 10.5353 47.3194 11.218C47.714 11.9006 47.9114 12.6953 47.9114 13.602C47.9114 14.5086 47.7087 15.3086 47.3034 16.002C46.9087 16.6846 46.37 17.2126 45.6874 17.586C45.0047 17.9593 44.2474 18.146 43.4154 18.146ZM43.4154 16.866C43.938 16.866 44.4287 16.7433 44.8874 16.498C45.346 16.2526 45.714 15.8846 45.9914 15.394C46.2794 14.9033 46.4234 14.306 46.4234 13.602C46.4234 12.898 46.2847 12.3006 46.0074 11.81C45.73 11.3193 45.3674 10.9566 44.9194 10.722C44.4714 10.4766 43.986 10.354 43.4634 10.354C42.93 10.354 42.4394 10.4766 41.9914 10.722C41.554 10.9566 41.202 11.3193 40.9354 11.81C40.6687 12.3006 40.5354 12.898 40.5354 13.602C40.5354 14.3166 40.6634 14.9193 40.9194 15.41C41.186 15.9006 41.538 16.2686 41.9754 16.514C42.4127 16.7486 42.8927 16.866 43.4154 16.866ZM60.3698 9.07395C61.0524 9.07395 61.6604 9.21795 62.1938 9.50595C62.7271 9.78329 63.1484 10.2046 63.4578 10.77C63.7671 11.3353 63.9218 12.0233 63.9218 12.834V18.002H62.4818V13.042C62.4818 12.1673 62.2631 11.5006 61.8258 11.042C61.3991 10.5726 60.8178 10.338 60.0818 10.338C59.3244 10.338 58.7218 10.5833 58.2738 11.074C57.8258 11.554 57.6018 12.2526 57.6018 13.17V18.002H56.1618V13.042C56.1618 12.1673 55.9431 11.5006 55.5058 11.042C55.0791 10.5726 54.4978 10.338 53.7618 10.338C53.0044 10.338 52.4018 10.5833 51.9538 11.074C51.5058 11.554 51.2818 12.2526 51.2818 13.17V18.002H49.8258V9.23395H51.2818V10.498C51.5698 10.0393 51.9538 9.68729 52.4338 9.44195C52.9244 9.19662 53.4631 9.07395 54.0498 9.07395C54.7858 9.07395 55.4364 9.23929 56.0018 9.56995C56.5671 9.90062 56.9884 10.386 57.2658 11.026C57.5111 10.4073 57.9164 9.92729 58.4818 9.58595C59.0471 9.24462 59.6764 9.07395 60.3698 9.07395ZM67.7661 10.85C68.0541 10.3486 68.4808 9.93262 69.0461 9.60195C69.6221 9.26062 70.2888 9.08995 71.0461 9.08995C71.8248 9.08995 72.5288 9.27662 73.1581 9.64995C73.7981 10.0233 74.2995 10.5513 74.6621 11.234C75.0248 11.906 75.2061 12.69 75.2061 13.586C75.2061 14.4713 75.0248 15.2606 74.6621 15.954C74.2995 16.6473 73.7981 17.186 73.1581 17.57C72.5288 17.954 71.8248 18.146 71.0461 18.146C70.2995 18.146 69.6381 17.9806 69.0621 17.65C68.4968 17.3086 68.0648 16.8873 67.7661 16.386V22.162H66.3101V9.23395H67.7661V10.85ZM73.7181 13.586C73.7181 12.9246 73.5848 12.3486 73.3181 11.858C73.0515 11.3673 72.6888 10.994 72.2301 10.738C71.7821 10.482 71.2861 10.354 70.7421 10.354C70.2088 10.354 69.7128 10.4873 69.2541 10.754C68.8061 11.01 68.4435 11.3886 68.1661 11.89C67.8995 12.3806 67.7661 12.9513 67.7661 13.602C67.7661 14.2633 67.8995 14.8446 68.1661 15.346C68.4435 15.8366 68.8061 16.2153 69.2541 16.482C69.7128 16.738 70.2088 16.866 70.7421 16.866C71.2861 16.866 71.7821 16.738 72.2301 16.482C72.6888 16.2153 73.0515 15.8366 73.3181 15.346C73.5848 14.8446 73.7181 14.258 73.7181 13.586ZM78.5786 6.16195V18.002H77.1226V6.16195H78.5786ZM89.0601 13.282C89.0601 13.5593 89.0441 13.8526 89.0121 14.162H82.0041C82.0575 15.026 82.3508 15.7033 82.8841 16.194C83.4281 16.674 84.0841 16.914 84.8521 16.914C85.4815 16.914 86.0041 16.77 86.4201 16.482C86.8468 16.1833 87.1455 15.7886 87.3161 15.298H88.8841C88.6495 16.1406 88.1801 16.8286 87.4761 17.362C86.7721 17.8846 85.8975 18.146 84.8521 18.146C84.0201 18.146 83.2735 17.9593 82.6121 17.586C81.9615 17.2126 81.4495 16.6846 81.0761 16.002C80.7028 15.3086 80.5161 14.5086 80.5161 13.602C80.5161 12.6953 80.6975 11.9006 81.0601 11.218C81.4228 10.5353 81.9295 10.0126 82.5801 9.64995C83.2415 9.27662 83.9988 9.08995 84.8521 9.08995C85.6841 9.08995 86.4201 9.27129 87.0601 9.63395C87.7001 9.99662 88.1908 10.498 88.5321 11.138C88.8841 11.7673 89.0601 12.482 89.0601 13.282ZM87.5561 12.978C87.5561 12.4233 87.4335 11.9486 87.1881 11.554C86.9428 11.1486 86.6068 10.8446 86.1801 10.642C85.7641 10.4286 85.3001 10.322 84.7881 10.322C84.0521 10.322 83.4228 10.5566 82.9001 11.026C82.3881 11.4953 82.0948 12.146 82.0201 12.978H87.5561ZM92.758 10.434V15.602C92.758 16.0286 92.8487 16.3326 93.03 16.514C93.2113 16.6846 93.526 16.77 93.974 16.77H95.046V18.002H93.734C92.9233 18.002 92.3153 17.8153 91.91 17.442C91.5047 17.0686 91.302 16.4553 91.302 15.602V10.434H90.166V9.23395H91.302V7.02595H92.758V9.23395H95.046V10.434H92.758ZM104.81 13.282C104.81 13.5593 104.794 13.8526 104.762 14.162H97.7541C97.8075 15.026 98.1008 15.7033 98.6341 16.194C99.1781 16.674 99.8341 16.914 100.602 16.914C101.231 16.914 101.754 16.77 102.17 16.482C102.597 16.1833 102.895 15.7886 103.066 15.298H104.634C104.399 16.1406 103.93 16.8286 103.226 17.362C102.522 17.8846 101.647 18.146 100.602 18.146C99.7701 18.146 99.0235 17.9593 98.3621 17.586C97.7115 17.2126 97.1995 16.6846 96.8261 16.002C96.4528 15.3086 96.2661 14.5086 96.2661 13.602C96.2661 12.6953 96.4475 11.9006 96.8101 11.218C97.1728 10.5353 97.6795 10.0126 98.3301 9.64995C98.9915 9.27662 99.7488 9.08995 100.602 9.08995C101.434 9.08995 102.17 9.27129 102.81 9.63395C103.45 9.99662 103.941 10.498 104.282 11.138C104.634 11.7673 104.81 12.482 104.81 13.282ZM103.306 12.978C103.306 12.4233 103.183 11.9486 102.938 11.554C102.693 11.1486 102.357 10.8446 101.93 10.642C101.514 10.4286 101.05 10.322 100.538 10.322C99.8021 10.322 99.1728 10.5566 98.6501 11.026C98.1381 11.4953 97.8448 12.146 97.7701 12.978H103.306ZM106.188 13.586C106.188 12.69 106.369 11.906 106.732 11.234C107.095 10.5513 107.591 10.0233 108.22 9.64995C108.86 9.27662 109.575 9.08995 110.364 9.08995C111.047 9.08995 111.681 9.24995 112.268 9.56995C112.855 9.87929 113.303 10.29 113.612 10.802V6.16195H115.084V18.002H113.612V16.354C113.324 16.8766 112.897 17.3086 112.332 17.65C111.767 17.9806 111.105 18.146 110.348 18.146C109.569 18.146 108.86 17.954 108.22 17.57C107.591 17.186 107.095 16.6473 106.732 15.954C106.369 15.2606 106.188 14.4713 106.188 13.586ZM113.612 13.602C113.612 12.9406 113.479 12.3646 113.212 11.874C112.945 11.3833 112.583 11.01 112.124 10.754C111.676 10.4873 111.18 10.354 110.636 10.354C110.092 10.354 109.596 10.482 109.148 10.738C108.7 10.994 108.343 11.3673 108.076 11.858C107.809 12.3486 107.676 12.9246 107.676 13.586C107.676 14.258 107.809 14.8446 108.076 15.346C108.343 15.8366 108.7 16.2153 109.148 16.482C109.596 16.738 110.092 16.866 110.636 16.866C111.18 16.866 111.676 16.738 112.124 16.482C112.583 16.2153 112.945 15.8366 113.212 15.346C113.479 14.8446 113.612 14.2633 113.612 13.602Z" fill="#7EBA00" />
+                                                                <path d="M11.0069 16.5445L6 11.2418L7.46283 9.77893L11.4856 13.0703L22.4568 1.00195L23.9197 1.73337L13.2534 16.3982C13.1272 16.5722 12.9642 16.7162 12.776 16.82C12.5878 16.9238 12.379 16.9849 12.1645 16.9989C11.95 17.0128 11.7351 16.9794 11.535 16.9008C11.3349 16.8223 11.1546 16.7006 11.0069 16.5445Z" fill="#7EB900" />
+                                                                <path d="M5.0069 16.5445L0 11.2418L1.46283 9.77893L5.48561 13.0703L16.4568 1.00195L17.9197 1.73337L7.25344 16.3982C7.12721 16.5722 6.96419 16.7162 6.77598 16.82C6.58778 16.9238 6.379 16.9849 6.16452 16.9989C5.95003 17.0128 5.73511 16.9794 5.53503 16.9008C5.33495 16.8223 5.15463 16.7006 5.0069 16.5445Z" fill="#7EB900" />
+                                                            </svg>
+
+
+                                                            </i>
+                                                        </div>
+                                                        <div>
                                                             <p className="text-gray-500 md:hidden">Amount</p>
-                                                            <p className="text-gray-700">-$3,000</p>
+                                                            <p className="numbersHash text-gray-700">$ 3,000</p>
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-gray-500 md:hidden">Last Update</p>
+                                                            <button className='' >Today - 3:20 PM</button>
+                                                        </div>
+                                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
                                                             <button className="text-red-500 border border-red-500 rounded-lg w-100 py-2 text-xs">View Details</button>
                                                         </div>
                                                     </div>
@@ -217,29 +232,31 @@ export default function Credit1() {
                                                         <div className="col-span-2 md:col-span-2 flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
                                                             <img src={recptImage} alt="Recipient profile picture" className="w-10 h-10 rounded-full" />
                                                             <div>
-                                                                <p className="text-gray-500 md:hidden">Recipient/Applicant</p>
+                                                                <p className="text-gray-500 md:hidden">Sender</p>
                                                                 <p className="font-bold text-gray-700">Muhammad Abdelhamid</p>
                                                                 <p className="text-gray-500">10/2/2024</p>
                                                             </div>
                                                         </div>
                                                         <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
-                                                            <p className="text-gray-500 md:hidden">Type</p>
-                                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0.941297 13.9319C0.900519 14.5047 1.29555 14.9995 1.82363 15.0371L10.4291 15.6498C10.9572 15.6874 11.4183 15.2535 11.4591 14.6807C11.4999 14.1079 11.1049 13.6131 10.5768 13.5755L2.92746 13.0309L3.51814 4.73379C3.55892 4.16099 3.16389 3.66617 2.63581 3.62857C2.10774 3.59098 1.64659 4.02485 1.60581 4.59765L0.941297 13.9319ZM14.5316 0.744688L1.27356 13.2185L2.52136 14.7815L15.7794 2.30769L14.5316 0.744688Z" fill="black" />
-                                                            </svg>
-                                                            </i>                                            <p className="text-gray-700">Received</p>
-                                                        </div>
-                                                        <div>
-                                                            <p className="text-gray-500 md:hidden">Type</p>
-                                                            <p className="text-gray-700">#12345</p>
-                                                        </div>
-                                                        <div>
                                                             <p className="text-gray-500 md:hidden">Status</p>
-                                                            <button className='confirmedBtn' >Confirmed</button>
+                                                            <i className=""><svg width="189" height="27" viewBox="0 0 189 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M26.688 12.418C26.688 11.33 26.9333 10.354 27.424 9.48995C27.9147 8.61529 28.5813 7.93262 29.424 7.44195C30.2773 6.95129 31.2213 6.70595 32.256 6.70595C33.472 6.70595 34.5333 6.99929 35.44 7.58595C36.3467 8.17262 37.008 9.00462 37.424 10.082H35.68C35.3707 9.40995 34.9227 8.89262 34.336 8.52995C33.76 8.16729 33.0667 7.98595 32.256 7.98595C31.4773 7.98595 30.7787 8.16729 30.16 8.52995C29.5413 8.89262 29.056 9.40995 28.704 10.082C28.352 10.7433 28.176 11.522 28.176 12.418C28.176 13.3033 28.352 14.082 28.704 14.754C29.056 15.4153 29.5413 15.9273 30.16 16.29C30.7787 16.6526 31.4773 16.834 32.256 16.834C33.0667 16.834 33.76 16.658 34.336 16.306C34.9227 15.9433 35.3707 15.426 35.68 14.754H37.424C37.008 15.8206 36.3467 16.6473 35.44 17.234C34.5333 17.81 33.472 18.098 32.256 18.098C31.2213 18.098 30.2773 17.858 29.424 17.378C28.5813 16.8873 27.9147 16.21 27.424 15.346C26.9333 14.482 26.688 13.506 26.688 12.418ZM43.4154 18.146C42.594 18.146 41.8474 17.9593 41.1754 17.586C40.514 17.2126 39.9914 16.6846 39.6074 16.002C39.234 15.3086 39.0474 14.5086 39.0474 13.602C39.0474 12.706 39.2394 11.9166 39.6234 11.234C40.018 10.5406 40.5514 10.0126 41.2234 9.64995C41.8954 9.27662 42.6474 9.08995 43.4794 9.08995C44.3114 9.08995 45.0634 9.27662 45.7354 9.64995C46.4074 10.0126 46.9354 10.5353 47.3194 11.218C47.714 11.9006 47.9114 12.6953 47.9114 13.602C47.9114 14.5086 47.7087 15.3086 47.3034 16.002C46.9087 16.6846 46.37 17.2126 45.6874 17.586C45.0047 17.9593 44.2474 18.146 43.4154 18.146ZM43.4154 16.866C43.938 16.866 44.4287 16.7433 44.8874 16.498C45.346 16.2526 45.714 15.8846 45.9914 15.394C46.2794 14.9033 46.4234 14.306 46.4234 13.602C46.4234 12.898 46.2847 12.3006 46.0074 11.81C45.73 11.3193 45.3674 10.9566 44.9194 10.722C44.4714 10.4766 43.986 10.354 43.4634 10.354C42.93 10.354 42.4394 10.4766 41.9914 10.722C41.554 10.9566 41.202 11.3193 40.9354 11.81C40.6687 12.3006 40.5354 12.898 40.5354 13.602C40.5354 14.3166 40.6634 14.9193 40.9194 15.41C41.186 15.9006 41.538 16.2686 41.9754 16.514C42.4127 16.7486 42.8927 16.866 43.4154 16.866ZM60.3698 9.07395C61.0524 9.07395 61.6604 9.21795 62.1938 9.50595C62.7271 9.78329 63.1484 10.2046 63.4578 10.77C63.7671 11.3353 63.9218 12.0233 63.9218 12.834V18.002H62.4818V13.042C62.4818 12.1673 62.2631 11.5006 61.8258 11.042C61.3991 10.5726 60.8178 10.338 60.0818 10.338C59.3244 10.338 58.7218 10.5833 58.2738 11.074C57.8258 11.554 57.6018 12.2526 57.6018 13.17V18.002H56.1618V13.042C56.1618 12.1673 55.9431 11.5006 55.5058 11.042C55.0791 10.5726 54.4978 10.338 53.7618 10.338C53.0044 10.338 52.4018 10.5833 51.9538 11.074C51.5058 11.554 51.2818 12.2526 51.2818 13.17V18.002H49.8258V9.23395H51.2818V10.498C51.5698 10.0393 51.9538 9.68729 52.4338 9.44195C52.9244 9.19662 53.4631 9.07395 54.0498 9.07395C54.7858 9.07395 55.4364 9.23929 56.0018 9.56995C56.5671 9.90062 56.9884 10.386 57.2658 11.026C57.5111 10.4073 57.9164 9.92729 58.4818 9.58595C59.0471 9.24462 59.6764 9.07395 60.3698 9.07395ZM67.7661 10.85C68.0541 10.3486 68.4808 9.93262 69.0461 9.60195C69.6221 9.26062 70.2888 9.08995 71.0461 9.08995C71.8248 9.08995 72.5288 9.27662 73.1581 9.64995C73.7981 10.0233 74.2995 10.5513 74.6621 11.234C75.0248 11.906 75.2061 12.69 75.2061 13.586C75.2061 14.4713 75.0248 15.2606 74.6621 15.954C74.2995 16.6473 73.7981 17.186 73.1581 17.57C72.5288 17.954 71.8248 18.146 71.0461 18.146C70.2995 18.146 69.6381 17.9806 69.0621 17.65C68.4968 17.3086 68.0648 16.8873 67.7661 16.386V22.162H66.3101V9.23395H67.7661V10.85ZM73.7181 13.586C73.7181 12.9246 73.5848 12.3486 73.3181 11.858C73.0515 11.3673 72.6888 10.994 72.2301 10.738C71.7821 10.482 71.2861 10.354 70.7421 10.354C70.2088 10.354 69.7128 10.4873 69.2541 10.754C68.8061 11.01 68.4435 11.3886 68.1661 11.89C67.8995 12.3806 67.7661 12.9513 67.7661 13.602C67.7661 14.2633 67.8995 14.8446 68.1661 15.346C68.4435 15.8366 68.8061 16.2153 69.2541 16.482C69.7128 16.738 70.2088 16.866 70.7421 16.866C71.2861 16.866 71.7821 16.738 72.2301 16.482C72.6888 16.2153 73.0515 15.8366 73.3181 15.346C73.5848 14.8446 73.7181 14.258 73.7181 13.586ZM78.5786 6.16195V18.002H77.1226V6.16195H78.5786ZM89.0601 13.282C89.0601 13.5593 89.0441 13.8526 89.0121 14.162H82.0041C82.0575 15.026 82.3508 15.7033 82.8841 16.194C83.4281 16.674 84.0841 16.914 84.8521 16.914C85.4815 16.914 86.0041 16.77 86.4201 16.482C86.8468 16.1833 87.1455 15.7886 87.3161 15.298H88.8841C88.6495 16.1406 88.1801 16.8286 87.4761 17.362C86.7721 17.8846 85.8975 18.146 84.8521 18.146C84.0201 18.146 83.2735 17.9593 82.6121 17.586C81.9615 17.2126 81.4495 16.6846 81.0761 16.002C80.7028 15.3086 80.5161 14.5086 80.5161 13.602C80.5161 12.6953 80.6975 11.9006 81.0601 11.218C81.4228 10.5353 81.9295 10.0126 82.5801 9.64995C83.2415 9.27662 83.9988 9.08995 84.8521 9.08995C85.6841 9.08995 86.4201 9.27129 87.0601 9.63395C87.7001 9.99662 88.1908 10.498 88.5321 11.138C88.8841 11.7673 89.0601 12.482 89.0601 13.282ZM87.5561 12.978C87.5561 12.4233 87.4335 11.9486 87.1881 11.554C86.9428 11.1486 86.6068 10.8446 86.1801 10.642C85.7641 10.4286 85.3001 10.322 84.7881 10.322C84.0521 10.322 83.4228 10.5566 82.9001 11.026C82.3881 11.4953 82.0948 12.146 82.0201 12.978H87.5561ZM92.758 10.434V15.602C92.758 16.0286 92.8487 16.3326 93.03 16.514C93.2113 16.6846 93.526 16.77 93.974 16.77H95.046V18.002H93.734C92.9233 18.002 92.3153 17.8153 91.91 17.442C91.5047 17.0686 91.302 16.4553 91.302 15.602V10.434H90.166V9.23395H91.302V7.02595H92.758V9.23395H95.046V10.434H92.758ZM104.81 13.282C104.81 13.5593 104.794 13.8526 104.762 14.162H97.7541C97.8075 15.026 98.1008 15.7033 98.6341 16.194C99.1781 16.674 99.8341 16.914 100.602 16.914C101.231 16.914 101.754 16.77 102.17 16.482C102.597 16.1833 102.895 15.7886 103.066 15.298H104.634C104.399 16.1406 103.93 16.8286 103.226 17.362C102.522 17.8846 101.647 18.146 100.602 18.146C99.7701 18.146 99.0235 17.9593 98.3621 17.586C97.7115 17.2126 97.1995 16.6846 96.8261 16.002C96.4528 15.3086 96.2661 14.5086 96.2661 13.602C96.2661 12.6953 96.4475 11.9006 96.8101 11.218C97.1728 10.5353 97.6795 10.0126 98.3301 9.64995C98.9915 9.27662 99.7488 9.08995 100.602 9.08995C101.434 9.08995 102.17 9.27129 102.81 9.63395C103.45 9.99662 103.941 10.498 104.282 11.138C104.634 11.7673 104.81 12.482 104.81 13.282ZM103.306 12.978C103.306 12.4233 103.183 11.9486 102.938 11.554C102.693 11.1486 102.357 10.8446 101.93 10.642C101.514 10.4286 101.05 10.322 100.538 10.322C99.8021 10.322 99.1728 10.5566 98.6501 11.026C98.1381 11.4953 97.8448 12.146 97.7701 12.978H103.306ZM106.188 13.586C106.188 12.69 106.369 11.906 106.732 11.234C107.095 10.5513 107.591 10.0233 108.22 9.64995C108.86 9.27662 109.575 9.08995 110.364 9.08995C111.047 9.08995 111.681 9.24995 112.268 9.56995C112.855 9.87929 113.303 10.29 113.612 10.802V6.16195H115.084V18.002H113.612V16.354C113.324 16.8766 112.897 17.3086 112.332 17.65C111.767 17.9806 111.105 18.146 110.348 18.146C109.569 18.146 108.86 17.954 108.22 17.57C107.591 17.186 107.095 16.6473 106.732 15.954C106.369 15.2606 106.188 14.4713 106.188 13.586ZM113.612 13.602C113.612 12.9406 113.479 12.3646 113.212 11.874C112.945 11.3833 112.583 11.01 112.124 10.754C111.676 10.4873 111.18 10.354 110.636 10.354C110.092 10.354 109.596 10.482 109.148 10.738C108.7 10.994 108.343 11.3673 108.076 11.858C107.809 12.3486 107.676 12.9246 107.676 13.586C107.676 14.258 107.809 14.8446 108.076 15.346C108.343 15.8366 108.7 16.2153 109.148 16.482C109.596 16.738 110.092 16.866 110.636 16.866C111.18 16.866 111.676 16.738 112.124 16.482C112.583 16.2153 112.945 15.8366 113.212 15.346C113.479 14.8446 113.612 14.2633 113.612 13.602Z" fill="#7EBA00" />
+                                                                <path d="M11.0069 16.5445L6 11.2418L7.46283 9.77893L11.4856 13.0703L22.4568 1.00195L23.9197 1.73337L13.2534 16.3982C13.1272 16.5722 12.9642 16.7162 12.776 16.82C12.5878 16.9238 12.379 16.9849 12.1645 16.9989C11.95 17.0128 11.7351 16.9794 11.535 16.9008C11.3349 16.8223 11.1546 16.7006 11.0069 16.5445Z" fill="#7EB900" />
+                                                                <path d="M5.0069 16.5445L0 11.2418L1.46283 9.77893L5.48561 13.0703L16.4568 1.00195L17.9197 1.73337L7.25344 16.3982C7.12721 16.5722 6.96419 16.7162 6.77598 16.82C6.58778 16.9238 6.379 16.9849 6.16452 16.9989C5.95003 17.0128 5.73511 16.9794 5.53503 16.9008C5.33495 16.8223 5.15463 16.7006 5.0069 16.5445Z" fill="#7EB900" />
+                                                            </svg>
+
+
+                                                            </i>
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-gray-500 md:hidden">Amount</p>
+                                                            <p className="numbersHash text-gray-700">$ 3,000</p>
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-gray-500 md:hidden">Last Update</p>
+                                                            <button className='' >Today - 3:20 PM</button>
                                                         </div>
                                                         <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
-                                                            <p className="text-gray-500 md:hidden">Amount</p>
-                                                            <p className="text-gray-700">-$3,000</p>
                                                             <button className="text-red-500 border border-red-500 rounded-lg w-100 py-2 text-xs">View Details</button>
                                                         </div>
                                                     </div>
@@ -248,29 +265,40 @@ export default function Credit1() {
                                                         <div className="col-span-2 md:col-span-2 flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
                                                             <img src={recptImage} alt="Recipient profile picture" className="w-10 h-10 rounded-full" />
                                                             <div>
-                                                                <p className="text-gray-500 md:hidden">Recipient/Applicant</p>
+                                                                <p className="text-gray-500 md:hidden">Sender</p>
                                                                 <p className="font-bold text-gray-700">Muhammad Abdelhamid</p>
                                                                 <p className="text-gray-500">10/2/2024</p>
                                                             </div>
                                                         </div>
                                                         <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
-                                                            <p className="text-gray-500 md:hidden">Type</p>
-                                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0.941297 13.9319C0.900519 14.5047 1.29555 14.9995 1.82363 15.0371L10.4291 15.6498C10.9572 15.6874 11.4183 15.2535 11.4591 14.6807C11.4999 14.1079 11.1049 13.6131 10.5768 13.5755L2.92746 13.0309L3.51814 4.73379C3.55892 4.16099 3.16389 3.66617 2.63581 3.62857C2.10774 3.59098 1.64659 4.02485 1.60581 4.59765L0.941297 13.9319ZM14.5316 0.744688L1.27356 13.2185L2.52136 14.7815L15.7794 2.30769L14.5316 0.744688Z" fill="black" />
-                                                            </svg>
-                                                            </i>                                            <p className="text-gray-700">Received</p>
-                                                        </div>
-                                                        <div>
-                                                            <p className="text-gray-500 md:hidden">Type</p>
-                                                            <p className="text-gray-700">#12345</p>
-                                                        </div>
-                                                        <div>
                                                             <p className="text-gray-500 md:hidden">Status</p>
-                                                            <button className='confirmedBtn' >Confirmed</button>
+                                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_2795_48744)">
+                                                                    <path d="M14.3252 11.897C14.0483 11.691 13.6568 11.7485 13.4507 12.0254C13.3374 12.1777 13.2162 12.3271 13.0903 12.4695C12.8617 12.7281 12.886 13.1231 13.1446 13.3517C13.2636 13.4568 13.4112 13.5084 13.5583 13.5084C13.7312 13.5084 13.9033 13.4371 14.0268 13.2974C14.1759 13.1288 14.3195 12.9519 14.4536 12.7715C14.6597 12.4946 14.6022 12.103 14.3252 11.897Z" fill="#FFB930" />
+                                                                    <path d="M15.37 8.9656C15.0329 8.89219 14.6997 9.1061 14.6263 9.44335C14.5859 9.62888 14.5371 9.81476 14.4811 9.99588C14.3792 10.3257 14.564 10.6756 14.8938 10.7775C14.9552 10.7965 15.0174 10.8055 15.0785 10.8055C15.3454 10.8055 15.5925 10.6332 15.6754 10.3648C15.7419 10.1499 15.7998 9.92932 15.8477 9.70923C15.9211 9.37198 15.7072 9.03904 15.37 8.9656Z" fill="#FFB930" />
+                                                                    <path d="M11.317 13.8978C11.1511 13.9904 10.9793 14.0769 10.8064 14.155C10.4918 14.2971 10.352 14.6673 10.494 14.9819C10.5984 15.213 10.8259 15.3498 11.064 15.3498C11.15 15.3498 11.2374 15.3319 11.3209 15.2943C11.526 15.2016 11.7296 15.099 11.9264 14.9891C12.2278 14.8209 12.3357 14.4401 12.1674 14.1388C11.9992 13.8374 11.6184 13.7295 11.317 13.8978Z" fill="#FFB930" />
+                                                                    <path d="M7.37528 3V7.74113L5.08344 10.0329C4.83938 10.277 4.83938 10.6728 5.08344 10.9168C5.2055 11.0389 5.36541 11.0999 5.52541 11.0999C5.68534 11.0999 5.84531 11.0388 5.96738 10.9168L8.44225 8.44194C8.55944 8.32475 8.62528 8.16575 8.62528 8V3C8.62528 2.65481 8.34547 2.375 8.00028 2.375C7.65509 2.375 7.37528 2.65481 7.37528 3Z" fill="#FFB930" />
+                                                                    <path d="M15.375 1.34375C15.0298 1.34375 14.75 1.62356 14.75 1.96875V3.70425C13.2952 1.42275 10.7547 0 8 0C5.86312 0 3.85416 0.832156 2.34313 2.34313C0.832156 3.85416 0 5.86312 0 8C0 10.1369 0.832156 12.1458 2.34313 13.6569C3.85416 15.1678 5.86312 16 8 16C8.00528 16 8.01038 15.9993 8.01562 15.9992C8.02087 15.9993 8.02597 16 8.03125 16C8.2565 16 8.48397 15.9905 8.70741 15.9718C9.05137 15.943 9.30687 15.6408 9.27809 15.2968C9.24925 14.9529 8.94747 14.6973 8.60309 14.7262C8.41422 14.742 8.22184 14.75 8.03125 14.75C8.02597 14.75 8.02087 14.7507 8.01562 14.7508C8.01038 14.7507 8.00528 14.75 8 14.75C4.27803 14.75 1.25 11.722 1.25 8C1.25 4.27803 4.27803 1.25 8 1.25C10.3987 1.25 12.6049 2.52853 13.8105 4.5625H12.092C11.7468 4.5625 11.467 4.84231 11.467 5.1875C11.467 5.53269 11.7468 5.8125 12.092 5.8125H14C14.3806 5.8125 14.7367 5.70553 15.0399 5.52022C15.0594 5.50909 15.0782 5.49712 15.096 5.48422C15.64 5.12637 16 4.51084 16 3.8125V1.96875C16 1.62356 15.7202 1.34375 15.375 1.34375Z" fill="#FFB930" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_2795_48744">
+                                                                        <rect width="16" height="16" fill="white" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+
+                                                            </i>
+                                                            <p className="orangeClr text-gray-700 whitespace-nowrap">Pending Submission</p>
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-gray-500 md:hidden">Amount</p>
+                                                            <p className="numbersHash text-gray-700">$ 3,000</p>
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-gray-500 md:hidden">Last Update</p>
+                                                            <button className='' >Today - 3:20 PM</button>
                                                         </div>
                                                         <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
-                                                            <p className="text-gray-500 md:hidden">Amount</p>
-                                                            <p className="text-gray-700">-$3,000</p>
                                                             <button className="text-red-500 border border-red-500 rounded-lg w-100 py-2 text-xs">View Details</button>
                                                         </div>
                                                     </div>
@@ -278,57 +306,54 @@ export default function Credit1() {
                                                 </div>
                                             </div>
                                         )}
-                                        {activeTab === 'received' && (
+                                        {!showAll && activeTab === 'received' && (
                                             <div>
-                                                <div className="flex justify-between items-center mb-4">
-                                                    <h2 className="text-xl font-bold">Recent transactions</h2>
-                                                    <div className="flex space-x-4">
-                                                        <select className="border border-gray-300 rounded-lg p-2">
-                                                            <option>All</option>
-                                                            <option>Sent</option>
-                                                        </select>
-                                                        <select className="border border-gray-300 rounded-lg p-2">
-                                                            <option>Sent</option>
-                                                        </select>
-                                                        <button className="text-red-500">See all</button>
-                                                    </div>
-                                                </div>
+
                                                 <div className="hidden md:grid grid-cols-6 gap-1  text-gray-500 mb-2">
-                                                    <div className='col-span-1 md:col-span-2'>Recipient/Applicant</div>
-                                                    <div >Type</div>
-                                                    <div className=''>Ref Num.</div>
-                                                    <div>Status</div>
-                                                    <div>Amount</div>
+                                                    <div className='col-span-1 md:col-span-2'>Sender</div>
+                                                    <div >Status</div>
+                                                    <div className='refNum'>Amount</div>
+                                                    <div>Last Update</div>
                                                 </div>
                                                 <div className="space-y-4">
                                                     <div className="grid grid-cols-1 md:grid-cols-6 gap-1 items-center">
                                                         <div className="col-span-2 md:col-span-2 flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
                                                             <img src={recptImage} alt="Recipient profile picture" className="w-10 h-10 rounded-full" />
                                                             <div>
-                                                                <p className="text-gray-500 md:hidden">Recipient/Applicant</p>
+                                                                <p className="text-gray-500 md:hidden">Sender</p>
                                                                 <p className="font-bold text-gray-700">Muhammad Abdelhamid</p>
                                                                 <p className="text-gray-500">10/2/2024</p>
                                                             </div>
                                                         </div>
                                                         <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
-                                                            <p className="text-gray-500 md:hidden">Type</p>
+                                                            <p className="text-gray-500 md:hidden">Sender</p>
                                                             <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0.941297 13.9319C0.900519 14.5047 1.29555 14.9995 1.82363 15.0371L10.4291 15.6498C10.9572 15.6874 11.4183 15.2535 11.4591 14.6807C11.4999 14.1079 11.1049 13.6131 10.5768 13.5755L2.92746 13.0309L3.51814 4.73379C3.55892 4.16099 3.16389 3.66617 2.63581 3.62857C2.10774 3.59098 1.64659 4.02485 1.60581 4.59765L0.941297 13.9319ZM14.5316 0.744688L1.27356 13.2185L2.52136 14.7815L15.7794 2.30769L14.5316 0.744688Z" fill="black" />
+                                                                <g clip-path="url(#clip0_2795_48744)">
+                                                                    <path d="M14.3252 11.897C14.0483 11.691 13.6568 11.7485 13.4507 12.0254C13.3374 12.1777 13.2162 12.3271 13.0903 12.4695C12.8617 12.7281 12.886 13.1231 13.1446 13.3517C13.2636 13.4568 13.4112 13.5084 13.5583 13.5084C13.7312 13.5084 13.9033 13.4371 14.0268 13.2974C14.1759 13.1288 14.3195 12.9519 14.4536 12.7715C14.6597 12.4946 14.6022 12.103 14.3252 11.897Z" fill="#FFB930" />
+                                                                    <path d="M15.37 8.9656C15.0329 8.89219 14.6997 9.1061 14.6263 9.44335C14.5859 9.62888 14.5371 9.81476 14.4811 9.99588C14.3792 10.3257 14.564 10.6756 14.8938 10.7775C14.9552 10.7965 15.0174 10.8055 15.0785 10.8055C15.3454 10.8055 15.5925 10.6332 15.6754 10.3648C15.7419 10.1499 15.7998 9.92932 15.8477 9.70923C15.9211 9.37198 15.7072 9.03904 15.37 8.9656Z" fill="#FFB930" />
+                                                                    <path d="M11.317 13.8978C11.1511 13.9904 10.9793 14.0769 10.8064 14.155C10.4918 14.2971 10.352 14.6673 10.494 14.9819C10.5984 15.213 10.8259 15.3498 11.064 15.3498C11.15 15.3498 11.2374 15.3319 11.3209 15.2943C11.526 15.2016 11.7296 15.099 11.9264 14.9891C12.2278 14.8209 12.3357 14.4401 12.1674 14.1388C11.9992 13.8374 11.6184 13.7295 11.317 13.8978Z" fill="#FFB930" />
+                                                                    <path d="M7.37528 3V7.74113L5.08344 10.0329C4.83938 10.277 4.83938 10.6728 5.08344 10.9168C5.2055 11.0389 5.36541 11.0999 5.52541 11.0999C5.68534 11.0999 5.84531 11.0388 5.96738 10.9168L8.44225 8.44194C8.55944 8.32475 8.62528 8.16575 8.62528 8V3C8.62528 2.65481 8.34547 2.375 8.00028 2.375C7.65509 2.375 7.37528 2.65481 7.37528 3Z" fill="#FFB930" />
+                                                                    <path d="M15.375 1.34375C15.0298 1.34375 14.75 1.62356 14.75 1.96875V3.70425C13.2952 1.42275 10.7547 0 8 0C5.86312 0 3.85416 0.832156 2.34313 2.34313C0.832156 3.85416 0 5.86312 0 8C0 10.1369 0.832156 12.1458 2.34313 13.6569C3.85416 15.1678 5.86312 16 8 16C8.00528 16 8.01038 15.9993 8.01562 15.9992C8.02087 15.9993 8.02597 16 8.03125 16C8.2565 16 8.48397 15.9905 8.70741 15.9718C9.05137 15.943 9.30687 15.6408 9.27809 15.2968C9.24925 14.9529 8.94747 14.6973 8.60309 14.7262C8.41422 14.742 8.22184 14.75 8.03125 14.75C8.02597 14.75 8.02087 14.7507 8.01562 14.7508C8.01038 14.7507 8.00528 14.75 8 14.75C4.27803 14.75 1.25 11.722 1.25 8C1.25 4.27803 4.27803 1.25 8 1.25C10.3987 1.25 12.6049 2.52853 13.8105 4.5625H12.092C11.7468 4.5625 11.467 4.84231 11.467 5.1875C11.467 5.53269 11.7468 5.8125 12.092 5.8125H14C14.3806 5.8125 14.7367 5.70553 15.0399 5.52022C15.0594 5.50909 15.0782 5.49712 15.096 5.48422C15.64 5.12637 16 4.51084 16 3.8125V1.96875C16 1.62356 15.7202 1.34375 15.375 1.34375Z" fill="#FFB930" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_2795_48744">
+                                                                        <rect width="16" height="16" fill="white" />
+                                                                    </clipPath>
+                                                                </defs>
                                                             </svg>
+
                                                             </i>
-                                                            <p className="text-gray-700">Received</p>
+                                                            <p className="orangeClr text-gray-700 whitespace-nowrap">Pending Submission</p>
                                                         </div>
                                                         <div>
-                                                            <p className="text-gray-500 md:hidden">Type</p>
-                                                            <p className="text-gray-700">#12345</p>
+                                                            <p className="text-gray-500 md:hidden">Amount</p>
+                                                            <p className="numbersHash text-gray-700">$ 3,000</p>
                                                         </div>
                                                         <div>
-                                                            <p className="text-gray-500 md:hidden">Status</p>
-                                                            <button className='confirmedBtn' >Confirmed</button>
+                                                            <p className="text-gray-500 md:hidden">Last Update</p>
+                                                            <button className='' >Today - 3:20 PM</button>
                                                         </div>
                                                         <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
-                                                            <p className="text-gray-500 md:hidden">Amount</p>
-                                                            <p className="text-gray-700">-$3,000</p>
                                                             <button className="viewDetails text-red-500 border border-red-500 rounded-lg w-100 py-2 text-xs">View Details</button>
                                                         </div>
                                                     </div>
@@ -341,29 +366,40 @@ export default function Credit1() {
                                                         <div className="col-span-2 md:col-span-2 flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
                                                             <img src={recptImage} alt="Recipient profile picture" className="w-10 h-10 rounded-full" />
                                                             <div>
-                                                                <p className="text-gray-500 md:hidden">Recipient/Applicant</p>
+                                                                <p className="text-gray-500 md:hidden">Sender</p>
                                                                 <p className="font-bold text-gray-700">Muhammad Abdelhamid</p>
                                                                 <p className="text-gray-500">10/2/2024</p>
                                                             </div>
                                                         </div>
                                                         <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
-                                                            <p className="text-gray-500 md:hidden">Type</p>
-                                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0.941297 13.9319C0.900519 14.5047 1.29555 14.9995 1.82363 15.0371L10.4291 15.6498C10.9572 15.6874 11.4183 15.2535 11.4591 14.6807C11.4999 14.1079 11.1049 13.6131 10.5768 13.5755L2.92746 13.0309L3.51814 4.73379C3.55892 4.16099 3.16389 3.66617 2.63581 3.62857C2.10774 3.59098 1.64659 4.02485 1.60581 4.59765L0.941297 13.9319ZM14.5316 0.744688L1.27356 13.2185L2.52136 14.7815L15.7794 2.30769L14.5316 0.744688Z" fill="black" />
-                                                            </svg>
-                                                            </i>                                            <p className="text-gray-700">Received</p>
-                                                        </div>
-                                                        <div>
-                                                            <p className="text-gray-500 md:hidden">Type</p>
-                                                            <p className="text-gray-700">#12345</p>
-                                                        </div>
-                                                        <div>
                                                             <p className="text-gray-500 md:hidden">Status</p>
-                                                            <button className='confirmedBtn' >Confirmed</button>
+                                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_2795_48744)">
+                                                                    <path d="M14.3252 11.897C14.0483 11.691 13.6568 11.7485 13.4507 12.0254C13.3374 12.1777 13.2162 12.3271 13.0903 12.4695C12.8617 12.7281 12.886 13.1231 13.1446 13.3517C13.2636 13.4568 13.4112 13.5084 13.5583 13.5084C13.7312 13.5084 13.9033 13.4371 14.0268 13.2974C14.1759 13.1288 14.3195 12.9519 14.4536 12.7715C14.6597 12.4946 14.6022 12.103 14.3252 11.897Z" fill="#FFB930" />
+                                                                    <path d="M15.37 8.9656C15.0329 8.89219 14.6997 9.1061 14.6263 9.44335C14.5859 9.62888 14.5371 9.81476 14.4811 9.99588C14.3792 10.3257 14.564 10.6756 14.8938 10.7775C14.9552 10.7965 15.0174 10.8055 15.0785 10.8055C15.3454 10.8055 15.5925 10.6332 15.6754 10.3648C15.7419 10.1499 15.7998 9.92932 15.8477 9.70923C15.9211 9.37198 15.7072 9.03904 15.37 8.9656Z" fill="#FFB930" />
+                                                                    <path d="M11.317 13.8978C11.1511 13.9904 10.9793 14.0769 10.8064 14.155C10.4918 14.2971 10.352 14.6673 10.494 14.9819C10.5984 15.213 10.8259 15.3498 11.064 15.3498C11.15 15.3498 11.2374 15.3319 11.3209 15.2943C11.526 15.2016 11.7296 15.099 11.9264 14.9891C12.2278 14.8209 12.3357 14.4401 12.1674 14.1388C11.9992 13.8374 11.6184 13.7295 11.317 13.8978Z" fill="#FFB930" />
+                                                                    <path d="M7.37528 3V7.74113L5.08344 10.0329C4.83938 10.277 4.83938 10.6728 5.08344 10.9168C5.2055 11.0389 5.36541 11.0999 5.52541 11.0999C5.68534 11.0999 5.84531 11.0388 5.96738 10.9168L8.44225 8.44194C8.55944 8.32475 8.62528 8.16575 8.62528 8V3C8.62528 2.65481 8.34547 2.375 8.00028 2.375C7.65509 2.375 7.37528 2.65481 7.37528 3Z" fill="#FFB930" />
+                                                                    <path d="M15.375 1.34375C15.0298 1.34375 14.75 1.62356 14.75 1.96875V3.70425C13.2952 1.42275 10.7547 0 8 0C5.86312 0 3.85416 0.832156 2.34313 2.34313C0.832156 3.85416 0 5.86312 0 8C0 10.1369 0.832156 12.1458 2.34313 13.6569C3.85416 15.1678 5.86312 16 8 16C8.00528 16 8.01038 15.9993 8.01562 15.9992C8.02087 15.9993 8.02597 16 8.03125 16C8.2565 16 8.48397 15.9905 8.70741 15.9718C9.05137 15.943 9.30687 15.6408 9.27809 15.2968C9.24925 14.9529 8.94747 14.6973 8.60309 14.7262C8.41422 14.742 8.22184 14.75 8.03125 14.75C8.02597 14.75 8.02087 14.7507 8.01562 14.7508C8.01038 14.7507 8.00528 14.75 8 14.75C4.27803 14.75 1.25 11.722 1.25 8C1.25 4.27803 4.27803 1.25 8 1.25C10.3987 1.25 12.6049 2.52853 13.8105 4.5625H12.092C11.7468 4.5625 11.467 4.84231 11.467 5.1875C11.467 5.53269 11.7468 5.8125 12.092 5.8125H14C14.3806 5.8125 14.7367 5.70553 15.0399 5.52022C15.0594 5.50909 15.0782 5.49712 15.096 5.48422C15.64 5.12637 16 4.51084 16 3.8125V1.96875C16 1.62356 15.7202 1.34375 15.375 1.34375Z" fill="#FFB930" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_2795_48744">
+                                                                        <rect width="16" height="16" fill="white" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+
+                                                            </i>
+                                                            <p className="orangeClr text-gray-700 whitespace-nowrap">Pending Submission</p>
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-gray-500 md:hidden">Amount</p>
+                                                            <p className="numbersHash text-gray-700">$ 3,000</p>
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-gray-500 md:hidden">Last Update</p>
+                                                            <button className='' >Today - 3:20 PM</button>
                                                         </div>
                                                         <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
-                                                            <p className="text-gray-500 md:hidden">Amount</p>
-                                                            <p className="text-gray-700">-$3,000</p>
                                                             <button className="text-red-500 border border-red-500 rounded-lg w-100 py-2 text-xs">View Details</button>
                                                         </div>
                                                     </div>
@@ -372,34 +408,52 @@ export default function Credit1() {
                                                         <div className="col-span-2 md:col-span-2 flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
                                                             <img src={recptImage} alt="Recipient profile picture" className="w-10 h-10 rounded-full" />
                                                             <div>
-                                                                <p className="text-gray-500 md:hidden">Recipient/Applicant</p>
+                                                                <p className="text-gray-500 md:hidden">Sender</p>
                                                                 <p className="font-bold text-gray-700">Muhammad Abdelhamid</p>
                                                                 <p className="text-gray-500">10/2/2024</p>
                                                             </div>
                                                         </div>
                                                         <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
-                                                            <p className="text-gray-500 md:hidden">Type</p>
-                                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <path d="M0.941297 13.9319C0.900519 14.5047 1.29555 14.9995 1.82363 15.0371L10.4291 15.6498C10.9572 15.6874 11.4183 15.2535 11.4591 14.6807C11.4999 14.1079 11.1049 13.6131 10.5768 13.5755L2.92746 13.0309L3.51814 4.73379C3.55892 4.16099 3.16389 3.66617 2.63581 3.62857C2.10774 3.59098 1.64659 4.02485 1.60581 4.59765L0.941297 13.9319ZM14.5316 0.744688L1.27356 13.2185L2.52136 14.7815L15.7794 2.30769L14.5316 0.744688Z" fill="black" />
-                                                            </svg>
-                                                            </i>                                            <p className="text-gray-700">Received</p>
-                                                        </div>
-                                                        <div>
-                                                            <p className="text-gray-500 md:hidden">Type</p>
-                                                            <p className="text-gray-700">#12345</p>
-                                                        </div>
-                                                        <div>
                                                             <p className="text-gray-500 md:hidden">Status</p>
-                                                            <button className='confirmedBtn' >Confirmed</button>
+                                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_2795_48744)">
+                                                                    <path d="M14.3252 11.897C14.0483 11.691 13.6568 11.7485 13.4507 12.0254C13.3374 12.1777 13.2162 12.3271 13.0903 12.4695C12.8617 12.7281 12.886 13.1231 13.1446 13.3517C13.2636 13.4568 13.4112 13.5084 13.5583 13.5084C13.7312 13.5084 13.9033 13.4371 14.0268 13.2974C14.1759 13.1288 14.3195 12.9519 14.4536 12.7715C14.6597 12.4946 14.6022 12.103 14.3252 11.897Z" fill="#FFB930" />
+                                                                    <path d="M15.37 8.9656C15.0329 8.89219 14.6997 9.1061 14.6263 9.44335C14.5859 9.62888 14.5371 9.81476 14.4811 9.99588C14.3792 10.3257 14.564 10.6756 14.8938 10.7775C14.9552 10.7965 15.0174 10.8055 15.0785 10.8055C15.3454 10.8055 15.5925 10.6332 15.6754 10.3648C15.7419 10.1499 15.7998 9.92932 15.8477 9.70923C15.9211 9.37198 15.7072 9.03904 15.37 8.9656Z" fill="#FFB930" />
+                                                                    <path d="M11.317 13.8978C11.1511 13.9904 10.9793 14.0769 10.8064 14.155C10.4918 14.2971 10.352 14.6673 10.494 14.9819C10.5984 15.213 10.8259 15.3498 11.064 15.3498C11.15 15.3498 11.2374 15.3319 11.3209 15.2943C11.526 15.2016 11.7296 15.099 11.9264 14.9891C12.2278 14.8209 12.3357 14.4401 12.1674 14.1388C11.9992 13.8374 11.6184 13.7295 11.317 13.8978Z" fill="#FFB930" />
+                                                                    <path d="M7.37528 3V7.74113L5.08344 10.0329C4.83938 10.277 4.83938 10.6728 5.08344 10.9168C5.2055 11.0389 5.36541 11.0999 5.52541 11.0999C5.68534 11.0999 5.84531 11.0388 5.96738 10.9168L8.44225 8.44194C8.55944 8.32475 8.62528 8.16575 8.62528 8V3C8.62528 2.65481 8.34547 2.375 8.00028 2.375C7.65509 2.375 7.37528 2.65481 7.37528 3Z" fill="#FFB930" />
+                                                                    <path d="M15.375 1.34375C15.0298 1.34375 14.75 1.62356 14.75 1.96875V3.70425C13.2952 1.42275 10.7547 0 8 0C5.86312 0 3.85416 0.832156 2.34313 2.34313C0.832156 3.85416 0 5.86312 0 8C0 10.1369 0.832156 12.1458 2.34313 13.6569C3.85416 15.1678 5.86312 16 8 16C8.00528 16 8.01038 15.9993 8.01562 15.9992C8.02087 15.9993 8.02597 16 8.03125 16C8.2565 16 8.48397 15.9905 8.70741 15.9718C9.05137 15.943 9.30687 15.6408 9.27809 15.2968C9.24925 14.9529 8.94747 14.6973 8.60309 14.7262C8.41422 14.742 8.22184 14.75 8.03125 14.75C8.02597 14.75 8.02087 14.7507 8.01562 14.7508C8.01038 14.7507 8.00528 14.75 8 14.75C4.27803 14.75 1.25 11.722 1.25 8C1.25 4.27803 4.27803 1.25 8 1.25C10.3987 1.25 12.6049 2.52853 13.8105 4.5625H12.092C11.7468 4.5625 11.467 4.84231 11.467 5.1875C11.467 5.53269 11.7468 5.8125 12.092 5.8125H14C14.3806 5.8125 14.7367 5.70553 15.0399 5.52022C15.0594 5.50909 15.0782 5.49712 15.096 5.48422C15.64 5.12637 16 4.51084 16 3.8125V1.96875C16 1.62356 15.7202 1.34375 15.375 1.34375Z" fill="#FFB930" />
+                                                                </g>
+                                                                <defs>
+                                                                    <clipPath id="clip0_2795_48744">
+                                                                        <rect width="16" height="16" fill="white" />
+                                                                    </clipPath>
+                                                                </defs>
+                                                            </svg>
+
+                                                            </i>
+                                                            <p className="orangeClr text-gray-700 whitespace-nowrap">Pending Submission</p>
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-gray-500 md:hidden">Amount</p>
+                                                            <p className="numbersHash text-gray-700">$ 3,000</p>
+                                                        </div>
+                                                        <div>
+                                                            <p className="text-gray-500 md:hidden">Last Update</p>
+                                                            <button className='' >Today - 3:20 PM</button>
                                                         </div>
                                                         <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
-                                                            <p className="text-gray-500 md:hidden">Amount</p>
-                                                            <p className="text-gray-700">-$3,000</p>
                                                             <button className="text-red-500 border border-red-500 rounded-lg w-100 py-2 text-xs">View Details</button>
                                                         </div>
                                                     </div>
 
                                                 </div>
+                                            </div>
+                                        )}
+
+                                        {showAll && (
+                                            <div>
+                                                <h2>All Content</h2>
+                                                <p>محتوى قسم "Sent" + "Received"</p>
                                             </div>
                                         )}
                                     </div>
@@ -421,6 +475,11 @@ export default function Credit1() {
 
 
                             </div>
+                            <div className='w-100 mt-10 text-center'>
+                                <button className='draftBtn'>View draft</button>
+
+                            </div>
+
                         </div>
 
 

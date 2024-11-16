@@ -206,7 +206,7 @@ export default function OverView1() {
 
                         <div className="">
                             <div className="flex flex-col md:flex-row justify-between items-center mb-6">
-                                <div className="relative w-full   md:mb-0" style={{width:"80%"}}>
+                                <div className="relative w-full   md:mb-0" style={{ width: "80%" }}>
                                     <input type="text" placeholder="Search anything here" className="w-full p-3 rounded-lg border border-gray-300" />
                                 </div>
                                 <div className="flex items-center space-x-4">
@@ -358,10 +358,10 @@ export default function OverView1() {
                                     </div>
                                 </div>
                             </div>
-                            <div className="bg-white p-6 rounded-lg border border-gray-200">
-                                <div className="flex justify-between items-center mb-4">
-                                    <h2 className="text-xl font-bold">Recent transactions</h2>
-                                    <div className="flex space-x-4">
+                            <div className='whiteBg p-6'>
+                                <div className="mb-4">
+                                    <h2 className="text-xl font-bold mb-2">Recent transactions</h2>
+                                    <div className="flex justify-start space-x-4">
                                         <select className="border border-gray-300 rounded-lg p-2">
                                             <option>All</option>
                                             <option>Sent</option>
@@ -372,26 +372,31 @@ export default function OverView1() {
                                         <button className="text-red-500">See all</button>
                                     </div>
                                 </div>
-                                <div className="hidden md:grid grid-cols-5  text-gray-500 mb-2">
-                                    <div>Recipient/Applicant</div>
-                                    <div className='pl-2'>Type</div>
-                                    <div>Type</div>
-                                    <div>Invoices</div>
+
+                                <div className="hidden md:grid grid-cols-6 gap-1  text-gray-500 mb-2">
+                                    <div className='col-span-1 md:col-span-2'>Recipient/Applicant</div>
+                                    <div >Type</div>
+                                    <div className=''>Ref Num.</div>
+                                    <div>Status</div>
                                     <div>Amount</div>
                                 </div>
                                 <div className="space-y-4">
-                                    <div className="grid grid-cols-1 md:grid-cols-5 gap-1 items-center">
-                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
+                                    <div className="grid grid-cols-1 md:grid-cols-6 gap-1 items-center">
+                                        <div className="col-span-2 md:col-span-2 flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
                                             <img src={recptImage} alt="Recipient profile picture" className="w-10 h-10 rounded-full" />
                                             <div>
                                                 <p className="text-gray-500 md:hidden">Recipient/Applicant</p>
                                                 <p className="font-bold text-gray-700">Muhammad Abdelhamid</p>
-                                                <p className="text-gray-500">Yesterday • 3:20 PM</p>
+                                                <p className="text-gray-500">10/2/2024</p>
                                             </div>
                                         </div>
-                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-2">
+                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
                                             <p className="text-gray-500 md:hidden">Type</p>
-                                            <i className="fas fa-arrow-up text-gray-700"></i>
+                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.2758 2.25991C15.3167 1.68487 14.9237 1.1884 14.3981 1.15101L5.83232 0.541652C5.30668 0.504259 4.84741 0.940106 4.8065 1.51514C4.76559 2.09018 5.15855 2.58666 5.68419 2.62405L13.2982 3.1657L12.7057 11.4953C12.6648 12.0703 13.0577 12.5668 13.5833 12.6042C14.109 12.6416 14.5683 12.2057 14.6092 11.6307L15.2758 2.25991ZM1.8003 15.4501L14.9447 2.97632L13.7034 1.40809L0.559071 13.8819L1.8003 15.4501Z" fill="black" />
+                                            </svg>
+
+                                            </i>
                                             <p className="text-gray-700">SEND</p>
                                         </div>
                                         <div>
@@ -399,45 +404,18 @@ export default function OverView1() {
                                             <p className="text-gray-700">Escrow</p>
                                         </div>
                                         <div>
-                                            <p className="text-gray-500 md:hidden">Invoices</p>
-                                            <p className="text-gray-700">-</p>
+                                            <p className="text-gray-500 md:hidden">Status</p>
+                                            <button className='' >-</button>
                                         </div>
-                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-2">
+                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
                                             <p className="text-gray-500 md:hidden">Amount</p>
                                             <p className="text-gray-700">-$3,000</p>
-                                            <button className="text-red-500 border border-red-500 rounded-lg w-100 py-2">View Details</button>
+                                            <button className="viewDetails text-red-500 border border-red-500 rounded-lg w-100 py-2 text-xs">View Details</button>
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-1 md:grid-cols-5 gap-1 items-center">
-                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
-                                            <img src={recptImage} alt="Recipient profile picture" className="w-10 h-10 rounded-full" />
-                                            <div>
-                                                <p className="text-gray-500 md:hidden">Recipient/Applicant</p>
-                                                <p className="font-bold text-gray-700">Muhammad Abdelhamid</p>
-                                                <p className="text-gray-500">Yesterday • 3:20 PM</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-2">
-                                            <p className="text-gray-500 md:hidden">Type</p>
-                                            <i className="fas fa-arrow-up text-gray-700"></i>
-                                            <p className="text-gray-700">SEND</p>
-                                        </div>
-                                        <div>
-                                            <p className="text-gray-500 md:hidden">Type</p>
-                                            <p className="text-gray-700">Transfer</p>
-                                        </div>
-                                        <div>
-                                            <p className="text-gray-500 md:hidden">Invoices</p>
-                                            <p className="text-gray-700">-</p>
-                                        </div>
-                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-2">
-                                            <p className="text-gray-500 md:hidden">Amount</p>
-                                            <p className="text-gray-700">-$3,000</p>
-                                            <button className="text-red-500 border border-red-500 rounded-lg w-100 py-2">View Details</button>
-                                        </div>
-                                    </div>
-                                    <div className="grid grid-cols-1 md:grid-cols-5 gap-1 items-center">
-                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
+
+                                    <div className="grid grid-cols-1 md:grid-cols-6 gap-1 items-center">
+                                        <div className="col-span-2 md:col-span-2 flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
                                             <img src={recptImage} alt="Recipient profile picture" className="w-10 h-10 rounded-full" />
                                             <div>
                                                 <p className="text-gray-500 md:hidden">Recipient/Applicant</p>
@@ -445,27 +423,31 @@ export default function OverView1() {
                                                 <p className="text-gray-500">10/2/2024</p>
                                             </div>
                                         </div>
-                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-2">
+                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
                                             <p className="text-gray-500 md:hidden">Type</p>
-                                            <i className="fas fa-arrow-up text-gray-700"></i>
-                                            <p className="text-gray-700">SEND</p>
+                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.2758 2.25991C15.3167 1.68487 14.9237 1.1884 14.3981 1.15101L5.83232 0.541652C5.30668 0.504259 4.84741 0.940106 4.8065 1.51514C4.76559 2.09018 5.15855 2.58666 5.68419 2.62405L13.2982 3.1657L12.7057 11.4953C12.6648 12.0703 13.0577 12.5668 13.5833 12.6042C14.109 12.6416 14.5683 12.2057 14.6092 11.6307L15.2758 2.25991ZM1.8003 15.4501L14.9447 2.97632L13.7034 1.40809L0.559071 13.8819L1.8003 15.4501Z" fill="black" />
+                                            </svg>
+
+                                            </i>                                                                                                        <p className="text-gray-700">SEND</p>
+
                                         </div>
                                         <div>
                                             <p className="text-gray-500 md:hidden">Type</p>
                                             <p className="text-gray-700">Transfer</p>
                                         </div>
                                         <div>
-                                            <p className="text-gray-500 md:hidden">Invoices</p>
-                                            <p className="text-gray-700">-</p>
-                                        </div>
-                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-2">
+                                            <p className="text-gray-500 md:hidden">Status</p>
+                                            <button className=''>-</button>                                        </div>
+                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
                                             <p className="text-gray-500 md:hidden">Amount</p>
                                             <p className="text-gray-700">-$3,000</p>
-                                            <button className="text-red-500 border border-red-500 rounded-lg w-100 py-2">View Details</button>
+                                            <button className="text-red-500 border border-red-500 rounded-lg w-100 py-2 text-xs">View Details</button>
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-1 md:grid-cols-5 gap-1 items-center">
-                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
+
+                                    <div className="grid grid-cols-1 md:grid-cols-6 gap-1 items-center">
+                                        <div className="col-span-2 md:col-span-2 flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
                                             <img src={recptImage} alt="Recipient profile picture" className="w-10 h-10 rounded-full" />
                                             <div>
                                                 <p className="text-gray-500 md:hidden">Recipient/Applicant</p>
@@ -473,27 +455,63 @@ export default function OverView1() {
                                                 <p className="text-gray-500">10/2/2024</p>
                                             </div>
                                         </div>
-                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-2">
+                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
                                             <p className="text-gray-500 md:hidden">Type</p>
-                                            <i className="fas fa-arrow-up text-gray-700"></i>
-                                            <p className="text-gray-700">SEND</p>
+                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.2758 2.25991C15.3167 1.68487 14.9237 1.1884 14.3981 1.15101L5.83232 0.541652C5.30668 0.504259 4.84741 0.940106 4.8065 1.51514C4.76559 2.09018 5.15855 2.58666 5.68419 2.62405L13.2982 3.1657L12.7057 11.4953C12.6648 12.0703 13.0577 12.5668 13.5833 12.6042C14.109 12.6416 14.5683 12.2057 14.6092 11.6307L15.2758 2.25991ZM1.8003 15.4501L14.9447 2.97632L13.7034 1.40809L0.559071 13.8819L1.8003 15.4501Z" fill="black" />
+                                            </svg>
+
+                                            </i>                                                                                                        <p className="text-gray-700">SEND</p>
+
+                                        </div>
+                                        <div>
+                                            <p className="text-gray-500 md:hidden">Type</p>
+                                            <p className="text-gray-700">Transfer</p>
+                                        </div>
+                                        <div>
+                                            <p className="text-gray-500 md:hidden">Status</p>
+                                            <button className=''>-</button>                                       </div>
+                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
+                                            <p className="text-gray-500 md:hidden">Amount</p>
+                                            <p className="text-gray-700">-$3,000</p>
+                                            <button className="text-red-500 border border-red-500 rounded-lg w-100 py-2 text-xs">View Details</button>
+                                        </div>
+                                    </div>
+
+                                    <div className="grid grid-cols-1 md:grid-cols-6 gap-1 items-center">
+                                        <div className="col-span-2 md:col-span-2 flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
+                                            <img src={recptImage} alt="Recipient profile picture" className="w-10 h-10 rounded-full" />
+                                            <div>
+                                                <p className="text-gray-500 md:hidden">Recipient/Applicant</p>
+                                                <p className="font-bold text-gray-700">Muhammad Abdelhamid</p>
+                                                <p className="text-gray-500">10/2/2024</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
+                                            <p className="text-gray-500 md:hidden">Type</p>
+                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.2758 2.25991C15.3167 1.68487 14.9237 1.1884 14.3981 1.15101L5.83232 0.541652C5.30668 0.504259 4.84741 0.940106 4.8065 1.51514C4.76559 2.09018 5.15855 2.58666 5.68419 2.62405L13.2982 3.1657L12.7057 11.4953C12.6648 12.0703 13.0577 12.5668 13.5833 12.6042C14.109 12.6416 14.5683 12.2057 14.6092 11.6307L15.2758 2.25991ZM1.8003 15.4501L14.9447 2.97632L13.7034 1.40809L0.559071 13.8819L1.8003 15.4501Z" fill="black" />
+                                            </svg>
+
+                                            </i>                                                                                                        <p className="text-gray-700">SEND</p>
+
                                         </div>
                                         <div>
                                             <p className="text-gray-500 md:hidden">Type</p>
                                             <p className="text-gray-700">Letter of credit</p>
                                         </div>
                                         <div>
-                                            <p className="text-gray-500 md:hidden">Invoices</p>
-                                            <p className="text-gray-700">2</p>
-                                        </div>
-                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-2">
+                                            <p className="text-gray-500 md:hidden">Status</p>
+                                            -                                                        </div>
+                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
                                             <p className="text-gray-500 md:hidden">Amount</p>
                                             <p className="text-gray-700">-$3,000</p>
-                                            <button className="text-red-500 border border-red-500 rounded-lg w-100 py-2">View Details</button>
+                                            <button className="text-red-500 border border-red-500 rounded-lg w-100 py-2 text-xs">View Details</button>
                                         </div>
                                     </div>
-                                    <div className="grid grid-cols-1 md:grid-cols-5 gap-1 items-center">
-                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
+
+                                    <div className="grid grid-cols-1 md:grid-cols-6 gap-1 items-center">
+                                        <div className="col-span-2 md:col-span-2 flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-4">
                                             <img src={recptImage} alt="Recipient profile picture" className="w-10 h-10 rounded-full" />
                                             <div>
                                                 <p className="text-gray-500 md:hidden">Recipient/Applicant</p>
@@ -501,25 +519,29 @@ export default function OverView1() {
                                                 <p className="text-gray-500">10/2/2024</p>
                                             </div>
                                         </div>
-                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-2">
+                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
                                             <p className="text-gray-500 md:hidden">Type</p>
-                                            <i className="fas fa-arrow-up text-gray-700"></i>
-                                            <p className="text-gray-700">SEND</p>
+                                            <i className=""><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.2758 2.25991C15.3167 1.68487 14.9237 1.1884 14.3981 1.15101L5.83232 0.541652C5.30668 0.504259 4.84741 0.940106 4.8065 1.51514C4.76559 2.09018 5.15855 2.58666 5.68419 2.62405L13.2982 3.1657L12.7057 11.4953C12.6648 12.0703 13.0577 12.5668 13.5833 12.6042C14.109 12.6416 14.5683 12.2057 14.6092 11.6307L15.2758 2.25991ZM1.8003 15.4501L14.9447 2.97632L13.7034 1.40809L0.559071 13.8819L1.8003 15.4501Z" fill="black" />
+                                            </svg>
+
+                                            </i>                                                                                                        <p className="text-gray-700">SEND</p>
+
                                         </div>
                                         <div>
                                             <p className="text-gray-500 md:hidden">Type</p>
                                             <p className="text-gray-700">Transfer</p>
                                         </div>
                                         <div>
-                                            <p className="text-gray-500 md:hidden">Invoices</p>
-                                            <p className="text-gray-700">-</p>
-                                        </div>
-                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-2">
+                                            <p className="text-gray-500 md:hidden">Status</p>
+                                            -                                                        </div>
+                                        <div className="flex flex-col md:flex-row items-start md:items-center space-y-2 md:space-y-0 md:space-x-1 gap-1">
                                             <p className="text-gray-500 md:hidden">Amount</p>
                                             <p className="text-gray-700">-$3,000</p>
-                                            <button className="text-red-500 border border-red-500 rounded-lg w-100 py-2">View Details</button>
+                                            <button className="text-red-500 border border-red-500 rounded-lg w-100 py-2 text-xs">View Details</button>
                                         </div>
                                     </div>
+
                                 </div>
                             </div>
                         </div>

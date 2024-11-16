@@ -58,20 +58,21 @@
 .asideStyless li {
     display: flex;
     align-items: center;
-    gap: 19px; /* Adds 19px gap between the icon and text */
+    gap: 19px;
+    /* Adds 19px gap between the icon and text */
 }
 
- .asideStyless li.active,
- .asideStyless li.asideBtns {
+.asideStyless li.active,
+.asideStyless li.asideBtns {
     display: flex;
     align-items: center;
-    gap: 19px; /* Adds 19px gap for active items */
+    gap: 19px;
+    /* Adds 19px gap for active items */
 }
 
 
 @media (max-width: 768px) {
     .asideStyles {
-        display: none;
         /* إخفاء السايد بار على الشاشات الصغيرة */
     }
 
@@ -101,7 +102,8 @@
 }
 
 .custom-hr {
-    border: 1px solid black; /* Adjust the thickness and color as needed */
+    border: 1px solid black;
+    /* Adjust the thickness and color as needed */
 }
 
 

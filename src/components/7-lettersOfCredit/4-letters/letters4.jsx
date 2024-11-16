@@ -11,18 +11,51 @@ export default function Letters4() {
 
     const [account, setAccount] = useState("USDT - wallet");
 
+    // تعديل: تعريف حالة للتحكم في ظهور وإخفاء القائمة
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    // تعديل: تعريف حالة لتتبع العنصر النشط
+    const [activeLink, setActiveLink] = useState('overview');
+
+    // تعديل: دالة لفتح وإغلاق القائمة
+    const toggleSidebar = () => {
+        setIsSidebarOpen(!isSidebarOpen); // هذه السطر يقوم بتغيير الحالة بين true و false
+    };
+    // تعديل: دالة لتحديد العنصر النشط وإغلاق القائمة
+    const handleLinkClick = (link) => {
+        setActiveLink(link); // تحديث العنصر النشط
+        setIsSidebarOpen(false); // إغلاق القائمة
+    };
+
 
     return (
         <>
             <div className="container-fluid lettersContainer flex-center">
                 <div className="row">
-                    <div className="asideComponent col-lg-3 col-md-2" style={{ height: "100%" }}>
-                        <Aside />
+                    <div className="col-lg-3 col-md-2 asideComponent " style={{ height: "100%" }}>
+                        {/* تعديل: تمرير props للـ Aside للتحكم في حالته */}
+                        <Aside
+                            isSidebarOpen={isSidebarOpen}  // حالة فتح أو إغلاق الـ Sidebar
+                            toggleSidebar={toggleSidebar}  // دالة لفتح أو إغلاق الـ Sidebar
+                            activeLink={activeLink}        // العنصر النشط في القائمة
+                            handleLinkClick={handleLinkClick}  // دالة لتغيير العنصر النشط
+                        />
                     </div>
 
+                    {/* 
+                    <button
+                        onClick={toggleSidebar}  // عند الضغط عليه، تقوم الدالة `toggleSidebar` بتغيير حالة القائمة
+                        className="text-white bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded  top-4 left-4 lg:hidden"
+                    >
+                        <i className="fas fa-bars"></i>
+                    </button> */}
 
-                    <div className="col-12 col-lg-9 col-md-10 mt-5 text-center">
-                        <div className="flex flex-col md:flex-row justify-between items-center mb-6 w-100">
+
+
+                    <div className="col-12 col-lg-9 col-md-10  text-center">
+
+
+
+                        <div className="flex flex-col md:flex-row justify-between items-center mb-6 w-100 mt-10">
                             <div className="parent w-100 flex gap-4">
                                 <div className="relative w-full md:mb-0" style={{ width: "80%" }}>
                                     <input type="text" placeholder="Search anything here" className="w-full p-3 rounded-lg border border-gray-300" />

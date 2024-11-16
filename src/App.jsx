@@ -29,7 +29,11 @@ import Letters4 from './components/7-lettersOfCredit/4-letters/letters4';
 import Letters5 from './components/7-lettersOfCredit/5-letters/letters5';
 import Accounts2 from './components/6-accounts/2-accounts2/accounts2';
 import Credit1 from './components/8-credit/1-credit/credit1';
-
+import Credit2 from './components/8-credit/2-credit/credit2';
+import Credit3 from './components/8-credit/3-credit/credit3';
+import Credit4 from './components/8-credit/4-credit/credit4';
+import Credit5 from './components/8-credit/5-credit/credit5';
+import Credit6 from './components/8-credit/6-credit/credit6';
 function App() {
   return (
     <>
@@ -59,6 +63,11 @@ function App() {
           <Route path="letters4" element={<Letters4/>} />
           <Route path="letters5" element={<Letters5/>} />
           <Route path="credit1" element={<Credit1/>} />
+          <Route path="credit2" element={<Credit2/>} />
+          <Route path="credit3" element={<Credit3/>} />
+          <Route path="credit4" element={<Credit4/>} />
+          <Route path="credit5" element={<Credit5/>} />
+          <Route path="credit6" element={<Credit6/>} />
           <Route path="aside" element={<Aside/>} />
         </Routes>
     </>
