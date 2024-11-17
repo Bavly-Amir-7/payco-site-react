@@ -32,3 +32,20 @@
     color: #C20101;
 
 }
+
+
+.ReplaceBtn{
+
+    border: 1px solid #C20101 !important;
+}
+
+.ReplaceBtn:hover{
+
+    color: #FFFFFF;
+    background-color: #C20101;
+}
+
+.upLoadBtn:hover{
+
+    background: #780303;
+}

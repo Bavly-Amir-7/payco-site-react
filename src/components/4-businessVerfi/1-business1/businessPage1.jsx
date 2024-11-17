@@ -16,7 +16,7 @@ export default function Business1() {
 
 
 
-                <div className="mainVerf">
+                <div className="mainVerf w-100">
                     <h1 className="text-2xl font-bold mb-6 text-center">Business Verification</h1>
                     <div className="relative mb-6 w-100">
                         <div className="absolute inset-0 flex items-center justify-center">

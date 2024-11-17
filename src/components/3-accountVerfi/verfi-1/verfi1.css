@@ -157,9 +157,7 @@ input[type="radio"] {
 }
 
 @media (max-width: 768px) {
-    .asideComponent {
-        display: none; /* إخفاء السايد بار على الشاشات الصغيرة */
-    }
+  
     .mainVerf {
         margin-left: 0; /* لا هوامش في الشاشات الصغيرة */
         margin-right: 0;

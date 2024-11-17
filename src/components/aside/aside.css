@@ -119,3 +119,30 @@
 .logOutIcon {
     margin-left: 105px;
 }
+
+@media (max-width: 700px) {
+
+    .asideComponent {
+        position: fixed;
+        z-index: 50;
+        /* إخفاء السايد بار على الشاشات الصغيرة */
+    }
+
+    .asideOpenBtn{
+        position: relative;
+        background: #C20101 !important;
+    }
+}
+@media (max-width: 900px) {
+
+    .asideComponent {
+        position: fixed;
+        z-index: 50;
+        /* إخفاء السايد بار على الشاشات الصغيرة */
+    }
+
+    .asideOpenBtn{
+        position: relative;
+        background: #C20101 !important;
+    }
+}

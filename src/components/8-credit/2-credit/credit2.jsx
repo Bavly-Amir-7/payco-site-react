@@ -51,7 +51,7 @@ export default function Credit2() {
 
 
 
-                    <div className="col-12 col-lg-9 col-md-10  text-center">
+                    <div className="col-12 col-lg-9 col-md-12  text-center">
 
 
 

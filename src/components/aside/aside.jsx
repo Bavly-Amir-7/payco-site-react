@@ -218,7 +218,7 @@ export default function Aside() {
             {/* Toggle Sidebar Button */}
             <button
                 onClick={toggleSidebar}
-                className="text-white bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded fixed top-4 left-4 lg:hidden"
+                className="asideOpenBtn text-white bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded fixed top-4 left-4 lg:hidden"
             >
                 <AiOutlineMenu />
             </button>

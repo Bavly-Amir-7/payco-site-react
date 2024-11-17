@@ -16,7 +16,7 @@ export default function Business8() {
                         <Aside />
                     </div>
 
-                    <div className="col-12 col-lg-9 col-md-10 mt-5" style={{ placeItems: "center" }}>
+                    <div className="col-12 col-lg-9 col-md-12 mt-5" style={{ placeItems: "center" }}>
 
                         <div className="relative mb-6 w-100">
                             <div className="absolute inset-0 flex items-center justify-center">

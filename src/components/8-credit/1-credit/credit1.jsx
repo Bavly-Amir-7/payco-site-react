@@ -23,7 +23,7 @@ export default function Credit1() {
                         <Aside />
                     </div>
 
-                    <div className="col-12 col-lg-9 col-md-10 mt-5" style={{ placeItems: "center" }}>
+                    <div className="col-12 col-lg-9 col-md-12 mt-5" style={{ placeItems: "center" }}>
 
 
 

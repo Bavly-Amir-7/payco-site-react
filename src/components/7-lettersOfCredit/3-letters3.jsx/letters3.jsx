@@ -44,7 +44,7 @@ export default function Letters3() {
                     </div>
 
 
-                    <div className="col-12 col-lg-9 col-md-10 mt-5 text-center">
+                    <div className="col-12 col-lg-9 col-md-12 mt-5 text-center">
                         <div className="flex flex-col md:flex-row justify-between items-center mb-6 w-100">
                             <div className="parent w-100 flex gap-4">
                                 <div className="relative w-full md:mb-0" style={{ width: "80%" }}>
