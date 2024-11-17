@@ -46,6 +46,7 @@ import Escrow5 from './components/9-escrow/5-escrow/escrow5';
 import Escrow6 from './components/9-escrow/6-escrow/escrow6';
 import Escrow7 from './components/9-escrow/7-escrow/escrow7';
 import Escrow8 from './components/9-escrow/8-escrow/escrow8';
+import Wallets1 from './components/11-wallets/1-invoices/wallets1';
 function App() {
   return (
     <>
@@ -92,6 +93,7 @@ function App() {
           <Route path="escrow7" element={<Escrow7/>} />
           <Route path="escrow8" element={<Escrow8/>} />
           <Route path="invoices1" element={<Invoices1/>} />
+          <Route path="wallets1" element={<Wallets1/>} />
           <Route path="aside" element={<Aside/>} />
         </Routes>
     </>
