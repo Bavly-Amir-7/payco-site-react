@@ -1,0 +1,27 @@
+.numbersHash,
+.refNum {
+    padding-left: 20%;
+}
+
+.draftBtn {
+    width: 220px;
+    height: 64px;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid #C20101;
+    background-color: white;
+    color: #C20101;
+}
+
+@media (max-width: 650px) {
+
+    .numbersHash,
+    .refNum {
+        padding-left: 0%;
+    }
+
+    .noneDiv {
+        display: none;
+    }
+
+}

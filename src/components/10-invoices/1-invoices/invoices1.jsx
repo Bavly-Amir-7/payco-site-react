@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import Aside from '../../aside/aside';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faPlus, faChevronDown, faChevronUp, faCalendarAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
-import "./letters1.css";
+import "./invoices1.css";
 
-export default function Letters1(){
+export default function Invoices1() {
     const [activeTab, setActiveTab] = useState("new");
 
     return (

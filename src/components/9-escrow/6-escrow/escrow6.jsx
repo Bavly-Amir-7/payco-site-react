@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import Aside from '../../aside/aside';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faPlus, faChevronDown, faChevronUp, faCalendarAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
-import "./credit7.css";
+import "./escrow6.css";
 import frame from "./Frame.svg"
 import selectedImage from "../../images/Group 138.png"
 
 
-export default function Credit7() {
+export default function Escrow6() {
 
 
     const [account, setAccount] = useState("USDT - wallet");
@@ -82,9 +82,9 @@ export default function Credit7() {
                                 {/* Adjust font size for mobile using responsive text utilities */}
                                 <span>Dashboard</span>
                                 <i className="fas fa-chevron-right"></i>
-                                <span>Letters of credit</span>
+                                <span>Escrow</span>
                                 <i className="fas fa-chevron-right"></i>
-                                <span>Letters of credit Timeline</span>
+                                <span className='font-bold text-gray-700'>Escrow Timeline</span>
 
                             </div>
 
@@ -143,49 +143,7 @@ export default function Credit7() {
 
                                 <div className=" flex items-center justify-center">
                                     <div className="w-100">
-                                        {/* Approved Item */}
-                                        <div className="greyBg2 p-4 rounded-lg mb-4 flex flex-col md:flex-row items-start md:items-center">
-                                            <i className="fas fa-check-circle text-green-500 text-2xl mr-0 md:mr-4 mb-2 md:mb-0"></i>
-                                            <div className="flex-1 text-start mb-2 md:mb-0">
-                                                <div className="text-sm font-semibold md:text-lg">Beneficiary's Signed Commercial Invoice</div>                                                <div className="text-sm text-gray-500">Approved</div>
-                                            </div>
-                                            <div className="text-sm text-gray-500">Uploaded: 20/2/2024 1:05 PM</div>
-                                        </div>
-
-                                        {/* Rejected Item */}
-                                        <div className="greyBg2 p-4 rounded-lg mb-4">
-                                            <div className="flex flex-col md:flex-row items-start md:items-center mb-2">
-                                                <i className="fas  text-red-500 text-2xl mb-2 md:mb-0 mr-0 md:mr-4"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g clip-path="url(#clip0_2795_54584)">
-                                                        <path d="M26.8593 22.3059C26.34 21.9196 25.606 22.0275 25.2197 22.5467C25.0072 22.8323 24.7798 23.1124 24.5439 23.3793C24.1153 23.8642 24.1608 24.6048 24.6457 25.0335C24.8687 25.2306 25.1455 25.3274 25.4214 25.3274C25.7455 25.3274 26.0683 25.1936 26.2998 24.9316C26.5793 24.6156 26.8485 24.2838 27.1001 23.9455C27.4864 23.4263 27.3787 22.6922 26.8593 22.3059Z" fill="#FFB930" />
-                                                        <path d="M28.8197 16.8103C28.1877 16.6726 27.563 17.0737 27.4254 17.706C27.3496 18.0539 27.2581 18.4024 27.1531 18.742C26.9621 19.3604 27.3085 20.0166 27.9268 20.2076C28.0421 20.2432 28.1585 20.2601 28.2732 20.2601C28.7735 20.2601 29.2369 19.9371 29.3924 19.4338C29.517 19.0308 29.6256 18.6172 29.7155 18.2046C29.8531 17.5722 29.4521 16.948 28.8197 16.8103Z" fill="#FFB930" />
-                                                        <path d="M21.2195 26.059C20.9084 26.2327 20.5863 26.395 20.2621 26.5414C19.6722 26.8078 19.41 27.5019 19.6764 28.0918C19.8721 28.5251 20.2986 28.7816 20.7451 28.7816C20.9063 28.7816 21.0702 28.7481 21.2267 28.6775C21.6113 28.5038 21.9932 28.3113 22.3621 28.1053C22.9272 27.7899 23.1296 27.076 22.814 26.5109C22.4986 25.9459 21.7847 25.7436 21.2195 26.059Z" fill="#FFB930" />
-                                                        <path d="M13.8279 5.625V14.5146L9.53071 18.8118C9.0731 19.2694 9.0731 20.0114 9.53071 20.469C9.75958 20.6979 10.0594 20.8123 10.3594 20.8123C10.6593 20.8123 10.9592 20.6978 11.1881 20.469L15.8285 15.8286C16.0482 15.6089 16.1717 15.3108 16.1717 15V5.625C16.1717 4.97777 15.647 4.45312 14.9998 4.45312C14.3526 4.45312 13.8279 4.97777 13.8279 5.625Z" fill="#FFB930" />
-                                                        <path d="M28.8281 2.51953C28.1809 2.51953 27.6562 3.04418 27.6562 3.69141V6.94547C24.9286 2.66766 20.1651 0 15 0C10.9934 0 7.22654 1.56029 4.39336 4.39336C1.56029 7.22654 0 10.9934 0 15C0 19.0066 1.56029 22.7735 4.39336 25.6066C7.22654 28.4397 10.9934 30 15 30C15.0099 30 15.0195 29.9988 15.0293 29.9985C15.0391 29.9988 15.0487 30 15.0586 30C15.4809 30 15.9074 29.9822 16.3264 29.9471C16.9713 29.8931 17.4504 29.3265 17.3964 28.6816C17.3423 28.0366 16.7765 27.5573 16.1308 27.6116C15.7767 27.6412 15.416 27.6562 15.0586 27.6562C15.0487 27.6562 15.0391 27.6575 15.0293 27.6577C15.0195 27.6575 15.0099 27.6562 15 27.6562C8.02131 27.6562 2.34375 21.9787 2.34375 15C2.34375 8.02131 8.02131 2.34375 15 2.34375C19.4975 2.34375 23.6342 4.741 25.8947 8.55469H22.6724C22.0252 8.55469 21.5006 9.07934 21.5006 9.72656C21.5006 10.3738 22.0252 10.8984 22.6724 10.8984H26.25C26.9637 10.8984 27.6313 10.6979 28.1998 10.3504C28.2364 10.3296 28.2715 10.3071 28.3051 10.2829C29.3249 9.61195 30 8.45783 30 7.14844V3.69141C30 3.04418 29.4754 2.51953 28.8281 2.51953Z" fill="#FFB930" />
-                                                    </g>
-                                                    <defs>
-                                                        <clipPath id="clip0_2795_54584">
-                                                            <rect width="30" height="30" fill="white" />
-                                                        </clipPath>
-                                                    </defs>
-                                                </svg>
-                                                </i>
-                                                <div className="flex-1 text-start mb-2 md:mb-0">
-                                                    <div className="text-sm font-semibold md:text-lg">Beneficiary's Signed Commercial Invoice</div>
-
-                                                    <div className="text-sm text-gray-500">Reason of rejection: Doesn't match</div>
-                                                </div>
-                                                <button className="redClr whiteBg  ReplaceBtn px-4 py-2 rounded w-full md:w-auto pt-6">
-                                                    Replace
-                                                </button>
-                                            </div>
-                                            <div className="flex flex-col md:flex-row items-start md:items-center w-100 justify-between">
-                                                <div className="flex items-center mb-4 md:mb-0">
-                                                    <img src={selectedImage} alt="Document thumbnail" className="mr-2" />
-                                                </div>
-                                                <div className="text-sm text-gray-500">Last review: 20/2/2024 1:05 PM</div>
-                                            </div>
-                                        </div>
+                                       
 
 
 
@@ -196,8 +154,8 @@ export default function Credit7() {
                                             </svg>
                                             </i>
                                             <div className="flex-1 text-start mb-2 md:mb-0">
-                                                <div className="text-sm font-semibold md:text-lg">Beneficiary's Signed Commercial Invoice</div>
-                                                <div className="text-sm text-gray-500">Approved</div>
+                                                <div className="text-sm font-semibold md:text-lg">Proof of Shipping</div>
+                                                <div className="text-sm text-gray-500">Must be uploaded</div>
                                             </div>
 
                                             {/* Replace Button */}

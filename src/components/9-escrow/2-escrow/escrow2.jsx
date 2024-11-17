@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import Aside from '../../aside/aside';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faPlus, faChevronDown, faChevronUp, faCalendarAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
-import "./letters1.css";
+import "./escrow2.css";
 
-export default function Letters1(){
+export default function Escrow2() {
     const [activeTab, setActiveTab] = useState("new");
 
     return (
@@ -38,25 +38,27 @@ export default function Letters1(){
                         <div className="text-gray-500 mb-6 text-sm" style={{ placeSelf: "start" }}>
                             <span>Dashboard</span>
                             <i className="fas fa-chevron-right mx-2"></i>
+                            <span>Dashboard</span>
+                            <i className="fas fa-chevron-right mx-2"></i>
 
-                            <span className="font-bold text-gray-700">invoices</span>
+                            <span className="font-bold text-gray-700">Create New Escrow</span>
                         </div>
                         <div className="relative mb-6 w-100">
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="dashedLine border-t-2 border-dashed border-gray-300" style={{ width: "80%" }}></div>
                             </div>
                             <div className="relative flex" style={{ justifyContent: "space-around" }}>
-                                <div className="w-10 h-10 whiteColor redBg rounded-full flex items-center justify-center">4</div>
+                                <div className="w-10 h-10 whiteColor redBg rounded-full flex items-center justify-center">1</div>
                                 <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">2</div>
                                 <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">3</div>
                                 <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">4</div>
                             </div>
                         </div>
                         <div className="flex justify-between mb-6 w-100">
-                            <div className="col text-center text-sm">Business Details</div>
-                            <div className="col text-center text-sm">Business Beneficial Owners</div>
-                            <div className="col text-center text-sm">Signatory Power</div>
-                            <div className="col text-center text-sm">Review and Additional Documents</div>
+                            <div className="col text-center text-sm">Invoice Details</div>
+                            <div className="col text-center text-sm">Escrow Conditions</div>
+                            <div className="col text-center text-sm">Review and confirmation</div>
+                            <div className="col text-center text-sm">Fund the Escrow</div>
                         </div>
                         <div className="p-4 whiteBg">
                             {/* Tabs */}

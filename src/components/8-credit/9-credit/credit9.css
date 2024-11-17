@@ -1,0 +1,51 @@
+.viewAndSend {
+    width: 320px;
+    height: 85px;
+    top: 955px;
+    left: 573px;
+    gap: 0px;
+    border-radius: 12px;
+    opacity: 0px;
+    background: #FFFFFF;
+    color: #C20101;
+}
+
+.viewAndSend:hover{
+    color: #FFFFFF;
+    background-color: #C20101;
+}
+
+.viewLc {
+    width: 320px;
+    height: 85px;
+    top: 955px;
+    left: 573px;
+    gap: 0px;
+    border-radius: 12px;
+    opacity: 0px;
+    color: #FFFFFF;
+    background-color: #C20101;
+}
+
+.viewLc:hover{
+    background: #FFFFFF;
+    color: #C20101;
+
+}
+
+
+.ReplaceBtn{
+
+    border: 1px solid #C20101 !important;
+}
+
+.ReplaceBtn:hover{
+
+    color: #FFFFFF;
+    background-color: #C20101;
+}
+
+.upLoadBtn:hover{
+
+    background: #780303;
+}

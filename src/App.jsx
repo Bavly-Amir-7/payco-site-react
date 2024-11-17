@@ -35,6 +35,17 @@ import Credit4 from './components/8-credit/4-credit/credit4';
 import Credit5 from './components/8-credit/5-credit/credit5';
 import Credit6 from './components/8-credit/6-credit/credit6';
 import Credit7 from './components/8-credit/7-credit/credit7';
+import Credit8 from './components/8-credit/8-credit/credit8';
+import Credit9 from './components/8-credit/9-credit/credit9';
+import Escrow1 from './components/9-escrow/1-escrow/escrow1';
+import Invoices1 from './components/10-invoices/1-invoices/invoices1';
+import Escrow2 from './components/9-escrow/2-escrow/escrow2';
+import Escrow3 from './components/9-escrow/3-escrow/escrow3';
+import Escrow4 from './components/9-escrow/4-escrow/escrow4';
+import Escrow5 from './components/9-escrow/5-escrow/escrow5';
+import Escrow6 from './components/9-escrow/6-escrow/escrow6';
+import Escrow7 from './components/9-escrow/7-escrow/escrow7';
+import Escrow8 from './components/9-escrow/8-escrow/escrow8';
 function App() {
   return (
     <>
@@ -70,6 +81,17 @@ function App() {
           <Route path="credit5" element={<Credit5/>} />
           <Route path="credit6" element={<Credit6/>} />
           <Route path="credit7" element={<Credit7/>} />
+          <Route path="credit8" element={<Credit8/>} />
+          <Route path="credit9" element={<Credit9/>} />
+          <Route path="escrow1" element={<Escrow1/>} />
+          <Route path="escrow2" element={<Escrow2/>} />
+          <Route path="escrow3" element={<Escrow3/>} />
+          <Route path="escrow4" element={<Escrow4/>} />
+          <Route path="escrow5" element={<Escrow5/>} />
+          <Route path="escrow6" element={<Escrow6/>} />
+          <Route path="escrow7" element={<Escrow7/>} />
+          <Route path="escrow8" element={<Escrow8/>} />
+          <Route path="invoices1" element={<Invoices1/>} />
           <Route path="aside" element={<Aside/>} />
         </Routes>
     </>
