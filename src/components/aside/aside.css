@@ -138,6 +138,7 @@
     .asideComponent {
         position: fixed;
         z-index: 50;
+        width: 1%;
         /* إخفاء السايد بار على الشاشات الصغيرة */
     }
 

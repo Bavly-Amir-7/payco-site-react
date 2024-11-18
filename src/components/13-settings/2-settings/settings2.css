@@ -1,0 +1,107 @@
+.settings .verified {
+  width: 118px;
+  height: 32px;
+  gap: 0px;
+  border-radius: 12px;
+  background: #427E1D;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  place-content: center;
+  color: white;
+
+
+}
+
+.settings .unVerified {
+  width: 146px;
+  height: 32px;
+  gap: 0px;
+  border-radius: 12px;
+  background: #545454;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  place-content: center;
+  color: white;
+
+}
+
+.settings .qrCodeExample {
+  width: 80%;
+  height: 400px;
+  background: #F1F1F1;
+  place-self: center;
+  justify-items: center;
+  border-radius: 30px;
+}
+
+.settings .closeQr {
+  width: 50px;
+  height: 44px;
+  opacity: 1;
+  /* Adjusted for visibility */
+  text-align: center;
+  /* Align inline content */
+  display: flex;
+  /* For consistent centering */
+  align-items: center;
+  /* Vertically center content */
+  justify-content: center;
+  /* Horizontally center content */
+  background: transparent;
+  /* Optional: Remove default button styles */
+  padding: 0;
+  /* Optional: Normalize padding */
+  box-sizing: border-box;
+  /* Ensure border doesn't affect size */
+  background: #B8B8B8;
+  border-radius: 6px;
+
+}
+
+.settings .qrImage {
+  width: 184px;
+  height: 154px;
+  border-radius: 24px;
+  opacity: 0px;
+  background: #FFFFFF;
+  justify-items: center;
+  place-content: center;
+
+
+}
+
+.responsive-margin {
+  margin-top: 30px; /* Apply margin-top on desktop screens */
+}
+
+
+@media (max-width: 700px) {
+  .settings .qrCodeExample {
+    width: fit-content;
+    height: 500px;
+
+   
+  }
+
+  .settings .verified {
+    height: 50px;
+    width: 125px;
+
+  }
+
+  .settings .closeQr {
+    width: 30px;
+    height: 30px;
+
+  }
+
+  .responsive-margin {
+    margin-top: 10; /* Remove margin-top on mobile screens */
+}
+
+ 
+
+
+}

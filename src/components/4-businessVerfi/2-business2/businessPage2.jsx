@@ -3,6 +3,8 @@ import "./business2.css";
 import { Link } from 'react-router-dom';
 import Aside from '../../aside/aside';
 import selectedImage from "../../images/Group 138.png";
+import { FaRegCalendarAlt } from "react-icons/fa";
+
 
 function Business2() {
     const [owners, setOwners] = useState([

@@ -49,6 +49,7 @@ import Escrow8 from './components/9-escrow/8-escrow/escrow8';
 import Wallets1 from './components/11-wallets/1-wallets/wallets1';
 import Contacts1 from './components/12-contacts/1-contacts/contacts';
 import Settings1 from './components/13-settings/1-settings/settings1';
+import Settings2 from './components/13-settings/2-settings/settings2';
 function App() {
   return (
     <>
@@ -98,6 +99,7 @@ function App() {
           <Route path="wallets1" element={<Wallets1/>} />
           <Route path="contacts1" element={<Contacts1/>} />
           <Route path="settings1" element={<Settings1/>} />
+          <Route path="settings2" element={<Settings2/>} />
           <Route path="aside" element={<Aside/>} />
         </Routes>
     </>

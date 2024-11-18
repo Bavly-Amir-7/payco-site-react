@@ -255,7 +255,7 @@ export default function OverView1() {
                             </div>
 
                             <div className="charts grid grid-cols-1 lg:grid-cols-2 gap-4 mb-6">
-                                <div className="bg-white p-6 rounded-lg border border-gray-200">
+                                <div className="bg-white p-3 rounded-lg border border-gray-200">
                                     <h2 className="text-xl font-bold mb-4">Analytics</h2>
                                     <div className="flex  mb-4">
                                         <div className='gap-3 w-100 space-x-4'>
@@ -321,7 +321,7 @@ export default function OverView1() {
                                     </div>
                                 </div>
 
-                                <div className="bg-white p-6 rounded-lg border border-gray-200">
+                                <div className="bg-white p-3 rounded-lg border border-gray-200">
                                     <h2 className="text-xl font-bold mb-4">Balance Overview</h2>
                                     <div className="flex  mb-4">
                                         <div className='gap-3 w-100 space-x-4'>

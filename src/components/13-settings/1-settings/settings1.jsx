@@ -44,6 +44,31 @@ export default function Settings1() {
 
                 {/* Main Content Section */}
                 <div className="col-12 col-lg-9 col-md-12 mt-5 text-center">
+
+
+                <div className="flex flex-col md:flex-row justify-between items-center mb-6 w-100">
+                            <div className="parent w-100 flex gap-4">
+                                <div className="relative w-full md:mb-0" style={{ width: "80%" }}>
+                                    <input type="text" placeholder="Search anything here" className="w-full p-3 rounded-lg border border-gray-300" />
+                                </div>
+                                <div className="flex items-center space-x-4">
+                                    <i className="fas fa-bell text-gray-400"></i>
+                                    <div className="flex items-center space-x-2">
+                                        <img src="https://storage.googleapis.com/a1aa/image/ScBMkEoJ3Gr6HVjcF2CrdyIti56QzXDWjyir38s7YUdcXC8E.jpg" alt="User profile picture" className="w-10 h-10 rounded-full" width="40" height="40" />
+                                        <div className="flex flex-col items-start">
+                                            <span className="text-gray-700">John Smith</span>
+                                        </div>
+                                        <i className="fas fa-caret-down text-gray-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="text-gray-500 mb-6 text-sm" style={{ placeSelf: "start" }}>
+                            <span>Dashboard</span>
+                            <i className="fas fa-chevron-right mx-2"></i>
+                            <span className="font-bold text-gray-700"></span>
+                        </div>
+
                     {/* General Settings Section */}
                     <div className="p-4 whiteBg">
                         <div className="p-4">
@@ -137,39 +162,39 @@ export default function Settings1() {
 
                             {/* Manage Users */}
                             <div className="mb-4">
-    <p className="font-medium">Manage Users</p>
+                                <p className="font-medium">Manage Users</p>
 
-    {/* Header Row */}
-    <div className="grid grid-cols-4 gap-4 mb-2 md:grid-cols-3 sm:grid-cols-12 mt-7" style={{ width: "80%", placeSelf: "center" }}>
-        <p className="font-medium col-span-4 sm:col-span-12 md:col-span-1 md:justify-self-start sm:justify-self-center">Name</p>
-        <p className="font-medium col-span-4 sm:col-span-12 md:col-span-1 md:justify-self-start sm:justify-self-center">Email</p>
-        <div className="w-100 flex place-content-center col-span-4 sm:col-span-12 md:col-span-1">
-            <p className="font-medium text-end md:w-50 sm:w-full">Role</p>
-            <button className="text-gray-500 col-span-4 sm:col-span-12 md:col-span-1 text-end md:w-50 sm:w-full pl-2">
-                <i className="fas fa-pencil-alt"></i> {/* Edit Icon */}
-            </button>
-        </div>
-    </div>
+                                {/* Header Row */}
+                                <div className="grid grid-cols-4 gap-4 mb-2 md:grid-cols-3 sm:grid-cols-12 mt-7" style={{ width: "80%", placeSelf: "center" }}>
+                                    <p className="font-medium col-span-4 sm:col-span-12 md:col-span-1 md:justify-self-start sm:justify-self-center">Name</p>
+                                    <p className="font-medium col-span-4 sm:col-span-12 md:col-span-1 md:justify-self-start sm:justify-self-center">Email</p>
+                                    <div className="w-100 flex place-content-center col-span-4 sm:col-span-12 md:col-span-1">
+                                        <p className="font-medium text-end md:w-50 sm:w-full">Role</p>
+                                        <button className="text-gray-500 col-span-4 sm:col-span-12 md:col-span-1 text-end md:w-50 sm:w-full pl-2">
+                                            <i className="fas fa-pencil-alt"></i> {/* Edit Icon */}
+                                        </button>
+                                    </div>
+                                </div>
 
-    {/* User Rows */}
-    <div className="grid grid-cols-4 gap-4 mb-2 md:grid-cols-3 sm:grid-cols-12" style={{ width: "80%", placeSelf: "center" }}>
-        <p className="col-span-4 sm:col-span-12 md:col-span-1 md:justify-self-start sm:justify-self-center">Bishoy Mikhael</p>
-        <p className="col-span-4 sm:col-span-12 md:col-span-1 md:justify-self-start sm:justify-self-center">User@email.com</p>
-        <div className="w-100 flex place-content-center col-span-4 sm:col-span-12 md:col-span-1">
-            <p className="font-medium text-end md:w-50 sm:w-full">Role</p>
-            <div className="text-gray-500 col-span-4 sm:col-span-12 md:col-span-1 pl-2 text-end md:w-50 sm:w-full"></div>
-        </div>
-    </div>
+                                {/* User Rows */}
+                                <div className="grid grid-cols-4 gap-4 mb-2 md:grid-cols-3 sm:grid-cols-12" style={{ width: "80%", placeSelf: "center" }}>
+                                    <p className="col-span-4 sm:col-span-12 md:col-span-1 md:justify-self-start sm:justify-self-center">Bishoy Mikhael</p>
+                                    <p className="col-span-4 sm:col-span-12 md:col-span-1 md:justify-self-start sm:justify-self-center">User@email.com</p>
+                                    <div className="w-100 flex place-content-center col-span-4 sm:col-span-12 md:col-span-1">
+                                        <p className="font-medium text-end md:w-50 sm:w-full">Role</p>
+                                        <div className="text-gray-500 col-span-4 sm:col-span-12 md:col-span-1 pl-2 text-end md:w-50 sm:w-full"></div>
+                                    </div>
+                                </div>
 
-    {/* Another User Row */}
-    <div className="grid grid-cols-4 gap-4 mb-2 md:grid-cols-3 sm:grid-cols-12" style={{ width: "80%", placeSelf: "center" }}>
-        <p className="col-span-4 sm:col-span-12 md:col-span-1 md:justify-self-start sm:justify-self-center">Kareem Elsayed</p>
-        <p className="col-span-4 sm:col-span-12 md:col-span-1 md:justify-self-start sm:justify-self-center">User@email.com</p>
-        <p className="col-span-4 sm:col-span-12 md:col-span-1">Admin
-            <i className="fas fa-chevron-down col-span-4 sm:col-span-12 md:col-span-1"></i> {/* Dropdown Icon */}
-        </p>
-    </div>
-</div>
+                                {/* Another User Row */}
+                                <div className="grid grid-cols-4 gap-4 mb-2 md:grid-cols-3 sm:grid-cols-12" style={{ width: "80%", placeSelf: "center" }}>
+                                    <p className="col-span-4 sm:col-span-12 md:col-span-1 md:justify-self-start sm:justify-self-center">Kareem Elsayed</p>
+                                    <p className="col-span-4 sm:col-span-12 md:col-span-1 md:justify-self-start sm:justify-self-center">User@email.com</p>
+                                    <p className="col-span-4 sm:col-span-12 md:col-span-1">Admin
+                                        <i className="fas fa-chevron-down col-span-4 sm:col-span-12 md:col-span-1"></i> {/* Dropdown Icon */}
+                                    </p>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
