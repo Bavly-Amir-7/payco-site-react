@@ -50,6 +50,7 @@ import Wallets1 from './components/11-wallets/1-wallets/wallets1';
 import Contacts1 from './components/12-contacts/1-contacts/contacts';
 import Settings1 from './components/13-settings/1-settings/settings1';
 import Settings2 from './components/13-settings/2-settings/settings2';
+import Business3 from './components/4-businessVerfi/3-business3/businessPage3';
 function App() {
   return (
     <>
@@ -62,6 +63,7 @@ function App() {
           <Route path="verfi4" element={<AccountVerification4/>} />
           <Route path="business1" element={<Business1/>} />
           <Route path="business2" element={<Business2/>} />
+          <Route path="business3" element={<Business3/>} />
           <Route path="business5" element={<Business5/>} />
           <Route path="business6" element={<Business6/>} />
           <Route path="business7" element={<Business7/>} />

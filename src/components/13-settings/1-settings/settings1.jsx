@@ -143,9 +143,9 @@ export default function Settings1() {
                             <div className="mb-4 flex gap-2">
                                 <p className="font-medium text-start">Two factor authentication</p>
                                 <div className="flex items-center">
-                                    <label className="switch">
+                                    <label className="switch2">
                                         <input type="checkbox" />
-                                        <span className="slider round"></span> {/* Toggle Switch */}
+                                        <span className="slider round"></span> {/* Toggle switch2 */}
                                     </label>
                                 </div>
                             </div>

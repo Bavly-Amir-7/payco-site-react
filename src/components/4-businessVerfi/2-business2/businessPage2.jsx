@@ -410,7 +410,7 @@ function Business2() {
                                                             </i>
                                                             <span>|</span>
                                                             <div>
-                                                            Single
+                                                                Single
                                                             </div>
                                                         </button>
                                                         <button className="jointBtn  flex items-center justify-center gap-2 mx-auto">
@@ -429,7 +429,7 @@ function Business2() {
                                                             </i>
                                                             <span>|</span>
                                                             <div>
-                                                            Joint
+                                                                Joint
                                                             </div>
                                                         </button>
                                                     </div>
@@ -515,7 +515,7 @@ function Business2() {
                                     <p className="text-gray-500">26%</p>
                                 </div>
                                 <div className="flex md:flex-row flex-col md:space-x-2 space-y-2 md:space-y-0 mt-1">
-                                <button className="flex items-center px-4 py-2 border border-red-500 text-red-500 rounded-lg place-content-center md:w-auto">
+                                    <button className="flex items-center px-4 py-2 border border-red-500 text-red-500 rounded-lg place-content-center md:w-auto">
                                         <span>DELETE</span>
                                         <i className="fas fa-trash-alt ml-2"></i>
                                     </button>
