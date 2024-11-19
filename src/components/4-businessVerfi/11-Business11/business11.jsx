@@ -26,7 +26,7 @@ export default function Business11() {
                                 <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
                                     <i>
                                         <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M14.6663 1L5.49967 10.1667L1.33301 6" stroke="#C20101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M14.6663 1L5.49967 10.1667L1.33301 6" stroke="#C20101" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
 
                                     </i>
@@ -34,7 +34,7 @@ export default function Business11() {
                                 <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
                                     <i>
                                         <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M14.6663 1L5.49967 10.1667L1.33301 6" stroke="#C20101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M14.6663 1L5.49967 10.1667L1.33301 6" stroke="#C20101" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
 
                                     </i>

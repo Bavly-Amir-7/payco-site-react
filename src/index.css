@@ -125,3 +125,11 @@ html {
     border: 1px solid var(--border-normal, #807E7E);
 
 }
+
+@media (max-width: 650px) {
+    .redBtn, .greyBtn {
+        width: 100%;
+       
+    }
+    
+}

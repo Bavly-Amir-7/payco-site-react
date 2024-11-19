@@ -61,7 +61,7 @@ export default function Escrow3() {
                                 <div className="w-10 h-10 whiteColor redBg rounded-full flex items-center justify-center"><i><svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <rect x="0.5" y="0.5" width="49" height="49" rx="24.5" fill="white" />
                                     <rect x="0.5" y="0.5" width="49" height="49" rx="24.5" stroke="#C80000" />
-                                    <path d="M31.3333 20L22.1667 29.1667L18 25" stroke="#C80000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M31.3333 20L22.1667 29.1667L18 25" stroke="#C80000" strokeWidth="2" stroke-linecap="round" stroke-linejoin="round" />
                                 </svg>
                                 </i></div>
                                 <div className="w-10 h-10 whiteColor redBg rounded-full flex items-center justify-center">2</div>

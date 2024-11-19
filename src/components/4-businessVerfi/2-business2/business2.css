@@ -1,0 +1,68 @@
+.custom-padding {
+    padding: 0;
+    /* Remove padding for mobile */
+}
+
+.verfi2Component .borderInput {
+    background-color: white;
+}
+
+.verfi2Component label {
+    text-align: start;
+}
+
+
+
+.singleBtn {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 325px; /* Restrict maximum width on larger screens */
+    height: 48px; /* Fixed height */
+    padding: 13px 16px;
+    gap: 12px;
+    border-radius: 4px;
+    border: 1px solid #FFFFFF33;
+    opacity: 1; /* Ensure the button is visible */
+    margin-top: 5px;
+}
+
+.jointBtn {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 325px; /* Restrict maximum width on larger screens */
+    height: 48px; /* Fixed height */
+    padding: 13px 16px;
+    gap: 12px;
+    border-radius: 4px;
+    border: 1px solid #FFFFFF33;
+    opacity: 1; /* Ensure the button is visible */
+    margin-top: 5px;
+    background-color: white;
+    color: #656565;
+}
+
+
+.importBtn{
+    margin-top: 25px;
+    width: 100%; /* Full width on smaller screens */
+    max-width: 325px; /* Restrict maximum width on larger screens */
+
+    height: 48px; /* Fixed height */
+    padding: 13px 16px;
+    gap: 10px;
+    border-radius: 4px;
+    border: 1px solid #FFFFFF33;
+    opacity: 0px;
+    background: #FFFFFF;
+    border: 1px solid #808080;
+    color : red  
+
+}
+
+@media (min-width: 700px) {
+
+    .custom-padding {
+        padding: 2rem;
+        /* Apply p-8 (2rem) for desktop */
+    }
+
+  
+}
