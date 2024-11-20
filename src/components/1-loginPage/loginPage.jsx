@@ -39,7 +39,7 @@ export default function LoginPage() {
                             </div>
                             <form>
                                 <div className="mb-4">
-                                    <label className="block text-gray-700">Email</label>
+                                    <label className="block text-gray-700">Email.</label>
                                     <div className="iconArea flex items-center border border-gray-300 rounded">
                                         <i className="p-2">{/* Email Icon */}</i>
                                         <span>|</span>
