@@ -1,0 +1,30 @@
+.iconArea {
+    background-color: white;
+}
+
+.lines {
+    gap: 7px;
+}
+
+.remember-and-forget {
+    width: 100%;
+    place-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .computer {
+        display: none !important; /* Hide the computer image on small screens */
+    }
+
+    .loginArea {
+        width: 100% !important; /* Ensure login area takes full width */
+    }
+
+    .imageParent {
+        flex: 1 1 100%; /* Adjusts layout */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Adjust heading size */
+    }
+}
