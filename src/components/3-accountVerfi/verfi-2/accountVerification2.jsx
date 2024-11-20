@@ -34,7 +34,7 @@ export default function AccountVerification2() {
                         <Aside />
                     </div>
 
-                    <div className="col-12 col-lg-9 col-md-10 " style={{ placeItems: "center" }}>
+                    <div className="col-12 col-lg-9 col-md-12 " style={{ placeItems: "center" }}>
                         <h1 className="text-2xl font-bold mb-6 text-center">Account Verification</h1>
                         <div className="relative mb-6 w-100">
                             <div className="absolute inset-0 flex items-center justify-center">
