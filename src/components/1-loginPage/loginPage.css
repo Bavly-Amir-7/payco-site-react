@@ -1,35 +1,30 @@
- .iconArea {
+.iconArea {
     background-color: white;
 }
 
-.lines{
+.lines {
     gap: 7px;
 }
 
-.remember-and-forget{
+.remember-and-forget {
     width: 100%;
     place-content: space-between;
-
 }
 
 @media (max-width: 768px) {
     .computer {
-        display: none !important;
-        /* Hide the computer image on small screens */
-    }
-
-    .imageParent {
-        flex: 1 1 100%;
-        /* Takes full width on small screens */
-    }
-
-    h1 {
-        font-size: 1.5rem;
-        /* Adjust heading size */
+        display: none !important; /* Hide the computer image on small screens */
     }
 
     .loginArea {
-        width: 100%;
-        /* Makes form take more space on small screens */
+        width: 100% !important; /* Ensure login area takes full width */
+    }
+
+    .imageParent {
+        flex: 1 1 100%; /* Adjusts layout */
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Adjust heading size */
     }
 }

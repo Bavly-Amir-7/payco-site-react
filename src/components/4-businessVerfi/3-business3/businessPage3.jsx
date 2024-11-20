@@ -288,6 +288,7 @@ function Business3() {
                                                             <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
                                                             <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
                                                         </svg>
+                                                        
                                                     </i>
                                                     <span>|</span>
                                                     <select className="flex-1 outline-none text-sm w-full">
@@ -392,7 +393,7 @@ function Business3() {
                             </div>
 
 
-                            <div className="authorized-signatories-container flex flex-col items-center justify-center min-h-screen bg-white w-100">
+                            <div className="authorized-signatories-container flex flex-col items-center justify-center mt-10 bg-white w-100">
                                 <div className="authorized-signatories-header text-center mb-6">
                                     <h1 className="authorized-signatories-title text-lg font-bold text-black">
                                         Authorized signatories
