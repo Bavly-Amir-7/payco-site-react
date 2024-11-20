@@ -110,8 +110,9 @@ export default function AccountVerification3() {
 
 
                         <div className="flex justify-center gap-2">
-                            <Link to="/verfi2" className='back'>
-                                <button className="backBtn  font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Back</button>
+                            
+                            <Link to="/verfi2" className='saveNext'>
+                                <button className="backBtn   redClr font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Back</button>
                             </Link>
                             <Link to="/verfi4" className='saveNext'>
                                 <button className="saveBtn greyBtn greyBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Save & Next</button>
