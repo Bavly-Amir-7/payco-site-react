@@ -33,7 +33,7 @@ export default function LoginPage() {
                     </div>
                     <div className="loginArea col-span-1 flex items-center justify-center bg-gray-100">
                         <div className="w-2/3">
-                            <div className="text-start imageParent mb-3" style={{ placeSelf: "start" }}>
+                            <div className="text-start imageParent mb-3 pt-5" style={{ placeSelf: "start" }}>
                                 <img src={image2} alt="Payco Logo" className="mx-auto mb-3" />
                                 <h2 className="text-2xl font-bold mt-5">Welcome Back</h2>
                             </div>
