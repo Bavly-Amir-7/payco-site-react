@@ -189,12 +189,14 @@ export default function Credit4() {
                             </div>
 
                         </div>
-                        <div className="finalBtns center mt-6 justify-center">
-                            <button className="py-2 px-6 viewAndSend col-button">View LC List</button>
-                            <button className="py-2 px-6 viewLc col-button">View Seller’s Documents</button>
+                        <div className="mt-6 w-full flex flex-col gap-4 lg:flex-row lg:gap-6">
+                            <Link to="#" className="saveNext w-full">
+                                <button className="py-4 viewAndSend2">View LC List</button>
+                            </Link>
+                            <Link to="/credit5" className="saveNext w-full">
+                                <button className="py-4 viewAndSend3">View Seller’s Documents</button>
+                            </Link>
                         </div>
-
-
 
 
                     </div>

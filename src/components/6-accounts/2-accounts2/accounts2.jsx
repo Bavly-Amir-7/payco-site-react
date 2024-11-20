@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faPlus, faChevronRight, faChevronDown, faChevronUp, faCalendarAlt, faTimes, faBell, faArrowRight, faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import Aside from '../../aside/aside';
 import "./accounts2.css";
+import { Link } from 'react-router-dom';
+
 
 export default function Accounts2() {
     const [activeTab, setActiveTab] = useState('business');
@@ -34,7 +36,7 @@ export default function Accounts2() {
                             </div>
                         </div>
                         <div className="text-gray-500 mb-6 text-start">
-                            <span>Dashboard</span> <FontAwesomeIcon icon={faChevronRight} className="mx-2" /> <span className="font-bold text-gray-700">Accounts</span>
+                            <span>Dashboard</span> <FontAwesomeIcon icon={faChevronRight} className="mx-2" /> <span className="font-bold text-gray-700">New Transfer</span>
                         </div>
 
                         <div className="bg-white rounded-lg shadow-lg p-8 ">
@@ -148,10 +150,17 @@ export default function Accounts2() {
                             )}
 
                         </div>
-                            <div className="finalBtns center mt-6 justify-center">
-                                <button className="py-2 px-6 backLetter col-button">Save & Exit</button>
-                                <button className="py-2 px-6 nextLetter col-button">Next</button>
-                            </div>
+
+
+                        <div className="flex justify-center gap-2">
+
+                            <Link to="/accounts1" className='saveNext'>
+                                <button className="backBtn   redClr font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Back</button>
+                            </Link>
+                            <Link to="/letters1" className='saveNext'>
+                                <button className=" redBtn redBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Save & Next</button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

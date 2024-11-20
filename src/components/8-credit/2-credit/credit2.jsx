@@ -124,7 +124,7 @@ export default function Credit2() {
                                         </svg>
                                     </i>
                                 </div>
-                              
+
                                 <div className="w-10 h-10 whiteColor redBg rounded-full flex items-center justify-center">2</div>
                                 <div className="w-10 h-10  whiteBg rounded-full flex items-center justify-center">3</div>
 
@@ -174,11 +174,15 @@ export default function Credit2() {
                             </div>
 
                         </div>
-                        <div className="finalBtns center mt-6 justify-center">
-                            <button className="py-2 px-6 viewAndSend col-button">View LC List</button>
-                            <button className="py-2 px-6 viewAndSend col-button">View Seller’s Documents</button>
+                      
+                        <div className="mt-6 w-full flex flex-col gap-4 lg:flex-row lg:gap-6">
+                            <Link to="#" className="saveNext w-full">
+                                <button className="py-4 viewAndSend2">View LC List</button>
+                            </Link>
+                            <Link to="/credit3" className="saveNext w-full">
+                                <button className="py-4 viewAndSend2">View Seller’s Documents</button>
+                            </Link>
                         </div>
-
 
 
 

@@ -4,6 +4,7 @@ import "./credit1.css";
 import { BarChart } from '@mui/x-charts/BarChart';
 import recptImage from "./Ellipse 7.svg";
 import notFound from "./No Results@3x.svg";
+import { Link } from 'react-router-dom';
 
 
 
@@ -475,10 +476,14 @@ export default function Credit1() {
 
 
                             </div>
-                            <div className='w-100 mt-10 text-center'>
-                                <button className='draftBtn'>View draft</button>
+                            <div className="flex justify-center gap-2">
 
+
+                                <Link to="/credit2" className='saveNext'>
+                                    <button className=" redBtn redBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">view Draft</button>
+                                </Link>
                             </div>
+
 
                         </div>
 

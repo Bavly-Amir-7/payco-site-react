@@ -96,11 +96,12 @@ export default function Letters3() {
                             </div>
                         </div>
                         <div className="flex justify-between mb-6 w-100">
-                            <div className="col text-center text-sm">Business Details</div>
-                            <div className="col text-center text-sm">Business Beneficial Owners</div>
-                            <div className="col text-center text-sm">Signatory Power</div>
-                            <div className="col text-center text-sm">Review and Additional Documents</div>
+                            <div className="col text-center text-sm">Invoice Details</div>
+                            <div className="col text-center text-sm">LC Conditions</div>
+                            <div className="col text-center text-sm ">Review and Confirmation</div>
+                            <div className="col text-center text-sm greyColor">Fund the LC</div>
                         </div>
+
 
 
 
@@ -207,9 +208,14 @@ export default function Letters3() {
                             </div>
 
                         </div>
-                        <div className="finalBtns center mt-6 justify-center">
-                            <button className="py-2 px-6 backLetter col-button">Save & Exit</button>
-                            <button className="py-2 px-6 nextLetter col-button">Next</button>
+                        <div className="flex justify-center gap-2">
+
+                            <Link to="/letters2" className='saveNext'>
+                                <button className="backBtn   redClr font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Back</button>
+                            </Link>
+                            <Link to="/letters4" className='saveNext'>
+                                <button className=" redBtn redBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Next</button>
+                            </Link>
                         </div>
 
 

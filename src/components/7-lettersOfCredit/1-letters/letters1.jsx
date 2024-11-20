@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faPlus, faChevronDown, faChevronUp, faCalendarAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
 import "./letters1.css";
 
-export default function Letters1(){
+export default function Letters1() {
     const [activeTab, setActiveTab] = useState("new");
 
     return (
@@ -46,17 +46,17 @@ export default function Letters1(){
                                 <div className="dashedLine border-t-2 border-dashed border-gray-300" style={{ width: "80%" }}></div>
                             </div>
                             <div className="relative flex" style={{ justifyContent: "space-around" }}>
-                                <div className="w-10 h-10 whiteColor redBg rounded-full flex items-center justify-center">4</div>
+                                <div className="w-10 h-10 whiteColor redBg rounded-full flex items-center justify-center">1</div>
                                 <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">2</div>
                                 <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">3</div>
                                 <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">4</div>
                             </div>
                         </div>
                         <div className="flex justify-between mb-6 w-100">
-                            <div className="col text-center text-sm">Business Details</div>
-                            <div className="col text-center text-sm">Business Beneficial Owners</div>
-                            <div className="col text-center text-sm">Signatory Power</div>
-                            <div className="col text-center text-sm">Review and Additional Documents</div>
+                            <div className="col text-center text-sm">Invoice Details</div>
+                            <div className="col text-center text-sm greyColor">LC Conditions</div>
+                            <div className="col text-center text-sm greyColor">Review and confirmation</div>
+                            <div className="col text-center text-sm greyColor">Fund the LC</div>
                         </div>
                         <div className="p-4 whiteBg">
                             {/* Tabs */}
@@ -166,10 +166,7 @@ export default function Letters1(){
                                                         <FontAwesomeIcon icon={faPlus} />
                                                     </button>
                                                 </div>
-                                                <div className="finalBtns center mt-6 justify-center">
-                                                    <button className="py-2 px-6 backLetter col-button">Save & Exit</button>
-                                                    <button className="py-2 px-6 nextLetter col-button">Next</button>
-                                                </div>
+
                                             </div>
 
                                         </div>
@@ -312,10 +309,7 @@ export default function Letters1(){
                                                         <FontAwesomeIcon icon={faPlus} />
                                                     </button>
                                                 </div>
-                                                <div className="finalBtns center mt-6 justify-center">
-                                                    <button className="py-2 px-6 backLetter col-button">Save & Exit</button>
-                                                    <button className="py-2 px-6 nextLetter col-button">Next</button>
-                                                </div>
+
 
                                             </div>
                                         </div>
@@ -328,6 +322,15 @@ export default function Letters1(){
                                     </div>
                                 )}
                             </div>
+                        </div>
+                        <div className="flex justify-center gap-2">
+
+                            <Link to="/accounts2" className='saveNext'>
+                                <button className="backBtn   redClr font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Save & Exit</button>
+                            </Link>
+                            <Link to="/letters2" className='saveNext'>
+                                <button className=" redBtn redBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Next</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

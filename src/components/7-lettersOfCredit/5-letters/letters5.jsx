@@ -122,9 +122,12 @@ export default function Letters5() {
                             </div>
 
                         </div>
-                        <div className="finalBtns center mt-6 justify-center">
-                            <button className="py-2 px-6 backLetter col-button">Save & Exit</button>
-                            <button className="py-2 px-6 nextLetter col-button">Next</button>
+                        <div className="flex justify-center gap-2">
+
+                         
+                            <Link to="/credit1" className='saveNext'>
+                                <button className=" redBtn redBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Next</button>
+                            </Link>
                         </div>
 
 

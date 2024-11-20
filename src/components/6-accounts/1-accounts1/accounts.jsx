@@ -3,6 +3,8 @@ import Aside from '../../aside/aside';
 import "./accounts.css";
 import { BarChart } from '@mui/x-charts/BarChart';
 import recptImage from "./Ellipse 7.svg";
+import { Link } from 'react-router-dom';
+
 import notFound from "./No Results@3x.svg";
 
 
@@ -87,7 +89,10 @@ export default function Accounts1() {
                             <div className="flex justify-between">
 
                                 <h1 className="text-2xl font-bold mb-2">Welcome back, John</h1>
+                                <Link to="/accounts2" className="">
+
                                 <button className="redBg text-white px-4 py-2 rounded-lg mt-1">send/receive</button>
+                                </Link>
 
                             </div>
                             <div className="text-gray-500 mb-6">
