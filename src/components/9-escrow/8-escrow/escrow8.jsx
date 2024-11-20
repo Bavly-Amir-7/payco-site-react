@@ -77,7 +77,7 @@ export default function Escrow8() {
 
 
                         <div className="md:flex items-center justify-between mb-6 mt-4 md:mt-10 w-full">
-                        <div className="flex items-center flex-wrap text-gray-500 gap-3 text-sm md:text-base">
+                            <div className="flex items-center flex-wrap text-gray-500 gap-3 text-sm md:text-base">
                                 {/* Adjust font size for mobile using responsive text utilities */}
                                 <span>Dashboard</span>
                                 <i className="fas fa-chevron-right"></i>
@@ -182,8 +182,12 @@ export default function Escrow8() {
                             </div>
 
                         </div>
-                        <div className="finalBtns center mt-6 justify-center">
-                            <button className="py-2  viewLc col-button">Withdraw</button>
+                        <div className="flex justify-center gap-2">
+
+
+                            <Link to="/invoices1" className='saveNext'>
+                                <button className=" redBtn redBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Withdraw</button>
+                            </Link>
                         </div>
 
 

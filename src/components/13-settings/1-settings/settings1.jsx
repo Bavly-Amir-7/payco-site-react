@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Importing F
 import { faTrash, faPencilAlt } from '@fortawesome/free-solid-svg-icons'; // Importing specific icons
 import './settings1.css'; // Importing CSS for styling
 import imageProfile from './Avatar With Options.svg'; // Default profile image
+import { Link } from 'react-router-dom';
+
 
 export default function Settings1() {
     // State variables for name, editing status, and profile image
@@ -140,15 +142,22 @@ export default function Settings1() {
                             </div>
 
                             {/* Two-Factor Authentication */}
-                            <div className="mb-4 flex gap-2">
-                                <p className="font-medium text-start">Two factor authentication</p>
-                                <div className="flex items-center">
-                                    <label className="switch2">
-                                        <input type="checkbox" />
-                                        <span className="slider round"></span> {/* Toggle switch2 */}
-                                    </label>
-                                </div>
-                            </div>
+                            <Link to="/settings2" className="">
+    <div
+        className={`mb-4 flex gap-2 ${
+            location.pathname.startsWith('/settings') ? 'text-red-600 font-medium' : ''
+        }`}
+    >
+        <p className="font-medium text-start">Two factor authentication</p>
+        <div className="flex items-center">
+            <label className="switch2">
+                <input type="checkbox" />
+                <span className="slider round"></span> {/* Toggle switch2 */}
+            </label>
+        </div>
+    </div>
+</Link>
+
 
                             {/* Phone Number */}
                             <div className="mb-4 flex flex-col items-start">

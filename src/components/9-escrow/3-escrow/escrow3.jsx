@@ -100,6 +100,15 @@ export default function Escrow3() {
                             </div>
 
                         </div>
+                        <div className="flex justify-center gap-2">
+
+                            <Link to="/escrow2" className='saveNext'>
+                                <button className="backBtn   redClr font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Back</button>
+                            </Link>
+                            <Link to="/escrow4" className='saveNext'>
+                                <button className=" redBtn redBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Next</button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

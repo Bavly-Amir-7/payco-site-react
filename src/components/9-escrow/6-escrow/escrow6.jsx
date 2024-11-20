@@ -143,7 +143,7 @@ export default function Escrow6() {
 
                                 <div className=" flex items-center justify-center">
                                     <div className="w-100">
-                                       
+
 
 
 
@@ -182,12 +182,12 @@ export default function Escrow6() {
                             </div>
 
                         </div>
-                        <div className="finalBtns center mt-6 justify-center">
-                            <button className="py-2 px-6 viewAndSend col-button">Back</button>
-                            <button className="py-2 px-6 viewAndSend col-button">View Escrow Contract</button>
+                        <div className="mt-6 w-full flex flex-col gap-4 lg:flex-row lg:gap-6 justify-center">
+
+                            <Link to="/escrow7" className="saveNext md:w-1/2 w-full">
+                                <button className="py-4 viewAndSend2">View Escrow Contract</button>
+                            </Link>
                         </div>
-
-
 
 
                     </div>

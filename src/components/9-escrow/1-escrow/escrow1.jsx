@@ -4,6 +4,7 @@ import "./escrow1.css";
 import { BarChart } from '@mui/x-charts/BarChart';
 import recptImage from "./Ellipse 7.svg";
 import notFound from "./No Results@3x.svg";
+import { Link } from 'react-router-dom';
 
 
 
@@ -475,9 +476,16 @@ export default function Escrow1() {
 
 
                             </div>
-                            <div className='w-100 mt-10 text-center'>
+
+
+
+                            <div className="flex justify-center gap-2 mt-4">
+
+
+                                <Link to="/escrow2" className='saveNext'>
                                 <button className='draftBtn'>View draft</button>
 
+                                </Link>
                             </div>
 
                         </div>

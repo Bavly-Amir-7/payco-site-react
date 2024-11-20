@@ -224,10 +224,17 @@ export default function Credit7() {
                             </div>
 
                         </div>
-                        <div className="finalBtns center mt-6 justify-center">
-                            <button className="py-2 px-6 viewAndSend col-button">Back</button>
-                            <button className="py-2 px-6 viewAndSend col-button">View Escrow Contract</button>
+                        <div className="flex justify-center gap-2">
+
+                            <Link to="/credit6" className='saveNext'>
+                                <button className="backBtn   redClr font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Back</button>
+                            </Link>
+                            <Link to="/credit8" className='saveNext'>
+                                <button className="backBtn   redClr font-semibold px-4 py-2 rounded-lg hover:bg-red-600">View Escrow Contract</button>
+                            </Link>
+                           
                         </div>
+
 
 
 
