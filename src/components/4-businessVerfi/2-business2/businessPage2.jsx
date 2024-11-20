@@ -28,22 +28,40 @@ function Business2() {
 
                     <div className="col-12 col-lg-9 col-md-12 mt-5 text-center">
                         <h1 className="text-2xl font-bold mb-6 text-center">Business Verification(s)</h1>
-                        <div className="relative mb-6">
-                            <div className="absolute inset-0 flex items-center">
-                                <div className="w-full border-t border-gray-300"></div>
+                        <div className="relative mb-6 w-100">
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="dashedLine border-t-2 border-dashed border-gray-300 " style={{ width: "80%" }}></div>
                             </div>
-                            <div className="relative flex justify-between">
-                                <div className="w-10 h-10 bg-red-500 redBg text-white rounded-full flex items-center justify-center">1</div>
-                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">2</div>
-                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">3</div>
-                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">4</div>
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="dashedLine border-t-2 border-dashed border-gray-300 " style={{ width: "80%" }}></div>
+                            </div>
+                            <div className="relative flex" style={{ justifyContent: "space-around" }}>
+                            <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
+                                    <i>
+                                        <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" fill="#FCFCFC" />
+                                            <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" stroke="#CDCDCD" />
+                                            <path d="M32.0726 21L22.9059 30.1667L18.7393 26" stroke="#C20101" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                    </i>
+                                </div>                                <div className="w-10 h-10 whiteColor redBg rounded-full flex items-center justify-center">2</div>
+
+                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
+                                    3
+                                </div>
+                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
+                                    4
+                                </div>
+                             
                             </div>
                         </div>
-                        <div className="flex justify-between mb-6">
-                            <p className="text-center flex-1">Account Type</p>
-                            <p className="text-center flex-1">Personal Details</p>
-                            <p className="text-center flex-1">Identity Verification</p>
-                            <p className="text-center flex-1">Review and Additional Documents</p>
+
+
+                        <div className="flex justify-between mb-6 w-100">
+                            <div className="col text-center text-sm">Business Details</div>
+                            <div className="col text-center text-sm greyColor">Business Beneficial Owners</div>
+                            <div className="col text-center text-sm greyColor">Signatory Power</div>
+                            <div className="col text-center text-sm greyColor">Review and Additional Documents</div>
                         </div>
                         <div className="bg-[rgb(252,252,252)] rounded-lg shadow-md verfi2Component custom-padding">
                             <h2 className="text-xl font-semibold mb-4 pt-4 text-center">Add Business Beneficial Owner(s)</h2>
@@ -529,11 +547,14 @@ function Business2() {
 
                         </div>
 
-                        <div className="flex justify-center">
-                            <Link to="/verfi2">
-                                <button className="redBtn redBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Save & Next</button>
+                        <div className="flex justify-center gap-2">
+                            
+                            <Link to="/business1" className='saveNext'>
+                                <button className="backBtn   redClr font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Back</button>
                             </Link>
-
+                            <Link to="/business3" className='saveNext'>
+                                <button className=" redBtn redBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Save & Next</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

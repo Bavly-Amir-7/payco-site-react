@@ -19,13 +19,15 @@ export default function AccountVerification4() {
 
     return (
         <>
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="asideComponent col-lg-3 col-md-2 fixed" style={{ height: "100%" }}>
+           <div className="container-fluid">
+                <div className="row" style={{ height: "100vh" }}>
+                    {/* Sidebar */}
+                    <div className="asideComponent col-lg-3 col-md-2 d-none d-md-block">
                         <Aside />
                     </div>
 
-                    <div className="col-12 col-lg-9 col-md-10 mainVerf">
+
+                    <div className="col-12 col-lg-9 col-md-12">
                         <h1 className="text-2xl font-bold mb-6 text-center">Account Verification</h1>
                         <div className="relative mb-6 w-100">
                             <div className="absolute inset-0 flex items-center justify-center">
@@ -109,12 +111,13 @@ export default function AccountVerification4() {
                             </div>
                         </div>
 
-                        <div className="row justify-content-center mt-4">
-                            <Link to="/verfi2" className="col-12 col-md-6">
-                                <button className="backBtn font-semibold px-4 py-2 rounded-lg w-100">Back</button>
+                        <div className="flex justify-center gap-2">
+                            
+                            <Link to="/verfi3" className='saveNext'>
+                                <button className="backBtn   redClr font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Back</button>
                             </Link>
-                            <Link to="/business1" className="col-12 col-md-6">
-                                <button className="finishBtn greyBtn redBg text-white font-semibold px-4 py-2 rounded-lg w-100">Finish</button>
+                            <Link to="/business1" className='saveNext'>
+                                <button className=" redBtn redBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Finish</button>
                             </Link>
                         </div>
 
