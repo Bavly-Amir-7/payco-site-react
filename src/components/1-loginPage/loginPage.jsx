@@ -27,8 +27,8 @@ export default function LoginPage() {
     return (
         <>
             <div className='login'>
-                <div className="grid grid-cols-2 h-screen">
-                    <div className="computer col-span-1 flex items-center justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 h-screen">
+            <div className="computer col-span-1 flex items-center justify-center">
                         <img src={image1} alt="Illustration of secure payment system with various security icons" className="w-2/3" />
                     </div>
                     <div className="loginArea col-span-1 flex items-center justify-center bg-gray-100">
