@@ -38,8 +38,10 @@ export default function Letters1() {
                         <div className="text-gray-500 mb-6 text-sm" style={{ placeSelf: "start" }}>
                             <span>Dashboard</span>
                             <i className="fas fa-chevron-right mx-2"></i>
+                            <span>Letters of credit</span>
+                            <i className="fas fa-chevron-right mx-2"></i>
 
-                            <span className="font-bold text-gray-700">invoices</span>
+                            <span className="font-bold text-gray-700">Create New LC</span>
                         </div>
                         <div className="relative mb-6 w-100">
                             <div className="absolute inset-0 flex items-center justify-center">
