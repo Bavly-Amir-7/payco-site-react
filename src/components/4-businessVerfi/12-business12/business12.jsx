@@ -213,9 +213,14 @@ export default function Business12() {
                             </div>
 
                         </div>
-                        <div className="finalBusinessBtns flex justify-center gap-3 mt-6">
-                            <button className="backBtn7 py-2 px-4 rounded-lg">Back</button>
-                            <button className="nextBtn7  py-2  rounded-lg">Finish</button>
+                        <div className="flex justify-center gap-2">
+
+                            <Link to="/business11" className='saveNext'>
+                                <button className="backBtn   redClr font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Back</button>
+                            </Link>
+                            <Link to="/overview" className='saveNext'>
+                                <button className=" redBtn redBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Finish</button>
+                            </Link>
                         </div>
                     </div>
                 </div>

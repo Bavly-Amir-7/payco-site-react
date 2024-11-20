@@ -74,10 +74,15 @@ export default function Business6() {
                                 </p>
                             </div>
                         </div>
-                        <div className="flex justify-center space-x-4 mt-5">
-                            <button className="overviewBtn px-6 py-2  rounded-full ">Overview</button>
-                            <button className="profileBtn px-6 py-2  rounded-full">Go To My Profile</button>
-                        </div>
+                        <div className="flex justify-center gap-2">
+
+                                <Link to="/business5" className='saveNext'>
+                                    <button className="backBtn   redClr font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Overview</button>
+                                </Link>
+                                <Link to="/business8" className='saveNext'>
+                                    <button className=" redBtn redBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Go to my profile</button>
+                                </Link>
+                            </div>
                     </div>
                 </div>
             </div>

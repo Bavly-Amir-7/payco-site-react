@@ -7,7 +7,7 @@ import "./business10.css";
 
 export default function Business10() {
 
-    
+
 
     const handleAddAnotherAsset = () => {
         // Here you add a new asset to the businessAssets array
@@ -15,7 +15,7 @@ export default function Business10() {
         setBusinessAssets([...businessAssets, newAsset]);
         setShowBusinessAssets(true); // Ensure assets section is displayed
     };
-    
+
 
     const [showBusinessAssets, setShowBusinessAssets] = useState(false);
     const [businessAssets, setBusinessAssets] = useState([
@@ -71,8 +71,8 @@ export default function Business10() {
                         <div className="flex justify-between mb-3 w-100">
                             <div className="col text-center text-sm">Business Details</div>
                             <div className="col text-center text-sm">Business Beneficial Owners</div>
-                            <div className="col text-center text-sm">Signatory Power</div>
-                            <div className="col text-center text-sm">Review and Additional Documents</div>
+                            <div className="col text-center text-sm greyColor">Signatory Power</div>
+                            <div className="col text-center text-sm greyColor">Review and Additional Documents</div>
                         </div>
 
                         <div id="root" class="flex justify-center items-center ">
@@ -204,10 +204,10 @@ export default function Business10() {
                                         <textarea class="w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" rows="4" placeholder="Type here a detailed description"></textarea>
                                     </div>
                                     <div className="flex justify-center mb-6">
-    <button type="button" onClick={handleAddAnotherAsset} className="bg-red-600 text-white py-2 px-4 rounded flex items-center justify-center">
-        <i className="fas fa-plus mr-2"></i> Add Another Type Of Asset
-    </button>
-</div>
+                                        <button type="button" onClick={handleAddAnotherAsset} className="bg-red-600 text-white py-2 px-4 rounded flex items-center justify-center">
+                                            <i className="fas fa-plus mr-2"></i> Add Another Type Of Asset
+                                        </button>
+                                    </div>
 
 
                                     {/* Conditional rendering of business assets */}
@@ -240,8 +240,15 @@ export default function Business10() {
                             </div>
                         </div>
 
-                        <button className="eddBtn py-2 px-6 rounded-full text-lg mt-6">Save & Next</button>
-                    </div>
+                        <div className="flex justify-center gap-2">
+
+                            <Link to="/business9" className='saveNext'>
+                                <button className="backBtn   redClr font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Back</button>
+                            </Link>
+                            <Link to="/business11" className='saveNext'>
+                                <button className=" redBtn redBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Finish</button>
+                            </Link>
+                        </div>                    </div>
                 </div>
             </div>
 

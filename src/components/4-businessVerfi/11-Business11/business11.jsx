@@ -54,7 +54,7 @@ export default function Business11() {
                             <div className="col text-center text-sm">Business Details</div>
                             <div className="col text-center text-sm">Business Beneficial Owners</div>
                             <div className="col text-center text-sm">Signatory Power</div>
-                            <div className="col text-center text-sm">Review and Additional Documents</div>
+                            <div className="col text-center text-sm greyColor">Review and Additional Documents</div>
                         </div>
 
 
@@ -81,12 +81,15 @@ export default function Business11() {
                             </form>
                         </div>
 
+                        <div className="flex justify-center gap-2">
 
-                        <div class="flex  mt-4 gap-4 w-100" style={{ justifyContent: "center" }}>
-                            <button type="button" class="backBtn8  border border-red-600 px-6 py-2 rounded-lg font-semibold">Back</button>
-                            <button type="submit" class="nextBtn8  px-6 py-2 rounded-lg font-semibold">Save & Next</button>
+                            <Link to="/business10" className='saveNext'>
+                                <button className="backBtn   redClr font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Back</button>
+                            </Link>
+                            <Link to="/business12" className='saveNext'>
+                                <button className=" redBtn redBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Save & Next</button>
+                            </Link>
                         </div>
-
                     </div>
                 </div>
             </div>

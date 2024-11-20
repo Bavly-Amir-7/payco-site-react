@@ -41,8 +41,8 @@ export default function Business9() {
 
                         <div className="flex justify-between mb-3 w-100">
                             <div className="col text-center text-sm">Business Details</div>
-                            <div className="col text-center text-sm">Business Beneficial Owners</div>
-                            <div className="col text-center text-sm">Signatory Power</div>
+                            <div className="col text-center text-sm">Assets Details</div>
+                            <div className="col text-center text-sm">Nature and purpose of the business relationship</div>
                             <div className="col text-center text-sm">Review and Additional Documents</div>
                         </div>
 
@@ -160,8 +160,14 @@ export default function Business9() {
                         </div>
 
 
-                        <button className="eddBtn py-2 px-6 rounded-full text-lg mt-6">
-                            Save & Next                        </button>
+                      
+                        <div className="flex justify-center gap-2 mt-5 w-100">
+
+
+                            <Link to="/business10" className='saveNext'>
+                            <button className=" redBtn redBg text-white font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Save & Next</button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

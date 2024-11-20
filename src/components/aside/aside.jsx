@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import "./aside.css";
 import image2 from "./../images/payco.png";
 import { AiOutlineMenu } from 'react-icons/ai'; // Import AiOutlineMenu from react-icons
+import { Link } from 'react-router-dom';
+
 
 export default function Aside() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false); // State to control sidebar visibility
@@ -33,7 +35,7 @@ export default function Aside() {
             >
                 {/* Sidebar Header */}
                 <div className="p-4 flex justify-between items-center border-b">
-                    <img src={image2} alt="PAYCO logo" className="mb-6" width={"160px"} />
+                    <img src={image2} alt="PAYCO logo" className="mb-4" width={"160px"} />
                     <button
                         onClick={() => setIsSidebarOpen(false)}
                         className="text-gray-600 hover:text-gray-900 lg:hidden"
@@ -44,36 +46,50 @@ export default function Aside() {
 
                 {/* Menu Items */}
                 <ul className="asideStyless space-y-4" style={{ placeSelf: "center" }}>
-                    <li
-                        className={`flex items-center py-2 px-4 rounded-md transition duration-150 ${activeLink === 'overview' ? 'asideBtns text-red-600' : 'text-gray-700 hover:text-red-600'}`}
-                        onClick={() => handleLinkClick('overview')}
-                    >
-                        <i><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="10.2857" height="10.2857" rx="2" transform="matrix(-1 0 0 1 10.2861 0)" fill="#C20101" />
-                            <rect width="10.2857" height="10.2857" rx="2" transform="matrix(-1 0 0 1 10.2861 13.7139)" fill="#C20101" />
-                            <rect width="10.2857" height="10.2857" rx="2" transform="matrix(-1 0 0 1 24 0)" fill="#C20101" />
-                            <rect width="10.2857" height="10.2857" rx="2" transform="matrix(-1 0 0 1 24 13.7139)" fill="#C20101" />
-                        </svg>
-                        </i>
-                        <span>Overview</span>
-                    </li>
-                    <li
-                        className={`flex items-center py-2 px-4 rounded-md transition duration-150 ${activeLink === 'accounts' ? 'asideBtns text-red-600' : 'text-gray-700 hover:text-red-600'}`}
-                        onClick={() => handleLinkClick('accounts')}
-                    >
-                        <i>
 
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 24C10.38 24 8.81 23.68 7.33 23.06C5.9 22.45 4.62 21.59 3.51 20.49C2.41 19.38 1.55 18.1 0.94 16.67C0.32 15.19 0 13.62 0 12C0 10.38 0.32 8.81 0.94 7.33C1.55 5.9 2.41 4.62 3.51 3.51C4.62 2.41 5.9 1.55 7.33 0.94C8.81 0.32 10.38 0 12 0C13.62 0 15.19 0.32 16.67 0.94C18.1 1.55 19.38 2.41 20.49 3.51C21.59 4.62 22.45 5.9 23.06 7.33C23.68 8.81 24 10.38 24 12C24 13.62 23.68 15.19 23.06 16.67C22.45 18.1 21.59 19.38 20.49 20.49C19.38 21.59 18.1 22.45 16.67 23.06C15.19 23.68 13.62 24 12 24ZM12 1.41C6.16 1.41 1.41 6.16 1.41 12C1.41 17.84 6.16 22.59 12 22.59C17.84 22.59 22.59 17.84 22.59 12C22.59 6.16 17.84 1.41 12 1.41Z" fill="#515151" />
-                                <path d="M12 21.19C6.93 21.19 2.81 17.07 2.81 12C2.81 6.93 6.93 2.81 12 2.81C17.07 2.81 21.19 6.93 21.19 12C21.19 17.07 17.07 21.19 12 21.19ZM12 4.22C7.71 4.22 4.22 7.71 4.22 12C4.22 16.29 7.71 19.78 12 19.78C16.29 19.78 19.78 16.29 19.78 12C19.78 7.71 16.29 4.22 12 4.22Z" fill="#515151" />
-                                <path d="M12.35 16.47H11.65C10.22 16.47 9.06 15.31 9.06 13.88H10.47C10.47 14.54 11 15.07 11.65 15.07H12.35C13 15.07 13.53 14.54 13.53 13.88C13.53 13.23 13 12.7 12.35 12.7H11.65C10.22 12.7 9.06 11.54 9.06 10.11C9.06 8.69 10.22 7.53 11.65 7.53H12.35C13.78 7.53 14.94 8.69 14.94 10.11H13.53C13.53 9.46 13 8.93 12.35 8.93H11.65C11 8.93 10.47 9.46 10.47 10.11C10.47 10.77 11 11.3 11.65 11.3H12.35C13.78 11.3 14.94 12.46 14.94 13.88C14.94 15.31 13.78 16.47 12.35 16.47Z" fill="#515151" />
-                                <path d="M12.94 8.58H11.06V5.77H12.94V8.58Z" fill="#515151" />
-                                <path d="M12.94 18.23H11.06V15.42H12.94V18.23Z" fill="#515151" />
+
+                    <Link to="/overview" className="">
+                        <li
+
+                            className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-3 ${activeLink === 'overview' ? 'asideBtns text-red-600' : 'text-gray-700 hover:text-red-600'}`}
+                            onClick={() => handleLinkClick('overview')}
+                        >
+
+                            <i><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="10.2857" height="10.2857" rx="2" transform="matrix(-1 0 0 1 10.2861 0)" fill="#C20101" />
+                                <rect width="10.2857" height="10.2857" rx="2" transform="matrix(-1 0 0 1 10.2861 13.7139)" fill="#C20101" />
+                                <rect width="10.2857" height="10.2857" rx="2" transform="matrix(-1 0 0 1 24 0)" fill="#C20101" />
+                                <rect width="10.2857" height="10.2857" rx="2" transform="matrix(-1 0 0 1 24 13.7139)" fill="#C20101" />
                             </svg>
+                            </i>
+                            <span>Overview</span>
 
-                        </i>
-                        <span>Accounts</span>
-                    </li>
+                        </li>
+                    </Link>
+
+                    <Link to="/accounts1" className="">
+
+                        <li
+                            className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-3 ${activeLink === 'accounts' ? 'asideBtns text-red-600' : 'text-gray-700 hover:text-red-600'}`}
+                            onClick={() => handleLinkClick('accounts')}
+                        >
+                            <i>
+
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 24C10.38 24 8.81 23.68 7.33 23.06C5.9 22.45 4.62 21.59 3.51 20.49C2.41 19.38 1.55 18.1 0.94 16.67C0.32 15.19 0 13.62 0 12C0 10.38 0.32 8.81 0.94 7.33C1.55 5.9 2.41 4.62 3.51 3.51C4.62 2.41 5.9 1.55 7.33 0.94C8.81 0.32 10.38 0 12 0C13.62 0 15.19 0.32 16.67 0.94C18.1 1.55 19.38 2.41 20.49 3.51C21.59 4.62 22.45 5.9 23.06 7.33C23.68 8.81 24 10.38 24 12C24 13.62 23.68 15.19 23.06 16.67C22.45 18.1 21.59 19.38 20.49 20.49C19.38 21.59 18.1 22.45 16.67 23.06C15.19 23.68 13.62 24 12 24ZM12 1.41C6.16 1.41 1.41 6.16 1.41 12C1.41 17.84 6.16 22.59 12 22.59C17.84 22.59 22.59 17.84 22.59 12C22.59 6.16 17.84 1.41 12 1.41Z" fill="#515151" />
+                                    <path d="M12 21.19C6.93 21.19 2.81 17.07 2.81 12C2.81 6.93 6.93 2.81 12 2.81C17.07 2.81 21.19 6.93 21.19 12C21.19 17.07 17.07 21.19 12 21.19ZM12 4.22C7.71 4.22 4.22 7.71 4.22 12C4.22 16.29 7.71 19.78 12 19.78C16.29 19.78 19.78 16.29 19.78 12C19.78 7.71 16.29 4.22 12 4.22Z" fill="#515151" />
+                                    <path d="M12.35 16.47H11.65C10.22 16.47 9.06 15.31 9.06 13.88H10.47C10.47 14.54 11 15.07 11.65 15.07H12.35C13 15.07 13.53 14.54 13.53 13.88C13.53 13.23 13 12.7 12.35 12.7H11.65C10.22 12.7 9.06 11.54 9.06 10.11C9.06 8.69 10.22 7.53 11.65 7.53H12.35C13.78 7.53 14.94 8.69 14.94 10.11H13.53C13.53 9.46 13 8.93 12.35 8.93H11.65C11 8.93 10.47 9.46 10.47 10.11C10.47 10.77 11 11.3 11.65 11.3H12.35C13.78 11.3 14.94 12.46 14.94 13.88C14.94 15.31 13.78 16.47 12.35 16.47Z" fill="#515151" />
+                                    <path d="M12.94 8.58H11.06V5.77H12.94V8.58Z" fill="#515151" />
+                                    <path d="M12.94 18.23H11.06V15.42H12.94V18.23Z" fill="#515151" />
+                                </svg>
+
+                            </i>
+                            <span>Accounts</span>
+                        </li>
+                    </Link>
+
+
+
                     <li
                         className={`flex items-center py-2 px-4 rounded-md transition duration-150 ${activeLink === 'letters' ? 'asideBtns text-red-600' : 'text-gray-700 hover:text-red-600'}`}
                         onClick={() => handleLinkClick('letters')}

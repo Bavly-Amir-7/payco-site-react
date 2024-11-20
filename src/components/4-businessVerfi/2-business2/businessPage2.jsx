@@ -36,7 +36,7 @@ function Business2() {
                                 <div className="dashedLine border-t-2 border-dashed border-gray-300 " style={{ width: "80%" }}></div>
                             </div>
                             <div className="relative flex" style={{ justifyContent: "space-around" }}>
-                            <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
+                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
                                     <i>
                                         <svg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect x="0.90625" y="0.5" width="49" height="49" rx="24.5" fill="#FCFCFC" />
@@ -52,7 +52,7 @@ function Business2() {
                                 <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
                                     4
                                 </div>
-                             
+
                             </div>
                         </div>
 
@@ -548,7 +548,7 @@ function Business2() {
                         </div>
 
                         <div className="flex justify-center gap-2">
-                            
+
                             <Link to="/business1" className='saveNext'>
                                 <button className="backBtn   redClr font-semibold px-4 py-2 rounded-lg hover:bg-red-600">Back</button>
                             </Link>
