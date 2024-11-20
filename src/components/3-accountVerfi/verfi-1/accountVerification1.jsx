@@ -27,25 +27,40 @@ export default function AccountVerification1() {
 
                     <div className="col-12 col-lg-9 col-md-12 mt-5 text-center">
                         <h1 className="text-2xl font-bold mb-6 text-center">Add Business Beneficial Owner(s)</h1>
-                        <div className="relative mb-6">
-                            <div className="absolute inset-0 flex items-center">
-                                <div className="w-full border-t border-gray-300"></div>
+                        <div className="relative mb-6 w-100">
+                            <div className="absolute inset-0 flex items-center justify-center">
+                                <div className="dashedLine border-t-2 border-dashed border-gray-300 " style={{ width: "80%" }}></div>
                             </div>
-                            <div className="relative flex justify-between">
-                                <div className="w-10 h-10 bg-red-500 redBg text-white rounded-full flex items-center justify-center">1</div>
-                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">2</div>
-                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">3</div>
-                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">4</div>
+                            <div className="relative flex" style={{ justifyContent: "space-around" }}>
+                                <div className="w-10 h-10 whiteColor redBg rounded-full flex items-center justify-center">1</div>
+
+                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
+                                    2
+                                </div>
+                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
+                                    3
+                                </div>
+                                <div className="w-10 h-10 greyColor whiteBg rounded-full flex items-center justify-center">
+                                    4
+                                </div>
                             </div>
                         </div>
-                        <div className="flex justify-between mb-6">
-                            <p className="text-center flex-1">Account Type</p>
-                            <p className="text-center flex-1">Personal Details</p>
-                            <p className="text-center flex-1">Identity Verification</p>
-                            <p className="text-center flex-1">Review and Additional Documents</p>
+
+
+                        <div className="flex justify-between mb-6 w-100">
+                            <div className="col text-center text-sm">Account Type</div>
+                            <div className="col text-center text-sm">Personal Details</div>
+                            <div className="col text-center text-sm">Identity Verification</div>
+                            <div className="col text-center text-sm">Review and Additional Documents</div>
                         </div>
-                        <div className="bg-[rgb(252,252,252)] p-8 rounded-lg shadow-md">
-                            <h2 className="text-xl font-semibold mb-4 text-center">Select Account Type</h2>
+                        <div className='verfi1Component'
+                            style={{
+                                backgroundColor: "rgb(252,252,252)",
+                                padding: window.innerWidth < 768 ? "0.25rem" : "2rem", // Dynamically set padding
+                                borderRadius: "0.5rem",
+                                boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                            }} >
+                            <h2 className=" text-xl font-semibold mb-2 text-center pt-2">Select Account Type</h2>
                             <div className="account-type bg-[rgb(252,252,252)] p-6 rounded-lg mb-6">
                                 <div className={`bg-[rgb(244,244,244)] p-4 rounded-lg border border-gray-300 ${selectedAccount === 'personal' ? 'bg-[rgb(230,230,230)]' : ''}`} style={{ marginBottom: '24px' }}>
                                     <label className="flex items-center">
@@ -119,32 +134,34 @@ export default function AccountVerification1() {
                                                     />
                                                 </div>
                                             </div>
-                                            <div className="mt-4">
-                                                <label className="block text-gray-700">Contact Email*</label>
-                                                <div className="mt-1 relative rounded-md shadow-sm">
-                                                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                                                        <i><svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
+
+
+
+                                            <div className='mt-4'>
+                                                <label className="block text-gray-700 mb-2">Country of Incorporation*</label>
+                                                <div className="flex items-center rounded-lg shadow-md bg-white p-2 border border-gray-300">
+                                                    <i>
+                                                        <svg className="w-6 h-6" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
                                                             <rect width="24" height="18" fill="#012169" />
                                                             <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
                                                             <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
                                                             <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
                                                             <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
                                                         </svg>
-                                                        </i>
-                                                        <span className="pl-1">|</span>
-                                                    </div>
-                                                    <input
-                                                        className="block w-full  pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
-                                                        placeholder="your.email@business.com"
-                                                        type="email"
-                                                        required
-                                                        style={{ paddingLeft: "47px" }}
+                                                    </i>
+                                                    <span className="px-2 ">|</span>
+                                                    <select className="flex-1 outline-none text-gray-700 text-sm">
+                                                        <option className="text-sm">United Kingdom</option>
+                                                        <option className="text-sm">United States</option>
+                                                        <option className="text-sm">Canada</option>
+                                                    </select>
 
-                                                    />
                                                 </div>
                                             </div>
+
+
                                             <div className="mt-4">
-                                                <label className="block text-gray-700">Phone Number*</label>
+                                                <label className="block text-gray-700">Company registration number* (For US people only)</label>
                                                 <div className="mt-1 relative rounded-md shadow-sm">
                                                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -155,7 +172,7 @@ export default function AccountVerification1() {
                                                     </div>
                                                     <input
                                                         className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
-                                                        placeholder="+20 123 456 7890"
+                                                        placeholder="Changable"
                                                         type="tel"
                                                         required
                                                     />

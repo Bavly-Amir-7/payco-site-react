@@ -4,6 +4,12 @@ body {
     background-color: rgb(236, 236, 236); /* إضافة الخلفية */
 }
 
+.verfi1Component label{
+    text-align: start;
+}
+.verfi1Component  .borderInput {
+    background-color: white;
+}
 
 
 input[type="radio"] {
