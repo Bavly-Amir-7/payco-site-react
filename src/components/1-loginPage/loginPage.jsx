@@ -115,7 +115,11 @@ export default function LoginPage() {
                             <h3 className="text-2xl font-bold text-red-600 mb-4">Our Terms of Service & Privacy Policy</h3>
                             <div className="h-64 overflow-y-scroll pr-4 scrollbar-thin scrollbar-thumb-red-600 scrollbar-track-gray-200">
                                 <p className="text-sm text-gray-700">
-                                    Lorem Ipsum content goes here...
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam, saepe facilis molestias iure veritatis minus aspernatur recusandae placeat blanditiis molestiae omnis? Deleniti doloribus molestiae repudiandae incidunt, necessitatibus sint voluptates quas.
+                                    Aperiam quibusdam eveniet voluptas tempora tenetur architecto culpa maiores cumque? Eius recusandae accusamus veniam nam velit adipisci tempora dolorum quidem, ad odit soluta aperiam eligendi iste harum repellendus laborum commodi?
+                                    Totam amet non distinctio ducimus atque voluptatem eos ipsum assumenda doloribus? Quam odit sequi illum omnis numquam commodi corrupti, inventore, tempora quas assumenda magnam corporis laboriosam, consequatur alias obcaecati cupiditate?
+                                    Voluptates at placeat, quae provident tempora ab repudiandae praesentium quasi earum. Excepturi, quo dolorum? Aliquam, officia corporis laboriosam, illum maxime velit iure quod minus id nisi aperiam voluptatem autem odit?
+                                    In aperiam deserunt ea quisquam excepturi aliquid a pariatur. Nulla, quos accusantium minima commodi officia iure mollitia quo aliquid quam natus sequi ipsam repudiandae consectetur corporis possimus reprehenderit molestias rem.
                                 </p>
                             </div>
                             <div className="flex justify-center mt-4">

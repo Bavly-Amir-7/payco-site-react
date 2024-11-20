@@ -58,13 +58,13 @@ export default function SignUpPage() {
 
     return (
         <div className="signUpBody">
-            <div className="flex h-screen">
-                <div className="computer w-1/2 flex items-center justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 ">
+                <div className="computer col-span-1 flex items-center justify-center">
                     <img src={image1} alt="Illustration of secure payment system with various security icons" className="w-2/3" />
                 </div>
-                <div className=" flex items-center justify-center bg-gray-100 loginArea pt-8">
+                <div className="loginArea col-span-1 flex items-center justify-center bg-gray-100 pt-2">
                     <div className="w-2/3">
-                        <div className="text-start imageParent mb-3" style={{placeSelf:"start"}}>
+                        <div className="text-start imageParent mb-3" style={{ placeSelf: "start" }}>
                             <img src={image2} alt="Payco Logo" className="mx-auto mb-3" />
                             <h2 className="text-2xl font-bold mt-5">Welcome Back</h2>
                         </div>
@@ -150,9 +150,9 @@ export default function SignUpPage() {
                                 </ul>
                                 <div className="mt-3">
                                     <Link to="/verfi1">
-                                    <button className="redBg w-full bg-red-600 text-white py-2 rounded">Sign Up</button>
+                                        <button className="redBg w-full bg-red-600 text-white py-2 rounded">Sign Up</button>
                                     </Link>
-                                    
+
                                 </div>
                                 <p className='mt-4'>to continue signing up You have to agree to our Terms of Service and Privacy Policy.</p>
                                 <div className="flex items-center justify-center mt-4 lines">
@@ -177,7 +177,7 @@ export default function SignUpPage() {
                                         <div className='googleSearch'>
                                             <div>
                                                 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        
+
                                                     <g clipPath="url(#clip0_2795_60742)">
                                                         <path d="M5.77203 14.5027L4.93663 17.6213L1.88323 17.6859C0.970719 15.9934 0.453125 14.057 0.453125 11.9992C0.453125 10.0093 0.937063 8.13277 1.79488 6.48047H1.79553L4.51391 6.97884L5.70472 9.68091C5.45548 10.4075 5.31964 11.1875 5.31964 11.9992C5.31973 12.88 5.4793 13.724 5.77203 14.5027Z" fill="#FBBB00" />
                                                         <path d="M24.2433 9.75781C24.3811 10.4837 24.453 11.2334 24.453 11.9996C24.453 12.8587 24.3627 13.6967 24.1906 14.5051C23.6064 17.2558 22.08 19.6578 19.9655 21.3576L19.9649 21.3569L16.541 21.1822L16.0564 18.1572C17.4594 17.3343 18.5559 16.0466 19.1335 14.5051H12.7168V9.75781H19.2271H24.2433Z" fill="#518EF8" />
@@ -201,7 +201,7 @@ export default function SignUpPage() {
                                     <span className="text-sm text-gray-500">
                                         have an account?{" "}
                                         <a className=" hover:text-red-700" href="#" >
-                                            Sign in 
+                                            Sign in
                                         </a>
                                     </span>
                                 </div>
