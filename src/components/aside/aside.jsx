@@ -51,7 +51,7 @@ export default function Aside() {
 
                     <Link to="/overview" className="">
                         <li
-                            className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-4 ${location.pathname === '/overview' ? 'asideBtns text-red-600' : 'text-gray-700 hover:text-red-600'}`}
+                            className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-3 ${location.pathname === '/overview' ? 'asideBtns text-red-600' : 'text-gray-700 hover:text-red-600'}`}
                         >
                             <i>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,7 +67,7 @@ export default function Aside() {
 
                     <Link to="/accounts1" className="">
                         <li
-                            className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-4 ${location.pathname === '/accounts1' ? 'asideBtns text-red-600' : 'text-gray-700 hover:text-red-600'}`}
+                            className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-3 ${location.pathname === '/accounts1' ? 'asideBtns text-red-600' : 'text-gray-700 hover:text-red-600'}`}
                         >
                             <i>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,7 +98,7 @@ export default function Aside() {
 
                     <Link to="/letters1" className="">
                         <li
-                            className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-4 ${location.pathname === '/letters1' ? 'asideBtns text-red-600' : 'text-gray-700 hover:text-red-600'}`}
+                            className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-3 ${location.pathname === '/letters1' ? 'asideBtns text-red-600' : 'text-gray-700 hover:text-red-600'}`}
                         >
                             <i>
                                 <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +117,7 @@ export default function Aside() {
 
                     <Link to="/escrow1" className="">
                         <li
-                            className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-4 ${location.pathname.startsWith('/escrow') // Ensures active state for all /escrow paths
+                            className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-3 ${location.pathname.startsWith('/escrow') // Ensures active state for all /escrow paths
                                 ? 'asideBtns text-red-600'
                                 : 'text-gray-700 hover:text-red-600'
                                 }`}
@@ -152,51 +152,50 @@ export default function Aside() {
 
 
                     <Link to="/invoices1" className="">
-    <li
-        className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-4 ${
-            location.pathname.startsWith('/invoices') // Ensures active state for both /invoices1 and /invoices2
-                ? 'asideBtns text-red-600'
-                : 'text-gray-700 hover:text-red-600'
-        }`}
-        onClick={() => handleLinkClick('invoices')}
-    >
-        <i>
-            <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <g clipPath="url(#clip0_3373_562)">
-                    <path
-                        d="M18.39 3.97886C18.4004 3.97962 18.4108 3.98038 18.4215 3.98038C18.4395 3.98038 18.4575 3.97886 18.4752 3.97639C18.9478 3.98607 19.326 4.37149 19.3265 4.84406C19.3265 5.05879 19.5006 5.2329 19.7154 5.2329C19.9301 5.2329 20.1042 5.05879 20.1042 4.84406C20.1033 4.07113 19.5652 3.40244 18.8103 3.23612V2.86247C18.8103 2.64774 18.6362 2.47363 18.4215 2.47363C18.2067 2.47363 18.0326 2.64774 18.0326 2.86247V3.25378C17.2345 3.46718 16.718 4.23935 16.8257 5.0586C16.9333 5.87786 17.6316 6.49035 18.4579 6.49035C18.9377 6.49035 19.3265 6.87938 19.3265 7.35916C19.3265 7.83875 18.9377 8.22778 18.4579 8.22778C17.9781 8.22778 17.5893 7.83875 17.5893 7.35916C17.5893 7.14443 17.4152 6.97032 17.2005 6.97032C16.9857 6.97032 16.8116 7.14443 16.8116 7.35916C16.8126 8.10418 17.3131 8.75597 18.0326 8.94944V9.37549C18.0326 9.59023 18.2067 9.76433 18.4215 9.76433C18.6362 9.76433 18.8103 9.59023 18.8103 9.37549V8.96729C19.6315 8.78749 20.1853 8.01779 20.0947 7.18202C20.0043 6.34625 19.2986 5.71287 18.4579 5.71306C17.9914 5.71325 17.6081 5.34491 17.5897 4.8788C17.5715 4.41269 17.9248 4.01531 18.39 3.97905V3.97886Z"
-                        fill="black"
-                    />
-                    <path
-                        d="M18.4798 0.572266C16.0878 0.572266 14.0464 2.13312 13.2816 4.22312H3.63073C3.41694 4.22312 3.24341 4.41583 3.24189 4.62942L3.15 18.2699H0.39909C0.184356 18.2699 0 18.4254 0 18.6405V20.3714C0.00493638 22.001 1.2884 23.3397 2.91628 23.4134V23.422H14.9216V23.4106C15.0188 23.4142 15.0589 23.422 15.1204 23.422H15.1288C16.8136 23.4193 18.1781 22.0527 18.1781 20.3678V11.616C18.2753 11.6213 18.3783 11.6241 18.4789 11.6241C21.5229 11.6241 24.0001 9.14225 24.0001 6.09801C24.0001 3.05395 21.5241 0.572266 18.4798 0.572266ZM3.06418 22.6443H3.06171C1.80388 22.6426 0.78337 21.6255 0.777674 20.3675V19.0475H12.054V20.3619C12.0545 21.1734 12.3786 21.9513 12.9543 22.5233C12.9951 22.5642 13.0458 22.5957 13.0885 22.6443H3.06418ZM17.4005 20.3675C17.4007 21.6232 16.3839 22.6418 15.1284 22.6443H15.121C13.8603 22.642 12.8379 21.6228 12.8316 20.3623V18.6405C12.8349 18.541 12.7969 18.4447 12.7264 18.3745C12.656 18.3042 12.5597 18.2664 12.4604 18.2699H3.92767L4.01691 5.00079H13.0657C12.9968 5.35679 12.9611 5.71828 12.9592 6.08073C12.9585 6.8472 13.1183 7.60513 13.4286 8.30591H9.75586C9.54094 8.30591 9.36703 8.48001 9.36703 8.69475C9.36703 8.90948 9.54094 9.08358 9.75586 9.08358H13.8504C14.6526 10.345 15.9349 11.2245 17.4005 11.5188V20.3675ZM18.4798 10.8466C15.8605 10.8466 13.7369 8.72323 13.7371 6.1037C13.7371 3.48418 15.8605 1.36076 18.48 1.36076C21.0994 1.36076 23.2228 3.48437 23.2228 6.1037C23.2199 8.7219 21.0982 10.8438 18.4798 10.8466Z"
-                        fill="black"
-                    />
-                    <path
-                        d="M7.26017 10.8945C6.57382 10.8945 6.01562 11.4351 6.01562 12.0996C6.01562 12.7641 6.57382 13.3046 7.26017 13.3046C7.94652 13.3046 8.5049 12.7641 8.5049 12.0996C8.5049 11.4351 7.94652 10.8945 7.26017 10.8945ZM7.26017 12.527C7.00253 12.527 6.7933 12.3352 6.7933 12.0996C6.7933 11.8638 7.00272 11.6722 7.26017 11.6722C7.51762 11.6722 7.72723 11.864 7.72723 12.0996C7.72723 12.3352 7.51762 12.527 7.26017 12.527Z"
-                        fill="black"
-                    />
-                </g>
-                <defs>
-                    <clipPath id="clip0_3373_562">
-                        <rect width="24" height="24" fill="white" />
-                    </clipPath>
-                </defs>
-            </svg>
-        </i>
-        <span>Invoices</span>
-    </li>
-</Link>
+                        <li
+                            className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-3 ${location.pathname.startsWith('/invoices') // Ensures active state for both /invoices1 and /invoices2
+                                    ? 'asideBtns text-red-600'
+                                    : 'text-gray-700 hover:text-red-600'
+                                }`}
+                            onClick={() => handleLinkClick('invoices')}
+                        >
+                            <i>
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <g clipPath="url(#clip0_3373_562)">
+                                        <path
+                                            d="M18.39 3.97886C18.4004 3.97962 18.4108 3.98038 18.4215 3.98038C18.4395 3.98038 18.4575 3.97886 18.4752 3.97639C18.9478 3.98607 19.326 4.37149 19.3265 4.84406C19.3265 5.05879 19.5006 5.2329 19.7154 5.2329C19.9301 5.2329 20.1042 5.05879 20.1042 4.84406C20.1033 4.07113 19.5652 3.40244 18.8103 3.23612V2.86247C18.8103 2.64774 18.6362 2.47363 18.4215 2.47363C18.2067 2.47363 18.0326 2.64774 18.0326 2.86247V3.25378C17.2345 3.46718 16.718 4.23935 16.8257 5.0586C16.9333 5.87786 17.6316 6.49035 18.4579 6.49035C18.9377 6.49035 19.3265 6.87938 19.3265 7.35916C19.3265 7.83875 18.9377 8.22778 18.4579 8.22778C17.9781 8.22778 17.5893 7.83875 17.5893 7.35916C17.5893 7.14443 17.4152 6.97032 17.2005 6.97032C16.9857 6.97032 16.8116 7.14443 16.8116 7.35916C16.8126 8.10418 17.3131 8.75597 18.0326 8.94944V9.37549C18.0326 9.59023 18.2067 9.76433 18.4215 9.76433C18.6362 9.76433 18.8103 9.59023 18.8103 9.37549V8.96729C19.6315 8.78749 20.1853 8.01779 20.0947 7.18202C20.0043 6.34625 19.2986 5.71287 18.4579 5.71306C17.9914 5.71325 17.6081 5.34491 17.5897 4.8788C17.5715 4.41269 17.9248 4.01531 18.39 3.97905V3.97886Z"
+                                            fill="black"
+                                        />
+                                        <path
+                                            d="M18.4798 0.572266C16.0878 0.572266 14.0464 2.13312 13.2816 4.22312H3.63073C3.41694 4.22312 3.24341 4.41583 3.24189 4.62942L3.15 18.2699H0.39909C0.184356 18.2699 0 18.4254 0 18.6405V20.3714C0.00493638 22.001 1.2884 23.3397 2.91628 23.4134V23.422H14.9216V23.4106C15.0188 23.4142 15.0589 23.422 15.1204 23.422H15.1288C16.8136 23.4193 18.1781 22.0527 18.1781 20.3678V11.616C18.2753 11.6213 18.3783 11.6241 18.4789 11.6241C21.5229 11.6241 24.0001 9.14225 24.0001 6.09801C24.0001 3.05395 21.5241 0.572266 18.4798 0.572266ZM3.06418 22.6443H3.06171C1.80388 22.6426 0.78337 21.6255 0.777674 20.3675V19.0475H12.054V20.3619C12.0545 21.1734 12.3786 21.9513 12.9543 22.5233C12.9951 22.5642 13.0458 22.5957 13.0885 22.6443H3.06418ZM17.4005 20.3675C17.4007 21.6232 16.3839 22.6418 15.1284 22.6443H15.121C13.8603 22.642 12.8379 21.6228 12.8316 20.3623V18.6405C12.8349 18.541 12.7969 18.4447 12.7264 18.3745C12.656 18.3042 12.5597 18.2664 12.4604 18.2699H3.92767L4.01691 5.00079H13.0657C12.9968 5.35679 12.9611 5.71828 12.9592 6.08073C12.9585 6.8472 13.1183 7.60513 13.4286 8.30591H9.75586C9.54094 8.30591 9.36703 8.48001 9.36703 8.69475C9.36703 8.90948 9.54094 9.08358 9.75586 9.08358H13.8504C14.6526 10.345 15.9349 11.2245 17.4005 11.5188V20.3675ZM18.4798 10.8466C15.8605 10.8466 13.7369 8.72323 13.7371 6.1037C13.7371 3.48418 15.8605 1.36076 18.48 1.36076C21.0994 1.36076 23.2228 3.48437 23.2228 6.1037C23.2199 8.7219 21.0982 10.8438 18.4798 10.8466Z"
+                                            fill="black"
+                                        />
+                                        <path
+                                            d="M7.26017 10.8945C6.57382 10.8945 6.01562 11.4351 6.01562 12.0996C6.01562 12.7641 6.57382 13.3046 7.26017 13.3046C7.94652 13.3046 8.5049 12.7641 8.5049 12.0996C8.5049 11.4351 7.94652 10.8945 7.26017 10.8945ZM7.26017 12.527C7.00253 12.527 6.7933 12.3352 6.7933 12.0996C6.7933 11.8638 7.00272 11.6722 7.26017 11.6722C7.51762 11.6722 7.72723 11.864 7.72723 12.0996C7.72723 12.3352 7.51762 12.527 7.26017 12.527Z"
+                                            fill="black"
+                                        />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_3373_562">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </i>
+                            <span>Invoices</span>
+                        </li>
+                    </Link>
 
 
                     <Link to="/wallets1" className="">
                         <li
-                            className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-4 ${location.pathname.startsWith('/wallets')
+                            className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-3 ${location.pathname.startsWith('/wallets')
                                 ? 'asideBtns text-red-600'
                                 : 'text-gray-700 hover:text-red-600'
                                 }`}
@@ -224,7 +223,7 @@ export default function Aside() {
 
                     <Link to="/contacts1" className="">
                         <li
-                            className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-4 ${location.pathname.startsWith('/contacts')
+                            className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-3 ${location.pathname.startsWith('/contacts')
                                 ? 'asideBtns text-red-600'
                                 : 'text-gray-700 hover:text-red-600'
                                 }`}
@@ -256,8 +255,8 @@ export default function Aside() {
                     <Link to="/settings1" className="">
                         <li
                             className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-2 ${location.pathname.startsWith('/settings')
-                                    ? 'asideBtns text-red-600'
-                                    : 'text-gray-700 hover:text-red-600'
+                                ? 'asideBtns text-red-600'
+                                : 'text-gray-700 hover:text-red-600'
                                 }`}
                             onClick={() => handleLinkClick('settings')}
                         >
@@ -294,7 +293,7 @@ export default function Aside() {
 
 
                     <li
-                        className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-4 ${activeLink === 'logout' ? 'asideBtns text-red-600' : 'text-gray-700 hover:text-red-600'}`}
+                        className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-3 ${activeLink === 'logout' ? 'asideBtns text-red-600' : 'text-gray-700 hover:text-red-600'}`}
                         onClick={() => handleLinkClick('logout')}
                     >
                         <span className='pl-4'>LogOut</span>
