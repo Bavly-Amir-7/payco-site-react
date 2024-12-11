@@ -137,7 +137,7 @@ export default function LoginPage() {
 
                 {showTerms && (
                     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-                        <div className="relative bg-white p-8 rounded-lg shadow-lg w-3/4 max-w-2xl">
+                        <div className="agreeMessage relative bg-white p-8 rounded-lg shadow-lg w-3/4 max-w-2xl">
                             <h2 className="text-lg mb-4">
                                 To continue signing up You have to agree to our{" "}
                                 <a href="#" className="text-black underline">Terms of Service</a> and{" "}

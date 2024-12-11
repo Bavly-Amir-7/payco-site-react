@@ -27,4 +27,10 @@
     h1 {
         font-size: 1.5rem; /* Adjust heading size */
     }
+
+    .agreeMessage{
+        width: 90% !important;
+    }
 }
+
+
