@@ -35,6 +35,8 @@ export default function Aside() {
                     }`}
             >
                 {/* Sidebar Header */}
+                <Link to="/verfi1" className="">
+
                 <div className="p-4 flex justify-between items-center border-b">
                     <img src={image2} alt="PAYCO logo" className="mb-4" width={"160px"} />
                     <button
@@ -44,6 +46,7 @@ export default function Aside() {
                         <i className="fas fa-times"></i>
                     </button>
                 </div>
+                </Link>
 
                 {/* Menu Items */}
                 <ul className="asideStyless space-y-4" style={{ placeSelf: "center" }}>
