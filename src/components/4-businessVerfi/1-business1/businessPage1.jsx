@@ -4,8 +4,97 @@ import "./business1.css";
 import { Link } from 'react-router-dom';
 import Aside from '../../aside/aside';
 import selectedImage from "../../images/Group 138.png"
+import Calender from '../../calender/calender';
 
 export default function Business1() {
+
+    const [isModalOpen, setIsModalOpen] = useState(false); // حالة لفتح وغلق المودال
+    const [dateOfBirth, setDateOfBirth] = useState("1 / 31 / 1998"); // لتحديث التاريخ
+
+    const handleDateChange = (newDate) => {
+        setDateOfBirth(newDate); // تحديث التاريخ بعد اختياره من Calender
+        setIsModalOpen(false); // إغلاق المودال
+    };
+
+
+
+
+
+
+
+
+    const countries = [
+        {
+            code: 'UK',
+            name: 'United Kingdom',
+            flag: (
+                <svg
+                    className="w-6 h-4"
+                    viewBox="0 0 24 18"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect width="24" height="18" fill="#012169" />
+                    <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
+                    <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
+                    <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
+                    <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
+                </svg>
+            ),
+        },
+        { code: 'EG', name: 'Egypt', flag: <img src="https://flagcdn.com/w40/eg.png" alt="Egypt" className="w-6 h-4" /> },
+        { code: 'US', name: 'USA', flag: <img src="https://flagcdn.com/w40/us.png" alt="USA" className="w-6 h-4" /> },
+        { code: 'FR', name: 'France', flag: <img src="https://flagcdn.com/w40/fr.png" alt="France" className="w-6 h-4" /> },
+        { code: 'DE', name: 'Germany', flag: <img src="https://flagcdn.com/w40/de.png" alt="Germany" className="w-6 h-4" /> },
+    ];
+
+    const handleCountryChange = (event) => {
+        setSelectedCountry(event.target.value);
+    };
+
+    const handlePhoneCountryChange = (event) => {
+        setSelectedPhoneCountry(event.target.value);
+    };
+
+
+    const [selectedFirstCountry, setSelectedFirstCountry] = useState('UK');
+    const [selectedSecondCountry, setSelectedSecondCountry] = useState('UK');
+    const [selectedThirdCountry, setSelectedThirdCountry] = useState('UK');
+    const [selectedExpectedCountries, setSelectedExpectedCountries] = useState([]);
+
+    const handleAddExpectedCountry = (country) => {
+        setSelectedExpectedCountries((prev) => [...prev, country]);
+    };
+
+    const [countries2, setCountries] = useState([
+        {
+            code: 'UK',
+            name: 'United Kingdom',
+            flag: (
+                <svg
+                    className="w-6 h-4"
+                    viewBox="0 0 24 18"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect width="24" height="18" fill="#012169" />
+                    <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
+                    <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
+                    <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
+                    <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
+                </svg>
+            ),
+        },
+        { code: 'EG', name: 'Egypt', flag: <img src="https://flagcdn.com/w40/eg.png" alt="Egypt" className="w-6 h-4" /> },
+        { code: 'US', name: 'USA', flag: <img src="https://flagcdn.com/w40/us.png" alt="USA" className="w-6 h-4" /> },
+        { code: 'FR', name: 'France', flag: <img src="https://flagcdn.com/w40/fr.png" alt="France" className="w-6 h-4" /> },
+        { code: 'DE', name: 'Germany', flag: <img src="https://flagcdn.com/w40/de.png" alt="Germany" className="w-6 h-4" /> },
+    ]);
+
+    // دالة حذف الدولة بناءً على كودها
+    const handleDeleteCountry = (code) => {
+        setCountries((prevCountries) =>
+            prevCountries.filter((country) => country.code !== code)
+        );
+    };
 
     return (
         <>
@@ -79,28 +168,47 @@ export default function Business1() {
                                             <input type="text" className="flex-1 outline-none" placeholder="PAYCO" />
                                         </div>
                                     </div>
-                                    <div>
-                                        <label className="block mb-2">Date of Incorporation*</label>
-                                        <div className="d-flex mail">
-                                            <div className="iconGap flex items-center borderInput rounded p-2" style={{ width: "100%" }}>
 
-                                                <input type="text" className="flex-1 outline-none" placeholder="1 / 31 / 1998" />
-                                                <i><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <g clipPath="url(#clip0_5001_3314)">
-                                                        <path d="M19 2.69238H18V1.69238C18 1.42717 17.8946 1.17281 17.7071 0.985276C17.5196 0.79774 17.2652 0.692383 17 0.692383C16.7348 0.692383 16.4804 0.79774 16.2929 0.985276C16.1054 1.17281 16 1.42717 16 1.69238V2.69238H8V1.69238C8 1.42717 7.89464 1.17281 7.70711 0.985276C7.51957 0.79774 7.26522 0.692383 7 0.692383C6.73478 0.692383 6.48043 0.79774 6.29289 0.985276C6.10536 1.17281 6 1.42717 6 1.69238V2.69238H5C3.67441 2.69397 2.40356 3.22126 1.46622 4.1586C0.528882 5.09594 0.00158786 6.36679 0 7.69238L0 19.6924C0.00158786 21.018 0.528882 22.2888 1.46622 23.2262C2.40356 24.1635 3.67441 24.6908 5 24.6924H19C20.3256 24.6908 21.5964 24.1635 22.5338 23.2262C23.4711 22.2888 23.9984 21.018 24 19.6924V7.69238C23.9984 6.36679 23.4711 5.09594 22.5338 4.1586C21.5964 3.22126 20.3256 2.69397 19 2.69238ZM2 7.69238C2 6.89673 2.31607 6.13367 2.87868 5.57106C3.44129 5.00845 4.20435 4.69238 5 4.69238H19C19.7956 4.69238 20.5587 5.00845 21.1213 5.57106C21.6839 6.13367 22 6.89673 22 7.69238V8.69238H2V7.69238ZM19 22.6924H5C4.20435 22.6924 3.44129 22.3763 2.87868 21.8137C2.31607 21.2511 2 20.488 2 19.6924V10.6924H22V19.6924C22 20.488 21.6839 21.2511 21.1213 21.8137C20.5587 22.3763 19.7956 22.6924 19 22.6924Z" fill="#374957" />
-                                                        <path d="M12 17.1924C12.8284 17.1924 13.5 16.5208 13.5 15.6924C13.5 14.864 12.8284 14.1924 12 14.1924C11.1716 14.1924 10.5 14.864 10.5 15.6924C10.5 16.5208 11.1716 17.1924 12 17.1924Z" fill="#374957" />
-                                                        <path d="M7 17.1924C7.82843 17.1924 8.5 16.5208 8.5 15.6924C8.5 14.864 7.82843 14.1924 7 14.1924C6.17157 14.1924 5.5 14.864 5.5 15.6924C5.5 16.5208 6.17157 17.1924 7 17.1924Z" fill="#374957" />
-                                                        <path d="M17 17.1924C17.8284 17.1924 18.5 16.5208 18.5 15.6924C18.5 14.864 17.8284 14.1924 17 14.1924C16.1716 14.1924 15.5 14.864 15.5 15.6924C15.5 16.5208 16.1716 17.1924 17 17.1924Z" fill="#374957" />
-                                                    </g>
-                                                    <defs>
-                                                        <clipPath id="clip0_5001_3314">
-                                                            <rect width="24" height="24" fill="white" transform="translate(0 0.692383)" />
-                                                        </clipPath>
-                                                    </defs>
-                                                </svg>
-                                                </i>
+
+
+                                    <div>
+                                        <div className="grid gap-1 mb-4">
+                                            <div>
+                                                <label className="block mb-2">Date of Incorporation*</label>
+                                                <div className="d-flex mail">
+                                                    <div
+                                                        className="iconGap flex items-center borderInput rounded p-2 cursor-pointer"
+                                                        style={{ width: "100%" }}
+                                                        onClick={() => setIsModalOpen(true)} // فتح المودال عند الضغط على الأيقونة
+                                                    >
+                                                        <input
+                                                            type="text"
+                                                            className="flex-1 outline-none placeholder:text-sm"
+                                                            placeholder={dateOfBirth}
+                                                            readOnly
+                                                        />
+                                                        <i className="fas fa-calendar-alt ml-2"></i>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+
+                                        {/* مودال التقويم */}
+                                        {isModalOpen && (
+                                            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                                                <div className="bg-white rounded-lg shadow-lg p-4 ">
+                                                    <Calender
+                                                        onDateSelect={handleDateChange} // تمرير الدالة لتحديث التاريخ
+                                                    />
+                                                    <button
+                                                        className="mt-4 bg-gray-300 text-gray-700 py-2 px-4 rounded"
+                                                        onClick={() => setIsModalOpen(false)}
+                                                    >
+                                                        Close
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        )}
                                     </div>
                                     <div>
                                         <label className="block mb-2">Business Address*</label>
@@ -160,17 +268,22 @@ export default function Business1() {
                                             <label className="block mb-2">Country</label>
                                             <div className="seven0 flex iconGap items-center borderInput rounded p-2" style={{ width: "50%" }}>
                                                 <i>
-                                                    <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect width="24" height="18" fill="#012169" />
-                                                        <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
-                                                        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
-                                                        <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
-                                                        <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
-                                                    </svg>
+                                                    {countries.find((country) => country.code === selectedFirstCountry)?.flag}
                                                 </i>
                                                 <span>|</span>
-                                                <select className="flex-1 outline-none">
-                                                    <option>United Kingdom</option>
+                                                <select
+                                                    value={selectedFirstCountry}
+                                                    onChange={(e) => setSelectedFirstCountry(e.target.value)}
+                                                    className="flex-1 outline-none text-sm w-full bg-transparent"
+                                                >
+                                                    {countries.map((country) => (
+                                                        <option
+                                                            key={country.code}
+                                                            value={country.code}
+                                                        >
+                                                            {country.name}
+                                                        </option>
+                                                    ))}
                                                 </select>
                                             </div>
                                         </div>
@@ -197,35 +310,46 @@ export default function Business1() {
                                                 <label className="block mb-2">Address Line One*</label>
                                                 <div className="flex iconGap items-center borderInput rounded p-2" style={{ width: "100%" }}>
                                                     <i>
-                                                        <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-                                                            <rect width="24" height="18" fill="#012169" />
-                                                            <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
-                                                            <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
-                                                            <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
-                                                            <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
-                                                        </svg>
+                                                        {countries.find((country) => country.code === selectedThirdCountry)?.flag}
                                                     </i>
                                                     <span>|</span>
-                                                    <select className="flex-1 outline-none">
-                                                        <option>United Kingdom</option>
+                                                    <select
+                                                        value={selectedThirdCountry}
+                                                        onChange={(e) => setSelectedThirdCountry(e.target.value)}
+                                                        className="flex-1 outline-none text-sm w-full bg-transparent"
+                                                    >
+                                                        {countries.map((country) => (
+                                                            <option
+                                                                key={country.code}
+                                                                value={country.code}
+                                                            >
+                                                                {country.name}
+                                                            </option>
+                                                        ))}
                                                     </select>
                                                 </div>
                                             </div>
+
                                             <div className="md:ml-32">
                                                 <label className="block mb-2">Currency</label>
                                                 <div className="iconGap flex items-center borderInput rounded p-2" style={{ width: "100%" }}>
                                                     <i>
-                                                        <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-                                                            <rect width="24" height="18" fill="#012169" />
-                                                            <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
-                                                            <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
-                                                            <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
-                                                            <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
-                                                        </svg>
+                                                        {countries.find((country) => country.code === selectedSecondCountry)?.flag}
                                                     </i>
                                                     <span>|</span>
-                                                    <select className="flex-1 outline-none">
-                                                        <option>United Kingdom</option>
+                                                    <select
+                                                        value={selectedSecondCountry}
+                                                        onChange={(e) => setSelectedSecondCountry(e.target.value)}
+                                                        className="flex-1 outline-none text-sm w-full bg-transparent"
+                                                    >
+                                                        {countries.map((country) => (
+                                                            <option
+                                                                key={country.code}
+                                                                value={country.code}
+                                                            >
+                                                                {country.name}
+                                                            </option>
+                                                        ))}
                                                     </select>
                                                 </div>
                                             </div>
@@ -235,47 +359,62 @@ export default function Business1() {
                                     <div className="flex mb-4" >
 
                                     </div>
+
+
+
                                     <div className="mb-4">
-                                        <label className="block text-gray-700 font-medium mb-2">Which countries do you expect to work with the most?</label>
-                                        <div className="selectedCountries flex flex-col md:flex-row items-center">
-                                            <div className="countreybg flex items-center  md:mb-0 md:mr-4">
-                                                <i>
-                                                    <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect width="24" height="18" fill="#012169" />
-                                                        <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
-                                                        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
-                                                        <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
-                                                        <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
-                                                    </svg>
-                                                </i>
-                                                <span>United Kingdom</span>
-                                                <i>
-                                                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <line x1="1.17976" y1="0.749436" x2="17.1798" y2="16.7494" stroke="black" strokeWidth="2" />
-                                                        <line x1="17.1798" y1="2.16365" x2="1.17976" y2="18.1636" stroke="black" strokeWidth="2" />
-                                                    </svg>
-                                                </i>
-                                            </div>
-                                            <div className="countreybg flex items-center">
-                                                <i>
-                                                    <svg width="24" height="18" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect width="24" height="18" fill="#012169" />
-                                                        <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
-                                                        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
-                                                        <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
-                                                        <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
-                                                    </svg>
-                                                </i>
-                                                <span>United Kingdom</span>
-                                                <i>
-                                                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <line x1="1.17976" y1="0.749436" x2="17.1798" y2="16.7494" stroke="black" strokeWidth="2" />
-                                                        <line x1="17.1798" y1="2.16365" x2="1.17976" y2="18.1636" stroke="black" strokeWidth="2" />
-                                                    </svg>
-                                                </i>
-                                            </div>
+                                        <label className="block text-gray-700 font-medium mb-2">
+                                            Which countries do you expect to work with the most?
+                                        </label>
+                                        <div className="selectedCountries flex flex-wrap gap-2">
+                                            {countries2.map((country) => (
+                                                <div
+                                                    key={country.code}
+                                                    className="flex items-center gap-2 bg-gray-200 px-2 py-1 rounded shadow-sm"
+                                                >
+                                                    <span>{country.flag}</span>
+                                                    <span className="text-sm font-medium">{country.name}</span>
+                                                    <button
+                                                        onClick={() => handleDeleteCountry(country.code)} // ربط الزر مع الدالة
+                                                        className="text-black hover:text-red-600"
+                                                        aria-label="Remove country"
+                                                    >
+                                                         <i
+                                                        className="cursor-pointer w-100 flex justify-end"
+                                                        onClick={() => handleDeleteCountry(country.code)}
+                                                    >
+                                                        <svg
+                                                            width="18"
+                                                            height="19"
+                                                            viewBox="0 0 18 19"
+                                                            fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                        >
+                                                            <line
+                                                                x1="1.17976"
+                                                                y1="0.749436"
+                                                                x2="17.1798"
+                                                                y2="16.7494"
+                                                                stroke="black"
+                                                                strokeWidth="1.5"
+                                                            />
+                                                            <line
+                                                                x1="17.1798"
+                                                                y1="2.16365"
+                                                                x2="1.17976"
+                                                                y2="18.1636"
+                                                                stroke="black"
+                                                                strokeWidth="1.5"
+                                                            />
+                                                        </svg>
+                                                    </i>
+                                                    </button>
+                                                </div>
+                                            ))}
                                         </div>
                                     </div>
+
+
 
                                     <div className="mb-4 flex gap-2">
                                         <i><svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
