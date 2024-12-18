@@ -291,6 +291,7 @@ export default function Aside() {
 
 
 
+                    <Link to="/" className="">
 
                     <li
                         className={`flex items-center py-2 px-4 rounded-md transition duration-150 mt-3 ${activeLink === 'logout' ? 'asideBtns text-red-600' : 'text-gray-700 hover:text-red-600'}`}
@@ -313,6 +314,8 @@ export default function Aside() {
 
                         </i>
                     </li>
+                    </Link>
+
                 </ul>
             </div>
 

@@ -4,8 +4,22 @@ import Aside from '../../aside/aside';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faPlus, faChevronDown, faChevronUp, faCalendarAlt, faTimes } from '@fortawesome/free-solid-svg-icons';
 import "./letters1.css";
+import Calender from '../../calender/calender';
 
 export default function Letters1() {
+
+
+
+    const [isModalOpen, setIsModalOpen] = useState(false); // حالة لفتح وغلق المودال
+    const [isModalOpen2, setIsModalOpen2] = useState(false); // حالة لفتح وغلق المودال
+    const [dateOfBirth, setDateOfBirth] = useState("1 / 31 / 1998"); // لتحديث التاريخ
+
+    const handleDateChange = (newDate) => {
+        setDateOfBirth(newDate); // تحديث التاريخ بعد اختياره من Calender
+        setIsModalOpen(false); // إغلاق المودال
+    };
+
+
     const [activeTab, setActiveTab] = useState("new");
 
     return (
@@ -105,12 +119,44 @@ export default function Letters1() {
                                                         <label htmlFor="reference-number" className="block text-gray-700">Reference Number (optional)</label>
                                                         <input type="text" id="reference-number" className="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500" defaultValue="12345" />
                                                     </div>
+
+
                                                     <div>
-                                                        <label htmlFor="invoice-date" className="block text-gray-700">Invoice Date (optional)</label>
-                                                        <div className="relative mt-1">
-                                                            <input type="text" id="invoice-date" className="w-full border border-gray-300 rounded-md py-2 pl-3 pr-10 text-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="12/12/2021" />
-                                                            <FontAwesomeIcon icon={faCalendarAlt} className="absolute right-3 top-3 text-gray-400" />
+                                                        <label htmlFor="invoice-date" className="block text-gray-700">
+                                                            Invoice Date (optional)
+                                                        </label>
+                                                        <div className="d-flex mail">
+                                                            <div
+                                                                className="iconGap flex items-center borderInput rounded p-2 cursor-pointer"
+                                                                style={{ width: "100%", border: "1px solid red" }}
+                                                                onClick={() => setIsModalOpen(true)} // فتح المودال عند الضغط على الأيقونة
+                                                            >
+
+                                                                <input
+                                                                    type="text"
+                                                                    className="flex-1 outline-none placeholder:text-sm"
+                                                                    placeholder={dateOfBirth}
+                                                                    readOnly
+                                                                />
+                                                                <i className="fas fa-calendar-alt ml-2"></i>
+                                                            </div>
                                                         </div>
+
+                                                        {isModalOpen && (
+                                                            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                                                                <div className="bg-white rounded-lg shadow-lg p-4">
+                                                                    <Calender
+                                                                        onDateSelect={handleDateChange} // تمرير الدالة لتحديث التاريخ
+                                                                    />
+                                                                    <button
+                                                                        className="mt-4 bg-gray-300 text-gray-700 py-2 px-4 rounded"
+                                                                        onClick={() => setIsModalOpen(false)}
+                                                                    >
+                                                                        Close
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        )}
                                                     </div>
                                                 </div>
                                                 <div className="overflow-x-auto">
