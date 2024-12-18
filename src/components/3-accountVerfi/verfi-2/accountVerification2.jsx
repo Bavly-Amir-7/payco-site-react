@@ -270,7 +270,7 @@ export default function AccountVerification2() {
                                             </div>
                                             <div className="flex items-center borderInput rounded p-2 ml-2 w-full">
                                                 <input
-                                                    type="text"
+                                                    type="number"
                                                     className="flex-1 outline-none placeholder:text-sm text-sm w-full"
                                                     placeholder={countryCodes[selectedPhoneCountry]} // كود الهاتف بناءً على الدولة المختارة
                                                 />
@@ -422,7 +422,7 @@ export default function AccountVerification2() {
                                                 </svg>
                                                 <span>|</span>
 
-                                                <input type="text" className="flex-1 outline-none placeholder:text-sm" placeholder="123456" />
+                                                <input type="number" className="flex-1 outline-none placeholder:text-sm" placeholder="123456" />
                                             </div>
                                         </div>
                                     </div>
