@@ -135,7 +135,7 @@ export default function AccountVerification1() {
                                                     <input
                                                         className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
                                                         placeholder="+20 123 456 7890"
-                                                        type="tel"
+                                                        type="number"
                                                         required
                                                     />
                                                 </div>
@@ -212,7 +212,7 @@ export default function AccountVerification1() {
                                                     <input
                                                         className="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
                                                         placeholder="Changable"
-                                                        type="tel"
+                                                        type="number"
                                                         required
                                                     />
                                                 </div>
