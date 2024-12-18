@@ -51,6 +51,7 @@ import Contacts1 from './components/12-contacts/1-contacts/contacts';
 import Settings1 from './components/13-settings/1-settings/settings1';
 import Settings2 from './components/13-settings/2-settings/settings2';
 import Business3 from './components/4-businessVerfi/3-business3/businessPage3';
+import Calender from './components/calender/calender';
 function App() {
   return (
     <>
@@ -103,6 +104,7 @@ function App() {
           <Route path="settings1" element={<Settings1/>} />
           <Route path="settings2" element={<Settings2/>} />
           <Route path="aside" element={<Aside/>} />
+          <Route path="calender" element={<Calender/>} />
         </Routes>
     </>
   );

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Aside from '../../aside/aside';
 import { Link } from 'react-router-dom';
 import "./verfi2.css";
+import Calender from '../../calender/calender';
 
 export default function AccountVerification2() {
     const [selectedAccount, setSelectedAccount] = useState('');
@@ -24,6 +25,62 @@ export default function AccountVerification2() {
     const handleClose = () => {
         setIsPhoneVerfiVisible(false);
     };
+
+
+    const [isModalOpen, setIsModalOpen] = useState(false); // حالة لفتح وغلق المودال
+    const [dateOfBirth, setDateOfBirth] = useState("1 / 31 / 1998"); // لتحديث التاريخ
+
+    const handleDateChange = (newDate) => {
+        setDateOfBirth(newDate); // تحديث التاريخ بعد اختياره من Calender
+        setIsModalOpen(false); // إغلاق المودال
+    };
+    const [selectedCountry, setSelectedCountry] = useState('UK'); // الدولة الافتراضية لقائمة "Country"
+    const [selectedPhoneCountry, setSelectedPhoneCountry] = useState('UK'); // الدولة الافتراضية لقائمة الهاتف
+
+    const countryCodes = {
+        UK: '+44',
+        EG: '+20',
+        US: '+1',
+        FR: '+33',
+        DE: '+49',
+    };
+
+    const countries = [
+        {
+            code: 'UK',
+            name: 'United Kingdom',
+            flag: (
+                <svg
+                    className="w-6 h-4"
+                    viewBox="0 0 24 18"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect width="24" height="18" fill="#012169" />
+                    <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
+                    <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
+                    <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
+                    <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
+                </svg>
+            ),
+        },
+        { code: 'EG', name: 'Egypt', flag: <img src="https://flagcdn.com/w40/eg.png" alt="Egypt" className="w-6 h-4" /> },
+        { code: 'US', name: 'USA', flag: <img src="https://flagcdn.com/w40/us.png" alt="USA" className="w-6 h-4" /> },
+        { code: 'FR', name: 'France', flag: <img src="https://flagcdn.com/w40/fr.png" alt="France" className="w-6 h-4" /> },
+        { code: 'DE', name: 'Germany', flag: <img src="https://flagcdn.com/w40/de.png" alt="Germany" className="w-6 h-4" /> },
+    ];
+
+    const handleCountryChange = (event) => {
+        setSelectedCountry(event.target.value);
+    };
+
+    const handlePhoneCountryChange = (event) => {
+        setSelectedPhoneCountry(event.target.value);
+    };
+
+
+    const [selectedFirstCountry, setSelectedFirstCountry] = useState('UK');
+    const [selectedSecondCountry, setSelectedSecondCountry] = useState('UK');
+
 
     return (
         <>
@@ -123,16 +180,45 @@ export default function AccountVerification2() {
                                         </div>
                                     </div>
 
-                                    <div className="grid  gap-1 mb-4">
+                                    <div className="grid  gap-1 ">
                                         <div>
-                                            <label className="block mb-2 text-sm">Date of Birth*</label>
-                                            <div className="d-flex mail">
-                                                <div className="iconGap flex items-center borderInput rounded p-2" style={{ width: "100%" }}>
-
-                                                    <input type="text" className="flex-1 outline-none placeholder:text-sm" placeholder="1 / 31 / 1998" />
-                                                    <i className="fas fa-calendar-alt ml-2"></i>
+                                            <div className="grid gap-1 mb-4">
+                                                <div>
+                                                    <label className="block mb-2 text-sm">Date of Birth*</label>
+                                                    <div className="d-flex mail">
+                                                        <div
+                                                            className="iconGap flex items-center borderInput rounded p-2 cursor-pointer"
+                                                            style={{ width: "100%" }}
+                                                            onClick={() => setIsModalOpen(true)} // فتح المودال عند الضغط على الأيقونة
+                                                        >
+                                                            <input
+                                                                type="text"
+                                                                className="flex-1 outline-none placeholder:text-sm"
+                                                                placeholder={dateOfBirth}
+                                                                readOnly
+                                                            />
+                                                            <i className="fas fa-calendar-alt ml-2"></i>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
+
+                                            {/* مودال التقويم */}
+                                            {isModalOpen && (
+                                                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                                                    <div className="bg-white rounded-lg shadow-lg p-4 ">
+                                                        <Calender
+                                                            onDateSelect={handleDateChange} // تمرير الدالة لتحديث التاريخ
+                                                        />
+                                                        <button
+                                                            className="mt-4 bg-gray-300 text-gray-700 py-2 px-4 rounded"
+                                                            onClick={() => setIsModalOpen(false)}
+                                                        >
+                                                            Close
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                     <div className="w-full  grid gap-1 mb-4">
@@ -157,27 +243,43 @@ export default function AccountVerification2() {
                                         <p className='text-center text-sm'>Tap “Verify” to receive a code. Enter it below to confirm your phone number.</p>
                                     </div>
 
-                                    <div className="w-full  grid gap-1 mb-4">
+
+                                    <div className="w-full grid gap-1 mb-4">
                                         <label className="block mb-2 text-sm">Phone Number*</label>
                                         <div className="d-flex">
-                                            <div className="phoneNumber iconGap flex items-center borderInput rounded p-2">
+                                            <div className="flex iconGap items-center borderInput rounded p-2">
                                                 <i>
-                                                    <svg className="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-6 lg:h-6" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect width="24" height="18" fill="#012169" />
-                                                        <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
-                                                        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
-                                                        <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
-                                                        <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
-                                                    </svg>
+                                                    {countries.find((country) => country.code === selectedPhoneCountry).flag}
                                                 </i>
-                                                <input type="text" className="outline-none w-full placeholder:text-sm" placeholder="(+44)" />
+                                                <span>|</span>
+                                                <select
+                                                    value={selectedPhoneCountry}
+                                                    onChange={handlePhoneCountryChange}
+                                                    className="flex-1 outline-none text-sm w-full bg-transparent"
+                                                >
+                                                    {countries.map((country) => (
+                                                        <option
+                                                            key={country.code}
+                                                            value={country.code}
+                                                            className="flex items-center"
+                                                        >
+                                                            {country.name}
+                                                        </option>
+                                                    ))}
+                                                </select>
                                             </div>
                                             <div className="flex items-center borderInput rounded p-2 ml-2 w-full">
-                                                <input type="text" className="flex-1 outline-none placeholder:text-sm text-sm w-full" placeholder="(+44) 123123456" />
+                                                <input
+                                                    type="text"
+                                                    className="flex-1 outline-none placeholder:text-sm text-sm w-full"
+                                                    placeholder={countryCodes[selectedPhoneCountry]} // كود الهاتف بناءً على الدولة المختارة
+                                                />
                                             </div>
                                             <button className="verfBtn bg-gray-200 text-gray-700 px-4 py-2 rounded ml-6">Verify</button>
                                         </div>
-                                        <p className='text-center text-sm'>Tap “Verify” to receive a code. Enter it below to confirm your phone number.</p>
+                                        <p className="text-center text-sm">
+                                            Tap “Verify” to receive a code. Enter it below to confirm your phone number.
+                                        </p>
                                     </div>
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -211,17 +313,23 @@ export default function AccountVerification2() {
                                             <label className="block mb-2 text-sm">Country*</label>
                                             <div className="flex iconGap items-center borderInput rounded p-2">
                                                 <i>
-                                                    <svg className="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-6 lg:h-6" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect width="24" height="18" fill="#012169" />
-                                                        <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
-                                                        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
-                                                        <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
-                                                        <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
-                                                    </svg>
+                                                    {countries.find((country) => country.code === selectedCountry).flag}
                                                 </i>
                                                 <span>|</span>
-                                                <select className="flex-1 outline-none text-sm w-full">
-                                                    <option className="text-sm">United Kingdom</option>
+                                                <select
+                                                    value={selectedCountry}
+                                                    onChange={handleCountryChange}
+                                                    className="flex-1 outline-none text-sm w-full bg-transparent"
+                                                >
+                                                    {countries.map((country) => (
+                                                        <option
+                                                            key={country.code}
+                                                            value={country.code}
+                                                            className="flex items-center"
+                                                        >
+                                                            {country.name}
+                                                        </option>
+                                                    ))}
                                                 </select>
                                             </div>
                                         </div>
@@ -250,43 +358,60 @@ export default function AccountVerification2() {
                                     </div>
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                        {/* Nationality */}
                                         <div>
                                             <label className="block mb-2 text-sm">Nationality*</label>
                                             <div className="flex iconGap items-center borderInput rounded p-2">
                                                 <i>
-                                                    <svg className="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-6 lg:h-6" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect width="24" height="18" fill="#012169" />
-                                                        <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
-                                                        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
-                                                        <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
-                                                        <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
-                                                    </svg>
+                                                    {countries.find((country) => country.code === selectedFirstCountry)?.flag}
                                                 </i>
                                                 <span>|</span>
-                                                <select className="flex-1 outline-none text-sm w-full">
-                                                    <option className="text-sm">United Kingdom</option>
+                                                <select
+                                                    value={selectedFirstCountry}
+                                                    onChange={(e) => setSelectedFirstCountry(e.target.value)}
+                                                    className="flex-1 outline-none text-sm w-full bg-transparent"
+                                                >
+                                                    {countries.map((country) => (
+                                                        <option
+                                                            key={country.code}
+                                                            value={country.code}
+                                                            className="flex items-center"
+                                                        >
+                                                            {country.name}
+                                                        </option>
+                                                    ))}
                                                 </select>
                                             </div>
                                         </div>
+
+
+                                        {/* Second Nationality */}
                                         <div>
-                                            <label className="block mb-2 text-sm whitespace-nowrap">Second Nationality if available*</label>
+                                            <label className="block mb-2 text-sm">Second Nationality if available*</label>
                                             <div className="flex iconGap items-center borderInput rounded p-2">
                                                 <i>
-                                                    <svg className="w-6 h-6 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-6 lg:h-6" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-                                                        <rect width="24" height="18" fill="#012169" />
-                                                        <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
-                                                        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
-                                                        <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
-                                                        <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
-                                                    </svg>
+                                                    {countries.find((country) => country.code === selectedSecondCountry)?.flag}
                                                 </i>
                                                 <span>|</span>
-                                                <select className="flex-1 outline-none text-sm w-full">
-                                                    <option className="text-sm">United Kingdom</option>
+                                                <select
+                                                    value={selectedSecondCountry}
+                                                    onChange={(e) => setSelectedSecondCountry(e.target.value)}
+                                                    className="flex-1 outline-none text-sm w-full bg-transparent"
+                                                >
+                                                    {countries.map((country) => (
+                                                        <option
+                                                            key={country.code}
+                                                            value={country.code}
+                                                            className="flex items-center"
+                                                        >
+                                                            {country.name}
+                                                        </option>
+                                                    ))}
                                                 </select>
                                             </div>
                                         </div>
-                                    </div>
+
+                                    </div>;
 
                                     <div className="grid  gap-4 mb-4">
                                         <div>
