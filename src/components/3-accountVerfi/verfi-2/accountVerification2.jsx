@@ -411,7 +411,7 @@ export default function AccountVerification2() {
                                             </div>
                                         </div>
 
-                                    </div>;
+                                    </div>
 
                                     <div className="grid  gap-4 mb-4">
                                         <div>
