@@ -260,7 +260,7 @@ export default function Business1() {
                                             </svg>
                                             <span>|</span>
 
-                                            <input type="text" className="flex-1 outline-none" placeholder="Changable" />
+                                            <input type="number" className="flex-1 outline-none" placeholder="Changable" />
                                         </div>
                                     </div>
                                     <div className=" flex-col md:flex-row mb-4">

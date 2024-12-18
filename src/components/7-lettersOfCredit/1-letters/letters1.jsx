@@ -117,7 +117,7 @@ export default function Letters1() {
                                                     </div>
                                                     <div>
                                                         <label htmlFor="reference-number" className="block text-gray-700">Reference Number (optional)</label>
-                                                        <input type="text" id="reference-number" className="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500" defaultValue="12345" />
+                                                        <input type="number" id="reference-number" className="w-full border border-gray-300 rounded-md py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-red-500" defaultValue="12345" />
                                                     </div>
 
 
