@@ -64,12 +64,12 @@ export default function AccountVerification2() {
             </svg>
         ),
     },
+    { code: 'AU', name: 'Australia', flag: <img src="https://flagcdn.com/w40/au.png" alt="Australia" className="w-6 h-4" /> },
+    { code: 'CA', name: 'Canada', flag: <img src="https://flagcdn.com/w40/ca.png" alt="Canada" className="w-6 h-4" /> },
     { code: 'EG', name: 'Egypt', flag: <img src="https://flagcdn.com/w40/eg.png" alt="Egypt" className="w-6 h-4" /> },
-    { code: 'US', name: 'USA', flag: <img src="https://flagcdn.com/w40/us.png" alt="USA" className="w-6 h-4" /> },
     { code: 'FR', name: 'France', flag: <img src="https://flagcdn.com/w40/fr.png" alt="France" className="w-6 h-4" /> },
     { code: 'DE', name: 'Germany', flag: <img src="https://flagcdn.com/w40/de.png" alt="Germany" className="w-6 h-4" /> },
-    { code: 'CA', name: 'Canada', flag: <img src="https://flagcdn.com/w40/ca.png" alt="Canada" className="w-6 h-4" /> },
-    { code: 'AU', name: 'Australia', flag: <img src="https://flagcdn.com/w40/au.png" alt="Australia" className="w-6 h-4" /> },
+    { code: 'US', name: 'USA', flag: <img src="https://flagcdn.com/w40/us.png" alt="USA" className="w-6 h-4" /> },
     {
         code: 'World',
         name: 'Other',
