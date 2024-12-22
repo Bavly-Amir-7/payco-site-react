@@ -23,7 +23,7 @@ export default function Business1() {
 
 
 
-    const countries = [
+  const countries = [
         {
             code: 'UK',
             name: 'United Kingdom',
@@ -45,8 +45,30 @@ export default function Business1() {
         { code: 'US', name: 'USA', flag: <img src="https://flagcdn.com/w40/us.png" alt="USA" className="w-6 h-4" /> },
         { code: 'FR', name: 'France', flag: <img src="https://flagcdn.com/w40/fr.png" alt="France" className="w-6 h-4" /> },
         { code: 'DE', name: 'Germany', flag: <img src="https://flagcdn.com/w40/de.png" alt="Germany" className="w-6 h-4" /> },
+        {
+            code: 'World',
+            name: 'Other',
+            flag: (
+              <span
+                style={{
+                  display: 'inline-flex', // Ensures proper alignment
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  fontSize: '24px', // Size of the emoji
+                  width: '20px', // Width of the circle
+                  height: '20px', // Height of the circle (same as width)
+                  borderRadius: '50%', // Makes the container a circle
+                  backgroundColor: 'transparent', // Optional background
+                  overflow: 'hidden',
+                  marginTop:'5px'
+                }}
+              >
+                🌎
+              </span>
+            )
+          }
+          
     ];
-
     const handleCountryChange = (event) => {
         setSelectedCountry(event.target.value);
     };
