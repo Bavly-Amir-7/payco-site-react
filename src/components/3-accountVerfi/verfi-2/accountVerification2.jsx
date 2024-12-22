@@ -269,42 +269,54 @@ export default function AccountVerification2() {
 
 
                                     <div className="w-full grid gap-1 mb-4">
-                                        <label className="block mb-2 text-sm">Phone Number*</label>
-                                        <div className="d-flex">
-                                            <div className="flex iconGap items-center borderInput rounded p-2">
-                                                <i>
-                                                    {countries.find((country) => country.code === selectedPhoneCountry).flag}
-                                                </i>
-                                                <span>|</span>
-                                                <select
-                                                    value={selectedPhoneCountry}
-                                                    onChange={handlePhoneCountryChange}
-                                                    className="flex-1 outline-none text-sm w-full bg-transparent"
-                                                >
-                                                    {countries.map((country) => (
-                                                        <option
-                                                            key={country.code}
-                                                            value={country.code}
-                                                            className="flex items-center"
-                                                        >
-                                                            {country.name}
-                                                        </option>
-                                                    ))}
-                                                </select>
-                                            </div>
-                                            <div className="flex items-center borderInput rounded p-2 ml-2 w-full">
-                                                <input
-                                                    type="number"
-                                                    className="flex-1 outline-none placeholder:text-sm text-sm w-full"
-                                                    placeholder={countryCodes[selectedPhoneCountry]} // كود الهاتف بناءً على الدولة المختارة
-                                                />
-                                            </div>
-                                            <button className="verfBtn bg-gray-200 text-gray-700 px-4 py-2 rounded ml-6">Verify</button>
-                                        </div>
-                                        <p className="text-center text-sm">
-                                            Tap “Verify” to receive a code. Enter it below to confirm your phone number.
-                                        </p>
-                                    </div>
+    <label className="block mb-2 text-sm">Phone Number*</label>
+    <div className="d-flex">
+        {/* Country Selector with Flag */}
+        <div className="flex iconGap items-center borderInput rounded p-2">
+            <i>
+                {countries.find((country) => country.code === selectedPhoneCountry).flag}
+            </i>
+            <span>|</span>
+            <select
+                value={selectedPhoneCountry}
+                onChange={handlePhoneCountryChange}
+                className="flex-1 outline-none text-sm w-full bg-transparent"
+            >
+                {countries.map((country) => (
+                    <option
+                        key={country.code}
+                        value={country.code}
+                        className="flex items-center"
+                    >
+                        {country.name}
+                    </option>
+                ))}
+            </select>
+        </div>
+
+        {/* Phone Number Input with Fixed Country Code */}
+        <div className="flex items-center borderInput rounded p-2 ml-2 w-full">
+            <span className="text-sm text-gray-700 pr-2">
+                {countryCodes[selectedPhoneCountry]}
+            </span>
+            <input
+                type="number"
+                className="flex-1 outline-none text-sm w-full"
+                placeholder="Enter your phone number"
+                style={{ borderLeft: '1px solid #ddd', paddingLeft: '8px' }}
+            />
+        </div>
+
+        {/* Verify Button */}
+        <button className="verfBtn bg-gray-200 text-gray-700 px-4 py-2 rounded ml-6">
+            Verify
+        </button>
+    </div>
+    <p className="text-center text-sm">
+        Tap “Verify” to receive a code. Enter it below to confirm your phone number.
+    </p>
+</div>
+
 
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                                         <div className="w-full">
