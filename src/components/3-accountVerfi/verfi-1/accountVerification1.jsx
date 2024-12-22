@@ -14,29 +14,53 @@ export default function AccountVerification1() {
 
 
     
-        const countries = [
-            {
-                code: 'UK',
-                name: 'United Kingdom',
-                flag: (
-                    <svg
-                        className="w-6 h-4"
-                        viewBox="0 0 24 18"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <rect width="24" height="18" fill="#012169" />
-                        <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
-                        <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
-                        <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
-                        <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
-                    </svg>
-                ),
-            },
-            { code: 'EG', name: 'Egypt', flag: <img src="https://flagcdn.com/w40/eg.png" alt="Egypt" className="w-6 h-4" /> },
-            { code: 'US', name: 'USA', flag: <img src="https://flagcdn.com/w40/us.png" alt="USA" className="w-6 h-4" /> },
-            { code: 'FR', name: 'France', flag: <img src="https://flagcdn.com/w40/fr.png" alt="France" className="w-6 h-4" /> },
-            { code: 'DE', name: 'Germany', flag: <img src="https://flagcdn.com/w40/de.png" alt="Germany" className="w-6 h-4" /> },
-        ];
+    const countries = [
+        {
+            code: 'UK',
+            name: 'United Kingdom',
+            flag: (
+                <svg
+                    className="w-6 h-4"
+                    viewBox="0 0 24 18"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect width="24" height="18" fill="#012169" />
+                    <path d="M0 0L24 18M24 0L0 18" stroke="white" strokeWidth="3" />
+                    <path d="M0 0L24 18M24 0L0 18" stroke="#C8102E" strokeWidth="1.5" />
+                    <path d="M10.5 0H13.5V18H10.5V0ZM0 7.5V10.5H24V7.5H0Z" fill="white" />
+                    <path d="M11.25 0H12.75V18H11.25V0ZM0 8.25V9.75H24V8.25H0Z" fill="#C8102E" />
+                </svg>
+            ),
+        },
+        { code: 'EG', name: 'Egypt', flag: <img src="https://flagcdn.com/w40/eg.png" alt="Egypt" className="w-6 h-4" /> },
+        { code: 'US', name: 'USA', flag: <img src="https://flagcdn.com/w40/us.png" alt="USA" className="w-6 h-4" /> },
+        { code: 'FR', name: 'France', flag: <img src="https://flagcdn.com/w40/fr.png" alt="France" className="w-6 h-4" /> },
+        { code: 'DE', name: 'Germany', flag: <img src="https://flagcdn.com/w40/de.png" alt="Germany" className="w-6 h-4" /> },
+        {
+            code: 'World',
+            name: 'Other',
+            flag: (
+              <span
+                style={{
+                  display: 'inline-flex', // Ensures proper alignment
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  fontSize: '24px', // Size of the emoji
+                  width: '20px', // Width of the circle
+                  height: '20px', // Height of the circle (same as width)
+                  borderRadius: '50%', // Makes the container a circle
+                  backgroundColor: 'transparent', // Optional background
+                  overflow: 'hidden',
+                  marginTop:'5px'
+                }}
+              >
+                🌎
+              </span>
+            )
+          }
+          
+    ];
+
     
         const handleCountryChange = (event) => {
             setSelectedCountry(event.target.value);
